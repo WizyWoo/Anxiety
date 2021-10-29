@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   _data:
-    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":0.0,"y":0.0},"zoom":1.0,"elements":[],"$version":"A"}}'
+    _json: '{"graph":{"variables":{"collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":null,"summary":null,"pan":{"x":197.793,"y":140.9448},"zoom":1.0,"elements":[{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-297.0,"y":-26.0},"guid":"e13626ce-7c2a-43a5-88a3-6bd082f384a2","$version":"A","$type":"Bolt.OnButtonClick"},{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-302.0,"y":93.0},"guid":"9ce91956-180a-45cf-ab79-99d3ee185c0e","$version":"A","$type":"Bolt.OnButtonClick"},{"coroutine":false,"defaultValues":{"target":null},"position":{"x":-304.0,"y":223.0},"guid":"c715cd24-64ec-4297-a32e-3d70f20e8467","$version":"A","$type":"Bolt.OnButtonClick"}],"$version":"A"}}'
     _objectReferences: []
