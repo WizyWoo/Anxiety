@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         capsuleCollider = gameObject.GetComponent<CapsuleCollider2D>();
-        maskPlayer = ~((1 << LayerMask.NameToLayer("Player")) + (1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
+        maskPlayer = ((1 << LayerMask.NameToLayer("Player")) + (1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
         rb2D.sharedMaterial = PM2D;
         capsuleCollider.sharedMaterial = PM2D;
         speedMultiplier = 1f;
@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+
         if (Input.GetAxisRaw("Vertical") != 0 || Input.GetKey(KeyCode.Space))
             JumpInput = true;
         else
@@ -58,9 +58,11 @@ public class PlayerMovement : MonoBehaviour
         RaycastHit2D hit2D;
         shouldSlide = false;
 
-        if (hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * capsuleCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
+        Debug.DrawLine(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * capsuleCollider.size.x * transform.localScale.y * Vector3.down + transform.position, Color.blue, 20);
+        if (hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 50f * capsuleCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
         {
-            if (hit2D.collider.isTrigger != true)
+
+            if (hit2D.collider.isTrigger == false)
             {
 
                 playerControlPower = 1;
@@ -68,6 +70,8 @@ public class PlayerMovement : MonoBehaviour
                 {
 
                     jumpOnOff = 1;
+                    isGrounded = true;
+                    Debug.Log(hit2D.transform.name);
 
                 }
 
