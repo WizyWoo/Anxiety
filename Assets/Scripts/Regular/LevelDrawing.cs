@@ -34,6 +34,7 @@ public class LevelDrawing : MonoBehaviour
             LevelPosPoints.Add(tempVector);
             LevelBorder.positionCount = vertice + 1;
             LevelBorder.SetPosition(vertice, tempVector);
+            LevelCollider.SetPoints(LevelPosPoints);
 
             vertice++;
 
@@ -77,6 +78,15 @@ public class LevelDrawing : MonoBehaviour
             LevelBorder.SetPositions(new Vector3[0]);
 
             tempLevelBorder.transform.SetParent(levelParent.transform);
+
+        }
+        else if(Input.GetKeyDown(KeyCode.Backspace))
+        {
+
+            vertice = 0;
+            LevelPosPoints.Clear();
+            LevelCollider.SetPoints(new List<Vector2>());
+            LevelBorder.SetPositions(new Vector3[0]);
 
         }
 
