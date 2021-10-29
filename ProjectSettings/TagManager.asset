@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Enemy
-  - Air
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -13,10 +11,10 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Ground
+  - Air
+  - Player
+  - Enemy
   - 
   - 
   - 
@@ -42,4 +40,16 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 421973141
+    locked: 0
+  - name: BiPolarDisorder
+    uniqueID: 1959602849
+    locked: 0
+  - name: Midground
+    uniqueID: 1317867025
+    locked: 0
+  - name: Foreground
+    uniqueID: 3054473105
     locked: 0
