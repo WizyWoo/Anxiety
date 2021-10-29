@@ -299,6 +299,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBorderParent
       objectReference: {fileID: 0}
+    - target: {fileID: 1819136811916907235, guid: 9c2646914e461c246b40866cbebae23a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6558880051327176256, guid: 9c2646914e461c246b40866cbebae23a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -362,7 +366,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &719002852
 AudioListener:
   m_ObjectHideFlags: 0
@@ -398,7 +402,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 20
+  orthographic size: 10
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -445,7 +449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1551359866
 Transform:
   m_ObjectHideFlags: 0
@@ -549,6 +553,14 @@ PrefabInstance:
     - target: {fileID: 2579482983171790672, guid: c2676965fc82d53428a772ec644fe1ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579482983171790674, guid: c2676965fc82d53428a772ec644fe1ae, type: 3}
+      propertyPath: m_EdgeRadius
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2579482983171790675, guid: c2676965fc82d53428a772ec644fe1ae, type: 3}
+      propertyPath: m_Parameters.numCornerVertices
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2579482983171790675, guid: c2676965fc82d53428a772ec644fe1ae, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value

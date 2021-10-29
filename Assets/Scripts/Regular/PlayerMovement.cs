@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         capsuleCollider = gameObject.GetComponent<CapsuleCollider2D>();
-        maskPlayer = ((1 << LayerMask.NameToLayer("Player")) + (1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
+        maskPlayer = ~((1 << LayerMask.NameToLayer("Player")) + (1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
         rb2D.sharedMaterial = PM2D;
         capsuleCollider.sharedMaterial = PM2D;
         speedMultiplier = 1f;
@@ -66,12 +66,12 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 playerControlPower = 1;
+                isGrounded = true;
+                Debug.Log(hit2D.transform.name);
                 if (JumpInput && rb2D.velocity.y < jumpForce)
                 {
 
                     jumpOnOff = 1;
-                    isGrounded = true;
-                    Debug.Log(hit2D.transform.name);
 
                 }
 
