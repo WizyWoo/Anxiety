@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+
     public int PlayerHealth;
     public GameObject PlayerCam;
+    public bool IsDuplicate;
     private Rigidbody2D rb2D;
     private float invincibilityTimer;
 
@@ -21,15 +22,23 @@ public class PlayerController : MonoBehaviour
     {
 
         gameObject.GetComponent<PlayerAbilites>().enabled = false;
-        gameObject.GetComponent<NewPlayerMovement>().enabled = false;
-        PlayerCam.SetActive(false);
+        gameObject.GetComponent<PlayerMovement>().enabled = false;
 
     }
 
     public void WakeUp()
     {
 
+        gameObject.GetComponent<PlayerAbilites>().enabled = true;
+        gameObject.GetComponent<PlayerMovement>().enabled = true;
 
+    }
+
+    public void MarkAsDupe()
+    {
+
+        IsDuplicate = true;
+        PlayerHealth = 1;
 
     }
 
@@ -38,18 +47,6 @@ public class PlayerController : MonoBehaviour
 
         invincibilityTimer -= Time.deltaTime;
         
-    }
-
-    private void OnCollisionStay2D(Collision2D col)
-    {
-
-        if(col.gameObject.tag == "Hurty")
-        {
-
-            TakeDamage();
-
-        }
-
     }
 
     public void TakeDamage()
@@ -75,7 +72,8 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
 
-        Debug.Log("ded");
+        if(!IsDuplicate)
+            GameManager.main.PlayerDied();
 
     }
 

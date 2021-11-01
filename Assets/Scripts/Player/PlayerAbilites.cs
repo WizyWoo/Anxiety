@@ -5,10 +5,18 @@ using UnityEngine;
 public class PlayerAbilites : MonoBehaviour
 {
 
-    public float DashPower, ChargeSpeed, DashCooldown, MaxDashCharge, SplitCooldown;
+    public enum Abilities
+    {
+
+        Split
+
+    }
+
+    public Abilities SelectedAbility;
+    public float DashPower, ChargeSpeed, MaxDashCharge, SplitCooldown;
     public bool DashOnOff, SplitOnOff;
-    private float dashCharge, dashCooldownTimer, originalCamSize, resizeSmoother, sizeA, splitCooldownTimer;
-    private bool occupied, dashReady, isSplit;
+    private float dashCharge, originalCamSize, resizeSmoother, sizeA, splitCooldownTimer;
+    private bool occupied, isSplit;
     private Rigidbody2D rb2D;
     private PlayerMovement movemenScript;
     private Camera mainCam;
@@ -24,14 +32,16 @@ public class PlayerAbilites : MonoBehaviour
         mainCam = Camera.main;
         originalCamSize = mainCam.orthographicSize;
         nonBlocking = ~((1 << LayerMask.NameToLayer("Player")) + (1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
+        if(gm == null)
+            gm = GameManager.main;
 
     }
 
     void Update()
     {
 
-        if(dashReady && DashOnOff && movemenScript.IsGrounded)
+        if(DashOnOff && movemenScript.IsGrounded)
         {
             
             if(Input.GetKey(KeyCode.Space))
@@ -52,13 +62,30 @@ public class PlayerAbilites : MonoBehaviour
 
         }
 
-        if(splitCooldownTimer < 0 && SplitOnOff && !gm.isSplit)
+        if(Input.GetKeyDown(KeyCode.Q))
         {
 
-            if(Input.GetKeyDown(KeyCode.Mouse0))
+            if(gm == null)
+                gm = GameManager.main;
+
+            switch(SelectedAbility)
             {
 
-                Split();
+                case Abilities.Split:
+                if(splitCooldownTimer < 0 && SplitOnOff && !gm.IsSplit)
+                {
+
+                    Split();
+
+                }
+                else if(gm.IsSplit)
+                {
+
+                    gm.SwapPlayer();
+
+                }
+                
+                break;
 
             }
 
@@ -72,18 +99,6 @@ public class PlayerAbilites : MonoBehaviour
         
     }
 
-    private void OnCollisionStay2D(Collision2D col)
-    {
-
-        if(col.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-
-            dashReady = true;
-
-        }
-
-    }
-
     private void resizeCam()
     {
 
@@ -94,11 +109,12 @@ public class PlayerAbilites : MonoBehaviour
     private void Split()
     {
 
-        GameObject ass = Instantiate(gameObject, transform.position, Quaternion.identity);
+        GameObject duplicate = Instantiate(gameObject, transform.position, Quaternion.identity);
         splitCooldownTimer = SplitCooldown;
-        gm.isSplit = true;
-        ass.GetComponent<PlayerController>().GoDormant();
-        gm.Dupe = ass;
+        gm.IsSplit = true;
+        duplicate.GetComponent<PlayerController>().GoDormant();
+        duplicate.GetComponent<PlayerController>().MarkAsDupe();
+        gm.Dupe = duplicate;
 
     }
 
@@ -109,7 +125,6 @@ public class PlayerAbilites : MonoBehaviour
         StartCoroutine(GroundedRevert());
 
         dashCharge = 1;
-        dashReady = false;
         occupied = false;
         resizeSmoother = 0;
         sizeA = mainCam.orthographicSize -0.3f;
