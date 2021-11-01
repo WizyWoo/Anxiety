@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager main;
-    private float backgroundOffsetX;
     public GameObject CursorLight;
     public GameObject Background;
     public GameObject Player;
@@ -14,10 +13,11 @@ public class GameManager : MonoBehaviour
     public GameObject PlayerLight;
     public GameObject PlayerDangerLight;
     public GameObject Dupe;
-    private Vector3 mousePosition;
-    private bool switchColour;
     public float BiPolarWait;
     public bool Level1, isSplit;
+    private float backgroundOffsetX;
+    private Vector3 mousePosition;
+    private bool switchColour;
 
     void Start()
     {
