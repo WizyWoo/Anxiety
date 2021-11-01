@@ -432,19 +432,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DashPower: 6
-  ChargeSpeed: 2
+  ChargeSpeed: 4
   DashCooldown: 4
   MaxDashCharge: 5
   TeleportCooldown: 0
+  SplitCooldown: 0
   DashOnOff: 1
   TeleportOnOff: 1
   IsGrounded: 0
+  SplitOnOff: 1
   dashCharge: 0
   dashCooldownTimer: 0
   originalCamSize: 0
   resizeSmoother: 0
   sizeA: 0
   teleportCooldownTimer: 0
+  splitCooldownTimer: 0
+  gm: {fileID: 0}
 --- !u!114 &6646570181702327679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -479,7 +483,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Gravity: 4
-  PlayerHealth: 0
+  PlayerHealth: 4
+  PlayerCam: {fileID: 6646570181712632060}
 --- !u!50 &6646570181702327676
 Rigidbody2D:
   serializedVersion: 4
@@ -623,6 +628,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2

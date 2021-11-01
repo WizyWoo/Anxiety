@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
+    public static GameManager main;
     private float backgroundOffsetX;
     public GameObject CursorLight;
     public GameObject Background;
@@ -18,9 +19,10 @@ public class GameManager : MonoBehaviour
     public float BiPolarWait;
     public bool Level1, isSplit;
 
-
     void Start()
     {
+
+        main = this;
 
         if(Level1)
             StartCoroutine(BiPolarVision());
@@ -31,12 +33,7 @@ public class GameManager : MonoBehaviour
     {
 
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        CursorLight.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
-
-        /*backgroundOffsetX = Player.transform.position.x * 0.1f;
-        Background.transform.position = new Vector3(Player.transform.position.x - backgroundOffsetX + 50, (Player.transform.position.y * 0.4f) + 20, 0);*/
-
-        
+        CursorLight.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);        
 
     }
 

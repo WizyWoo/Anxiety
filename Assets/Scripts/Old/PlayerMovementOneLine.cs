@@ -28,7 +28,7 @@ public class PlayerMovementOneLine : MonoBehaviour
     public bool isGrounded;
     private LayerMask maskPlayer;
     //References
-    private CapsuleCollider2D capsuleCollider;
+    private CapsuleCollider2D playerCollider;
     private Rigidbody2D rb2D;
     public GameObject PlayerSpriteParent;
 
@@ -36,12 +36,12 @@ public class PlayerMovementOneLine : MonoBehaviour
     {
 
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-        capsuleCollider = gameObject.GetComponent<CapsuleCollider2D>();
+        playerCollider = gameObject.GetComponent<CapsuleCollider2D>();
         maskPlayer = ~((1 << LayerMask.NameToLayer("Player")) + (1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
         rb2D.sharedMaterial = PM2D;
-        capsuleCollider.sharedMaterial = PM2D;
+        playerCollider.sharedMaterial = PM2D;
         speedMultiplier = 1f;
-        yGroundCheckOffset = (-0.4f + ((1 - capsuleCollider.size.x) * -0.4f)) * transform.localScale.y;
+        yGroundCheckOffset = (-playerCollider.size.y * 0.002f) + playerCollider.offset.y;
         groundCheckDist = 0.5f * transform.localScale.y;
         jumpPower = 1f;
 
@@ -58,8 +58,8 @@ public class PlayerMovementOneLine : MonoBehaviour
         RaycastHit2D hit2D;
         shouldSlide = false;
 
-        Debug.DrawLine(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * capsuleCollider.size.x * transform.localScale.y * Vector3.down + transform.position, Color.blue, 20);
-        if (hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 50f * capsuleCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
+        Debug.DrawLine(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * playerCollider.size.x * transform.localScale.y * Vector3.down + transform.position, Color.blue, 20);
+        if (hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 50f * playerCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
         {
 
             if (hit2D.collider.isTrigger == false)
@@ -67,7 +67,6 @@ public class PlayerMovementOneLine : MonoBehaviour
 
                 playerControlPower = 1;
                 isGrounded = true;
-                Debug.Log(hit2D.transform.name);
                 if (JumpInput && rb2D.velocity.y < jumpForce)
                 {
 
@@ -87,7 +86,7 @@ public class PlayerMovementOneLine : MonoBehaviour
             playerControlPower = controlPowerInAir;
             PM2D.friction = 0;
             rb2D.sharedMaterial = PM2D;
-            capsuleCollider.sharedMaterial = PM2D;
+            playerCollider.sharedMaterial = PM2D;
 
         }
         else
@@ -96,7 +95,7 @@ public class PlayerMovementOneLine : MonoBehaviour
             playerControlPower = 1f;
             PM2D.friction = friction;
             rb2D.sharedMaterial = PM2D;
-            capsuleCollider.sharedMaterial = PM2D;
+            playerCollider.sharedMaterial = PM2D;
 
         }
 

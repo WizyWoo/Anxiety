@@ -787,11 +787,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1273275705 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6646570181712632060, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-  m_PrefabInstance: {fileID: 5509656335045441016}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1511665976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1576,38 +1571,6 @@ PrefabInstance:
     - target: {fileID: 6646570181702327672, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646570181702327673, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646570181702327673, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646570181702327673, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646570181702327675, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: PlayerCam
-      value: 
-      objectReference: {fileID: 1273275705}
-    - target: {fileID: 6646570181702327675, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: PlayerHealth
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646570181702327676, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: m_Mass
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646570181702327678, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: SplitOnOff
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646570181702327678, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: ChargeSpeed
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7065205053825452702, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_Color.b

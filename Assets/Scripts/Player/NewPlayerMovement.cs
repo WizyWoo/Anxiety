@@ -6,11 +6,10 @@ public class NewPlayerMovement : MonoBehaviour
 {
 
     //Movement
-    [Range(0, 100
-    )]
-    public float moveSpeed;
+    [Range(0, 100)]
+    public float MoveSpeed;
     [Tooltip("should be between 0 and 1")]
-    public float controlPowerInAir, friction, DashThreshold;
+    public float ControlPowerInAir, Friction, DashThreshold;
     public bool MovementEnabled, Dashing;
     [Tooltip("should be the Player physicsMaterial 2D")]
     public PhysicsMaterial2D PM2D;
@@ -20,7 +19,6 @@ public class NewPlayerMovement : MonoBehaviour
     private float playerControlPower, speedMultiplier, xMoveDir;
     //GroundCheck
     private float yGroundCheckOffset, groundCheckDist;
-    [SerializeField]
     private bool isGrounded;
     private LayerMask maskPlayer;
     //References
@@ -61,7 +59,7 @@ public class NewPlayerMovement : MonoBehaviour
 
         if (hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * playerCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
         {
-            if (hit2D.collider.isTrigger != true)
+            if (hit2D.collider.isTrigger == false)
             {
 
                 isGrounded = true;
@@ -70,22 +68,34 @@ public class NewPlayerMovement : MonoBehaviour
                 playerControlPower = 1;
 
             }
-            else {isGrounded = false; pa.IsGrounded = false;}
+            else 
+            {
+                
+                isGrounded = false; 
+                pa.IsGrounded = false;
+                
+            }
 
         }
-        else {isGrounded = false; pa.IsGrounded = false;}
+        else 
+        {
+            
+            isGrounded = false; 
+            pa.IsGrounded = false;
+            
+        }
 
         if (isGrounded == false)
         {
 
-            playerControlPower = controlPowerInAir;
+            playerControlPower = ControlPowerInAir;
             PM2D.friction = 0;
             inAir = 1;
             rb2D.sharedMaterial = PM2D;
             playerCollider.sharedMaterial = PM2D;
-            if (rb2D.velocity.x >= (moveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") > 0) xMoveDir = 0;
+            if (rb2D.velocity.x >= (MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") > 0) xMoveDir = 0;
             else
-            if (rb2D.velocity.x <= (-moveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") < 0) xMoveDir = 0;
+            if (rb2D.velocity.x <= (-MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") < 0) xMoveDir = 0;
             else xMoveDir = Input.GetAxis("Horizontal");
 
         }
@@ -93,13 +103,13 @@ public class NewPlayerMovement : MonoBehaviour
         {
 
             playerControlPower = 1f;
-            PM2D.friction = friction;
+            PM2D.friction = Friction;
             inAir = 0;
             rb2D.sharedMaterial = PM2D;
             playerCollider.sharedMaterial = PM2D;
-            if (rb2D.velocity.x >= (moveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") > 0) {xMoveDir = 0; inAir = 1;}
+            if (rb2D.velocity.x >= (MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") > 0) {xMoveDir = 0; inAir = 1;}
             else
-            if (rb2D.velocity.x <= (-moveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") < 0) {xMoveDir = 0; inAir = 1;}
+            if (rb2D.velocity.x <= (-MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") < 0) {xMoveDir = 0; inAir = 1;}
             else xMoveDir = Input.GetAxis("Horizontal");
 
         }
@@ -120,9 +130,9 @@ public class NewPlayerMovement : MonoBehaviour
         }
 
         if(!Dashing)
-            movementVector = new Vector2(xMoveDir * playerControlPower * moveSpeed + (rb2D.velocity.x * inAir), rb2D.velocity.y);
+            movementVector = new Vector2(xMoveDir * playerControlPower * MoveSpeed + (rb2D.velocity.x * inAir), rb2D.velocity.y);
         else
-            movementVector = new Vector2((rb2D.velocity.x * loseSpeed) + (xMoveDir * controlPowerInAir), rb2D.velocity.y);
+            movementVector = new Vector2((rb2D.velocity.x * loseSpeed) + (xMoveDir * ControlPowerInAir), rb2D.velocity.y);
 
         if(!MovementEnabled)
         {
