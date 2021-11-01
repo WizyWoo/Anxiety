@@ -338,7 +338,6 @@ GameObject:
   - component: {fileID: 6646570181702327672}
   - component: {fileID: 6646570181702327673}
   - component: {fileID: 6646570181702327678}
-  - component: {fileID: 6646570181702327679}
   - component: {fileID: 6646570181702327675}
   - component: {fileID: 6646570181702327676}
   - component: {fileID: 6646570181702327677}
@@ -449,27 +448,6 @@ MonoBehaviour:
   teleportCooldownTimer: 0
   splitCooldownTimer: 0
   gm: {fileID: 0}
---- !u!114 &6646570181702327679
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6646570181702327650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5c7685aac8f6f04b8e1074d14372ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 9
-  controlPowerInAir: 0.4
-  friction: 0.2
-  DashThreshold: 1
-  MovementEnabled: 1
-  Dashing: 0
-  PM2D: {fileID: 6200000, guid: d1cbbee2c44d9034f8c0e042d4ee36a5, type: 2}
-  isGrounded: 0
-  PlayerSpriteRenderer: {fileID: 6646570181702327673}
 --- !u!114 &6646570181702327675
 MonoBehaviour:
   m_ObjectHideFlags: 0

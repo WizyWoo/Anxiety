@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     //References
     private CapsuleCollider2D playerCollider;
     private Rigidbody2D rb2D;
-    public GameObject PlayerSpriteParent;
+    public SpriteRenderer PlayerSprite;
 
     void Start()
     {
@@ -113,9 +113,9 @@ public class PlayerMovement : MonoBehaviour
         else xMoveDir = Input.GetAxis("Horizontal");
 
         if(Input.GetAxisRaw("Horizontal") == -1)
-            PlayerSpriteParent.transform.rotation = Quaternion.Euler(0, 180, PlayerSpriteParent.transform.rotation.x);
+            PlayerSprite.flipY = true;
         else if(Input.GetAxisRaw("Horizontal") == 1)
-            PlayerSpriteParent.transform.rotation = Quaternion.Euler(0, 0, PlayerSpriteParent.transform.rotation.x);
+            PlayerSprite.flipY = false;
 
         yVel = rb2D.velocity.y - jumpForce;
 
