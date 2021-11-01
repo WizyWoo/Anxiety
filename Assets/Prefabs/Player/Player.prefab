@@ -431,19 +431,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dca08f43dbb50f4596c88ba3dfb767f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6
-  controlPowerInAir: 0.2
-  friction: 0
-  speedDampening: 2
-  sprintOnOff: 1
-  shouldSlide: 0
-  MovementEnabled: 0
-  NukeMovement: 0
+  MoveSpeed: 4
+  ControlPowerInAir: 0.2
+  Friction: 0
+  SpeedDampening: 1
+  SprintOnOff: 1
+  ShouldSlide: 0
+  MovementEnabled: 1
   PM2D: {fileID: 6200000, guid: d1cbbee2c44d9034f8c0e042d4ee36a5, type: 2}
-  movementVector: {x: 0, y: 0}
-  BumpForce: 0
-  jumpForce: 0
-  isGrounded: 0
+  JumpHeight: 6
+  IsGrounded: 0
   PlayerSprite: {fileID: 6646570181702327673}
 --- !u!114 &6646570181702327678
 MonoBehaviour:
