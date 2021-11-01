@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
-    public float Gravity;
+    
     public int PlayerHealth;
     public GameObject PlayerCam;
     private Rigidbody2D rb2D;
@@ -37,18 +36,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        rb2D.velocity = new Vector3(rb2D.velocity.x, rb2D.velocity.y - Gravity * Time.deltaTime, 0);
-
         invincibilityTimer -= Time.deltaTime;
-
-        
         
     }
 
     private void OnCollisionStay2D(Collision2D col)
     {
 
-        if(col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        if(col.gameObject.tag == "Hurty")
         {
 
             TakeDamage();

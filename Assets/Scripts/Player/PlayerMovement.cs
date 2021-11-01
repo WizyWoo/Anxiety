@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     //Movement
+    [Header("Movement")]
     [Range(0, 10)]
     public float MoveSpeed;
     [Tooltip("should be between 0 and 1")]
@@ -18,11 +19,13 @@ public class PlayerMovement : MonoBehaviour
     private float yVel, jumpPower, damping;
     private Vector2 movementVector;
     //Jumping
-    public float JumpHeight;
+    public float JumpHeight, FallSpeed;
+    public bool JumpOnOff, GroundedOverride;
     private float playerControlPower, speedMultiplier, xMoveDir;
     private int jumpOnOff;
-    private bool JumpInput;
+    private bool jumpInput;
     //GroundCheck
+    [Header("Do not touch!")]
     public bool IsGrounded;
     private float yGroundCheckOffset, groundCheckDist;
     private LayerMask maskPlayer;
@@ -49,35 +52,54 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (Input.GetAxisRaw("Vertical") != 0 || Input.GetKey(KeyCode.Space))
-            JumpInput = true;
-        else
-            JumpInput = false;
+        if(JumpOnOff)
+            if (Input.GetAxisRaw("Vertical") != 0 || Input.GetKey(KeyCode.Space))
+                jumpInput = true;
+            else
+                jumpInput = false;
 
         RaycastHit2D hit2D;
         ShouldSlide = false;
 
-        Debug.DrawLine(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * playerCollider.size.x * transform.localScale.y * Vector3.down + transform.position, Color.blue, 20);
-        if (hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 50f * playerCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
+        if(!GroundedOverride)
         {
 
-            if (hit2D.collider.isTrigger == false)
+            if(hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * playerCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
             {
 
-                playerControlPower = 1;
-                IsGrounded = true;
-                if (JumpInput && rb2D.velocity.y < JumpHeight)
+                if (hit2D.collider.isTrigger == false)
                 {
 
-                    jumpOnOff = 1;
+                    playerControlPower = 1;
+                    IsGrounded = true;
+                    if (jumpInput && rb2D.velocity.y < JumpHeight)
+                    {
+
+                        jumpOnOff = 1;
+
+                    }
+
+                }
+                else 
+                {
+                    
+                    IsGrounded = false;
+                    rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y - (FallSpeed * Time.deltaTime));
 
                 }
 
             }
-            else IsGrounded = false;
+            else 
+            {
+                
+                IsGrounded = false;
+                rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y - (FallSpeed * Time.deltaTime));
+
+            }
 
         }
-        else IsGrounded = false;
+        else
+            IsGrounded = false;
 
         if (IsGrounded == false)
         {

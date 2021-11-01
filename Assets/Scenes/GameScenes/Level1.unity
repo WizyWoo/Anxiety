@@ -1377,7 +1377,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -29.022081, y: 51.702984}
+  - {x: -29.076906, y: 50.880608}
   - {x: -28.391172, y: 36.245567}
   - {x: -29.337534, y: 27.591673}
   - {x: -29.968454, y: 16.866114}
@@ -1464,7 +1464,8 @@ EdgeCollider2D:
   - {x: 24.166885, y: 95.755424}
   - {x: -0.12333679, y: 93.547226}
   - {x: -11.164345, y: 89.44627}
-  - {x: -16.842583, y: 79.98256}
+  - {x: -16.18362, y: 80.76355}
+  - {x: -16.977638, y: 81.213524}
   - {x: -16.527119, y: 108.68918}
   - {x: -28.5145, y: 108.37373}
   - {x: -29.460873, y: 82.19076}
@@ -1500,10 +1501,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 816501296715157107, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: MoveSpeed
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 4119370261416270772, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_Name
       value: BlueLight
@@ -1575,6 +1572,10 @@ PrefabInstance:
     - target: {fileID: 6646570181702327672, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646570181712632060, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7065205053825452702, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_Color.b
@@ -1744,7 +1745,7 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
-  - {x: -29.022081, y: 51.702984, z: 0}
+  - {x: -28.87588, y: 49.107937, z: 0}
   - {x: -28.391172, y: 36.245567, z: 0}
   - {x: -29.968454, y: 16.866114, z: 0}
   - {x: -29.652988, y: 9.295144, z: 0}
@@ -1871,14 +1872,14 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 5
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
-  m_Loop: 0
+  m_UseWorldSpace: 0
+  m_Loop: 1
 --- !u!68 &8584615981738852529
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1895,7 +1896,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 137.04575, y: 24.031124}
+  - {x: 136.41411, y: 24.088547}
   - {x: 120.64195, y: 26.554785}
   - {x: 117.171936, y: 37.595795}
   - {x: 117.802826, y: 44.53585}
@@ -1914,8 +1915,9 @@ EdgeCollider2D:
   - {x: 109.91641, y: 58.41598}
   - {x: 104.23819, y: 57.78507}
   - {x: 100.4527, y: 57.469604}
-  - {x: 96.35172, y: 57.15414}
-  - {x: 93.828094, y: 56.8387}
+  - {x: 97.040794, y: 57.211563}
+  - {x: 94.99385, y: 57.246407}
+  - {x: 94.91912, y: 56.3219}
   - {x: 102.34544, y: 53.999577}
   - {x: 102.66089, y: 49.583168}
   - {x: 102.66089, y: 45.482227}
@@ -1976,7 +1978,7 @@ LineRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
-  - {x: 137.04575, y: 24.031124, z: 0}
+  - {x: 135.71417, y: 24.065266, z: 0}
   - {x: 120.64195, y: 26.554785, z: 0}
   - {x: 117.171936, y: 37.595795, z: 0}
   - {x: 117.802826, y: 44.53585, z: 0}
@@ -2058,14 +2060,14 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
+    numCornerVertices: 5
     numCapVertices: 0
     alignment: 0
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
-  m_Loop: 0
+  m_Loop: 1
 --- !u!1 &8584615981738852542
 GameObject:
   m_ObjectHideFlags: 0

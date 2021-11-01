@@ -5,23 +5,21 @@ using UnityEngine;
 public class PlayerAbilites : MonoBehaviour
 {
 
-    public float DashPower, ChargeSpeed, DashCooldown, MaxDashCharge, TeleportCooldown, SplitCooldown;
-    public bool DashOnOff, TeleportOnOff, IsGrounded, SplitOnOff;
-    [SerializeField]
-    private float dashCharge, dashCooldownTimer, originalCamSize, resizeSmoother, sizeA, teleportCooldownTimer, splitCooldownTimer;
+    public float DashPower, ChargeSpeed, DashCooldown, MaxDashCharge, SplitCooldown;
+    public bool DashOnOff, SplitOnOff;
+    private float dashCharge, dashCooldownTimer, originalCamSize, resizeSmoother, sizeA, splitCooldownTimer;
     private bool occupied, dashReady, isSplit;
     private Rigidbody2D rb2D;
-    private NewPlayerMovement movemenScript;
+    private PlayerMovement movemenScript;
     private Camera mainCam;
     private LayerMask nonBlocking;
     public GameManager gm;
 
-    // Start is called before the first frame update
     void Start()
     {
         
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-        movemenScript = gameObject.GetComponent<NewPlayerMovement>();
+        movemenScript = gameObject.GetComponent<PlayerMovement>();
         dashCharge = 1;
         mainCam = Camera.main;
         originalCamSize = mainCam.orthographicSize;
@@ -30,11 +28,10 @@ public class PlayerAbilites : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
-        if(dashReady && DashOnOff && IsGrounded)
+        if(dashReady && DashOnOff && movemenScript.IsGrounded)
         {
             
             if(Input.GetKey(KeyCode.Space))
@@ -67,19 +64,6 @@ public class PlayerAbilites : MonoBehaviour
 
         }
 
-        if(teleportCooldownTimer < 0 && TeleportOnOff)
-        {
-
-            if(Input.GetKeyDown(KeyCode.Mouse1))
-            {
-
-                
-
-            }
-
-        }
-
-        teleportCooldownTimer -= Time.deltaTime;
         splitCooldownTimer -= Time.deltaTime;
 
         if(mainCam.orthographicSize < originalCamSize && !occupied) {resizeCam(); resizeSmoother += Time.deltaTime * 50f;}
@@ -121,7 +105,8 @@ public class PlayerAbilites : MonoBehaviour
     private void Dash(float charge)
     {
 
-        movemenScript.DisableMovement(0.2f);
+        movemenScript.GroundedOverride = true;
+        StartCoroutine(GroundedRevert());
 
         dashCharge = 1;
         dashReady = false;
@@ -129,11 +114,19 @@ public class PlayerAbilites : MonoBehaviour
         resizeSmoother = 0;
         sizeA = mainCam.orthographicSize -0.3f;
 
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 dashDir = mousePos - transform.position;
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 dashDir = mousePos - new Vector2(transform.position.x, transform.position.y);
         dashDir = dashDir.normalized;
 
-        rb2D.velocity = dashDir * charge * DashPower;
+        rb2D.velocity += dashDir * charge * DashPower;
+
+    }
+
+    private IEnumerator GroundedRevert()
+    {
+
+        yield return new WaitForSeconds(0.2f);
+        movemenScript.GroundedOverride = false;
 
     }
 
