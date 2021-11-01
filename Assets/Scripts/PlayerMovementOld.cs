@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementOneLine : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     //Movement
@@ -12,25 +12,30 @@ public class PlayerMovementOneLine : MonoBehaviour
     public float controlPowerInAir, friction;
     public float speedDampening;
     public bool sprintOnOff, shouldSlide;
-    public bool MovementEnabled, NukeMovement;
+    public bool MovementEnabled;
     [Tooltip("should be the Player physicsMaterial 2D")]
     public PhysicsMaterial2D PM2D;
     private float yVel, jumpPower, damping;
-    [SerializeField]
     private Vector2 movementVector;
     //Jumping
-    public float BumpForce, jumpForce;
+    public float jumpForce;
     private float playerControlPower, speedMultiplier, xMoveDir;
     private int jumpOnOff;
     private bool JumpInput;
     //GroundCheck
     private float yGroundCheckOffset, groundCheckDist;
-    public bool isGrounded;
+    [SerializeField]
+    private bool isGrounded;
     private LayerMask maskPlayer;
     //References
     private CapsuleCollider2D playerCollider;
     private Rigidbody2D rb2D;
-    public GameObject PlayerSpriteParent;
+    public SpriteRenderer PlayerSpriteRenderer; 
+
+    public void PopInFinal()
+    {
+        Debug.Log("popin final");
+    }
 
     void Start()
     {
@@ -41,7 +46,7 @@ public class PlayerMovementOneLine : MonoBehaviour
         rb2D.sharedMaterial = PM2D;
         playerCollider.sharedMaterial = PM2D;
         speedMultiplier = 1f;
-        yGroundCheckOffset = (-playerCollider.size.y * 0.002f) + playerCollider.offset.y;
+        yGroundCheckOffset = -playerCollider.size.y * 0.01f;
         groundCheckDist = 0.5f * transform.localScale.y;
         jumpPower = 1f;
 
@@ -58,15 +63,14 @@ public class PlayerMovementOneLine : MonoBehaviour
         RaycastHit2D hit2D;
         shouldSlide = false;
 
-        Debug.DrawLine(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * playerCollider.size.x * transform.localScale.y * Vector3.down + transform.position, Color.blue, 20);
-        if (hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 50f * playerCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
+        if (hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * playerCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
         {
-
-            if (hit2D.collider.isTrigger == false)
+            if (hit2D.collider.isTrigger != true)
             {
 
-                playerControlPower = 1;
                 isGrounded = true;
+
+                playerControlPower = 1;
                 if (JumpInput && rb2D.velocity.y < jumpForce)
                 {
 
@@ -113,9 +117,9 @@ public class PlayerMovementOneLine : MonoBehaviour
         else xMoveDir = Input.GetAxis("Horizontal");
 
         if(Input.GetAxisRaw("Horizontal") == -1)
-            PlayerSpriteParent.transform.rotation = Quaternion.Euler(0, 180, PlayerSpriteParent.transform.rotation.x);
+            PlayerSpriteRenderer.flipX = true;
         else if(Input.GetAxisRaw("Horizontal") == 1)
-            PlayerSpriteParent.transform.rotation = Quaternion.Euler(0, 0, PlayerSpriteParent.transform.rotation.x);
+            PlayerSpriteRenderer.flipX = false;
 
         yVel = rb2D.velocity.y - jumpForce;
 
