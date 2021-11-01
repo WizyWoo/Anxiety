@@ -112,9 +112,9 @@ public class PlayerMovement : MonoBehaviour
         else xMoveDir = Input.GetAxis("Horizontal");
 
         if(Input.GetAxisRaw("Horizontal") == -1)
-            PlayerSprite.flipY = true;
+            PlayerSprite.flipX = true;
         else if(Input.GetAxisRaw("Horizontal") == 1)
-            PlayerSprite.flipY = false;
+            PlayerSprite.flipX = false;
 
         yVel = rb2D.velocity.y - JumpHeight;
 
