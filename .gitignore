@@ -1,4 +1,7 @@
 /*
+!Assets/
 Assets/*.meta
 Assets/XR
+!ProjectSettings
+!ProjectSettings/*
 !.gitignore
