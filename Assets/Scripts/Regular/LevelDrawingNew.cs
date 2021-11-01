@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelDrawing : MonoBehaviour
+public class LevelDrawingNew : MonoBehaviour
 {
 
     public List<Vector2> LevelPosPoints;
