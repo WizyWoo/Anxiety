@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
         main = this;
 
+        if(!Player)
+            Player = GameObject.FindGameObjectWithTag("Player");
         activePlayer = Player;
         cameraObject = Camera.main.gameObject;
 
