@@ -5,36 +5,43 @@ using UnityEngine;
 public class PlayerAbilites : MonoBehaviour
 {
 
-    public float DashPower, ChargeSpeed, DashCooldown, MaxDashCharge, TeleportCooldown, SplitCooldown;
-    public bool DashOnOff, TeleportOnOff, IsGrounded, SplitOnOff;
-    [SerializeField]
-    private float dashCharge, dashCooldownTimer, originalCamSize, resizeSmoother, sizeA, teleportCooldownTimer, splitCooldownTimer;
-    private bool occupied, dashReady, isSplit;
+    public enum Abilities
+    {
+
+        Split
+
+    }
+
+    public Abilities SelectedAbility;
+    public float DashPower, ChargeSpeed, MaxDashCharge, SplitCooldown;
+    public bool DashOnOff, SplitOnOff;
+    private float dashCharge, originalCamSize, resizeSmoother, sizeA, splitCooldownTimer;
+    private bool occupied, isSplit;
     private Rigidbody2D rb2D;
-    private NewPlayerMovement movemenScript;
+    private PlayerMovement movemenScript;
     private Camera mainCam;
     private LayerMask nonBlocking;
     public GameManager gm;
 
-    // Start is called before the first frame update
     void Start()
     {
         
         rb2D = gameObject.GetComponent<Rigidbody2D>();
-        movemenScript = gameObject.GetComponent<NewPlayerMovement>();
+        movemenScript = gameObject.GetComponent<PlayerMovement>();
         dashCharge = 1;
         mainCam = Camera.main;
         originalCamSize = mainCam.orthographicSize;
         nonBlocking = ~((1 << LayerMask.NameToLayer("Player")) + (1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
-        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        
+        if(gm == null)
+            gm = GameManager.main;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
-        if(dashReady && DashOnOff && IsGrounded)
+        if(DashOnOff && movemenScript.IsGrounded)
         {
             
             if(Input.GetKey(KeyCode.Space))
@@ -55,49 +62,41 @@ public class PlayerAbilites : MonoBehaviour
 
         }
 
-        if(splitCooldownTimer < 0 && SplitOnOff && !gm.isSplit)
+        if(Input.GetKeyDown(KeyCode.Q))
         {
 
-            if(Input.GetKeyDown(KeyCode.Mouse0))
+            if(gm == null)
+                gm = GameManager.main;
+
+            switch(SelectedAbility)
             {
 
-                Split();
+                case Abilities.Split:
+                if(splitCooldownTimer < 0 && SplitOnOff && !gm.IsSplit)
+                {
 
-            }
+                    Split();
 
-        }
+                }
+                else if(gm.IsSplit)
+                {
 
-        if(teleportCooldownTimer < 0 && TeleportOnOff)
-        {
+                    gm.SwapPlayer();
 
-            if(Input.GetKeyDown(KeyCode.Mouse1))
-            {
-
+                }
                 
+                break;
 
             }
 
         }
 
-        teleportCooldownTimer -= Time.deltaTime;
         splitCooldownTimer -= Time.deltaTime;
 
         if(mainCam.orthographicSize < originalCamSize && !occupied) {resizeCam(); resizeSmoother += Time.deltaTime * 50f;}
 
         occupied = false;
         
-    }
-
-    private void OnCollisionStay2D(Collision2D col)
-    {
-
-        if(col.gameObject.layer == LayerMask.NameToLayer("Ground"))
-        {
-
-            dashReady = true;
-
-        }
-
     }
 
     private void resizeCam()
@@ -110,30 +109,39 @@ public class PlayerAbilites : MonoBehaviour
     private void Split()
     {
 
-        GameObject ass = Instantiate(gameObject, transform.position, Quaternion.identity);
+        GameObject duplicate = Instantiate(gameObject, transform.position, Quaternion.identity);
         splitCooldownTimer = SplitCooldown;
-        gm.isSplit = true;
-        ass.GetComponent<PlayerController>().GoDormant();
-        gm.Dupe = ass;
+        gm.IsSplit = true;
+        duplicate.GetComponent<PlayerController>().GoDormant();
+        duplicate.GetComponent<PlayerController>().MarkAsDupe();
+        gm.Dupe = duplicate;
 
     }
 
     private void Dash(float charge)
     {
 
-        movemenScript.DisableMovement(0.2f);
+        movemenScript.GroundedOverride = true;
+        StartCoroutine(GroundedRevert());
 
         dashCharge = 1;
-        dashReady = false;
         occupied = false;
         resizeSmoother = 0;
         sizeA = mainCam.orthographicSize -0.3f;
 
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector3 dashDir = mousePos - transform.position;
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 dashDir = mousePos - new Vector2(transform.position.x, transform.position.y);
         dashDir = dashDir.normalized;
 
-        rb2D.velocity = dashDir * charge * DashPower;
+        rb2D.velocity += dashDir * charge * DashPower;
+
+    }
+
+    private IEnumerator GroundedRevert()
+    {
+
+        yield return new WaitForSeconds(0.2f);
+        movemenScript.GroundedOverride = false;
 
     }
 

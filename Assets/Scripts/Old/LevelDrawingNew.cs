@@ -27,7 +27,25 @@ public class LevelDrawingNew : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if(Input.GetMouseButton(0))
+        /*if(Input.GetMouseButton(0))
+        {
+
+            Vector2 tempVector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            LevelPosPoints.Add(tempVector);
+            LevelBorder.positionCount = vertice + 1;
+            LevelBorder.SetPosition(vertice, tempVector);
+            LevelCollider.SetPoints(LevelPosPoints);
+
+            vertice++;
+
+        }*/
+
+    }
+
+    private void Update()
+    {
+
+        if(Input.GetMouseButtonDown(0))
         {
 
             Vector2 tempVector = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -39,11 +57,6 @@ public class LevelDrawingNew : MonoBehaviour
             vertice++;
 
         }
-
-    }
-
-    private void Update()
-    {
 
         if(Input.GetKeyDown(KeyCode.G))
         {

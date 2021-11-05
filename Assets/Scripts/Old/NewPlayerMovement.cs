@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class NewPlayerMovement : MonoBehaviour
-{
+{/*
 
     //Movement
     [Range(0, 100)]
@@ -168,4 +168,4 @@ public class NewPlayerMovement : MonoBehaviour
 
     }
 
-}
+*/}

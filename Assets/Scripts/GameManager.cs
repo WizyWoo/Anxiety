@@ -14,15 +14,21 @@ public class GameManager : MonoBehaviour
     public GameObject PlayerDangerLight;
     public GameObject Dupe;
     public float BiPolarWait;
-    public bool Level1, isSplit;
+    public bool Level1, IsSplit;
     private float backgroundOffsetX;
     private Vector3 mousePosition;
-    private bool switchColour;
+    private bool switchColour, playerSwapped;
+    private GameObject cameraObject, activePlayer;
 
     void Start()
     {
 
         main = this;
+
+        if(!Player)
+            Player = GameObject.FindGameObjectWithTag("Player");
+        activePlayer = Player;
+        cameraObject = Camera.main.gameObject;
 
         if(Level1)
             StartCoroutine(BiPolarVision());
@@ -33,7 +39,42 @@ public class GameManager : MonoBehaviour
     {
 
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        CursorLight.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);        
+        CursorLight.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+        
+        cameraObject.transform.position = new Vector3(activePlayer.transform.position.x, activePlayer.transform.position.y, -10);
+
+    }
+
+    public void PlayerDied()
+    {
+
+        Destroy(Player);
+        if(Dupe)
+            Destroy(Dupe);
+
+    }
+
+    public void SwapPlayer()
+    {
+
+        playerSwapped = !playerSwapped;
+
+        if(playerSwapped)
+        {
+
+            Player.GetComponent<PlayerController>().GoDormant();
+            Dupe.GetComponent<PlayerController>().WakeUp();
+            activePlayer = Dupe;
+
+        }
+        else
+        {
+
+            Player.GetComponent<PlayerController>().WakeUp();
+            Dupe.GetComponent<PlayerController>().GoDormant();
+            activePlayer = Player;
+
+        }
 
     }
 

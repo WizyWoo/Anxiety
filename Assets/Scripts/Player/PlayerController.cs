@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public float Gravity;
     public int PlayerHealth;
     public GameObject PlayerCam;
+    public bool IsDuplicate;
     private Rigidbody2D rb2D;
     private float invincibilityTimer;
 
@@ -22,39 +22,31 @@ public class PlayerController : MonoBehaviour
     {
 
         gameObject.GetComponent<PlayerAbilites>().enabled = false;
-        gameObject.GetComponent<NewPlayerMovement>().enabled = false;
-        PlayerCam.SetActive(false);
+        gameObject.GetComponent<PlayerMovement>().enabled = false;
 
     }
 
     public void WakeUp()
     {
 
+        gameObject.GetComponent<PlayerAbilites>().enabled = true;
+        gameObject.GetComponent<PlayerMovement>().enabled = true;
 
+    }
+
+    public void MarkAsDupe()
+    {
+
+        IsDuplicate = true;
+        PlayerHealth = 1;
 
     }
 
     void Update()
     {
 
-        rb2D.velocity = new Vector3(rb2D.velocity.x, rb2D.velocity.y - Gravity * Time.deltaTime, 0);
-
         invincibilityTimer -= Time.deltaTime;
-
         
-        
-    }
-
-    private void OnCollisionStay2D(Collision2D col)
-    {
-
-        if(col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
-        {
-
-            TakeDamage();
-
-        }
-
     }
 
     public void TakeDamage()
@@ -80,7 +72,8 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
 
-        Debug.Log("ded");
+        if(!IsDuplicate)
+            GameManager.main.PlayerDied();
 
     }
 

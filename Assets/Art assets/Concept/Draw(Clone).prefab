@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2579482983171790700
+--- !u!1 &8189878232410432429
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2579482983171790672}
-  - component: {fileID: 2579482983171790673}
-  - component: {fileID: 2579482983171790674}
-  - component: {fileID: 2579482983171790675}
+  - component: {fileID: 5460110296561929706}
+  - component: {fileID: 8524048814487920147}
+  - component: {fileID: 8733348429275200881}
+  - component: {fileID: 2360413390531479988}
   m_Layer: 0
-  m_Name: LevelDrawing
+  m_Name: Draw(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2579482983171790672
+--- !u!4 &5460110296561929706
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579482983171790700}
+  m_GameObject: {fileID: 8189878232410432429}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,29 +33,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2579482983171790673
+--- !u!114 &8524048814487920147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579482983171790700}
+  m_GameObject: {fileID: 8189878232410432429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e13185cb17d21e44d9bddb6b5ff7c1b7, type: 3}
+  m_Script: {fileID: 11500000, guid: fc386170c352f1045bf1a3861be1ff0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPosPoints: []
-  LevelCollider: {fileID: 2579482983171790674}
-  LevelBorder: {fileID: 2579482983171790675}
-  LevelParentName: LevelBorderParent
---- !u!68 &2579482983171790674
+  currentLineOrigin: {fileID: 8189878232410432429}
+  regLine: {fileID: 8189878232410432429}
+  points:
+  - {x: 103.30116, y: 56.80892}
+  - {x: 106.183426, y: 46.47729}
+  - {x: 158.20709, y: 42.134125}
+  - {x: 166.64853, y: 57.007133}
+  - {x: 103.5986, y: 57.00374}
+  pointsV3:
+  - {x: 103.30116, y: 56.80892, z: 0}
+  - {x: 106.183426, y: 46.47729, z: 0}
+  - {x: 158.20709, y: 42.134125, z: 0}
+  - {x: 166.64853, y: 57.007133, z: 0}
+  - {x: 103.5986, y: 57.00374, z: 0}
+  pointVectors:
+  - {x: 103.30116, y: 56.80892}
+  - {x: 106.183426, y: 46.47729}
+  - {x: 158.20709, y: 42.134125}
+  - {x: 166.64853, y: 57.007133}
+  - {x: 103.5986, y: 57.00374}
+  pointVector3s:
+  - {x: 103.30116, y: 56.80892, z: 0}
+  - {x: 106.183426, y: 46.47729, z: 0}
+  - {x: 158.20709, y: 42.134125, z: 0}
+  - {x: 166.64853, y: 57.007133, z: 0}
+  - {x: 103.5986, y: 57.00374, z: 0}
+--- !u!68 &8733348429275200881
 EdgeCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579482983171790700}
+  m_GameObject: {fileID: 8189878232410432429}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -63,19 +85,24 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0.1
-  m_Points: []
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 103.30116, y: 56.80892}
+  - {x: 106.183426, y: 46.47729}
+  - {x: 158.20752, y: 42.134167}
+  - {x: 166.64853, y: 57.007133}
+  - {x: 103.5986, y: 57.00374}
   m_AdjacentStartPoint: {x: 0, y: 0}
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!120 &2579482983171790675
+--- !u!120 &2360413390531479988
 LineRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2579482983171790700}
+  m_GameObject: {fileID: 8189878232410432429}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -89,7 +116,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 335d6bb845690b74993704d16dbaa5eb, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,10 +134,15 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Positions: []
+  m_Positions:
+  - {x: 103.30116, y: 56.80892, z: 0}
+  - {x: 106.183426, y: 46.47729, z: 0}
+  - {x: 158.20752, y: 42.134167, z: 0}
+  - {x: 166.64853, y: 57.007133, z: 0}
+  - {x: 103.5986, y: 57.00374, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -119,7 +151,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.11428642
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -158,10 +190,10 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 3
+    numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 1
+    textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
   m_UseWorldSpace: 1
