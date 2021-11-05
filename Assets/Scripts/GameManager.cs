@@ -9,15 +9,11 @@ public class GameManager : MonoBehaviour
     public GameObject CursorLight;
     public GameObject Background;
     public GameObject Player;
-    public SpriteMask DangerMask;
-    public GameObject PlayerLight;
-    public GameObject PlayerDangerLight;
     public GameObject Dupe;
-    public float BiPolarWait;
-    public bool Level1, IsSplit;
+    public bool IsSplit;
     private float backgroundOffsetX;
     private Vector3 mousePosition;
-    private bool switchColour, playerSwapped;
+    private bool playerSwapped;
     private GameObject cameraObject, activePlayer;
 
     void Start()
@@ -30,8 +26,8 @@ public class GameManager : MonoBehaviour
         activePlayer = Player;
         cameraObject = Camera.main.gameObject;
 
-        if(Level1)
-            StartCoroutine(BiPolarVision());
+        /*if(Level1)
+            StartCoroutine(BiPolarVision());*/
 
     }
 
@@ -78,7 +74,7 @@ public class GameManager : MonoBehaviour
 
     }
 
-    private IEnumerator BiPolarVision()
+    /*private IEnumerator BiPolarVision()
     {
 
         yield return new WaitForSecondsRealtime(BiPolarWait + Random.Range(-3, 1));
@@ -95,6 +91,6 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(BiPolarVision());
 
-    }
+    }*/
 
 }
