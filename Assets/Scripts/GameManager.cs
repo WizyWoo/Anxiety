@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -38,6 +39,9 @@ public class GameManager : MonoBehaviour
         CursorLight.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
         
         cameraObject.transform.position = new Vector3(activePlayer.transform.position.x, activePlayer.transform.position.y, -10);
+
+        if(Input.GetKeyDown(KeyCode.R))
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
     }
 
