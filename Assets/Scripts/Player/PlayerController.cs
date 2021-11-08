@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
         if(col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
 
+            Debug.Log("Took damage from: " + col.gameObject.name);
             TakeDamage();
 
         }
