@@ -10,11 +10,15 @@ public class PlayerController : MonoBehaviour
     public bool IsDuplicate;
     private Rigidbody2D rb2D;
     private float invincibilityTimer;
+    private GameManager gm;
 
     void Start()
     {
 
         rb2D = gameObject.GetComponent<Rigidbody2D>();
+
+        if(!gm)
+            gm = GameManager.main;
 
     }
 
@@ -55,14 +59,30 @@ public class PlayerController : MonoBehaviour
         if(col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
         {
 
+            GameManager.DeathType tempDeathType;
+
             Debug.Log("Took damage from: " + col.gameObject.name);
-            TakeDamage();
+            
+            if(col.gameObject.name.Contains("acid"))
+            {
+
+                tempDeathType = GameManager.DeathType.Acid;
+
+            }
+            else
+            {
+
+                tempDeathType = GameManager.DeathType.Normal;
+
+            }
+
+            TakeDamage(tempDeathType);
 
         }
 
     }
 
-    public void TakeDamage()
+    public void TakeDamage(GameManager.DeathType damageFrom = GameManager.DeathType.Normal)
     {
 
         if(invincibilityTimer < 0)
@@ -76,17 +96,28 @@ public class PlayerController : MonoBehaviour
         if(PlayerHealth <= 0)
         {
 
-            Die();
+            Die(damageFrom);
 
         }
 
     }
 
-    public void Die()
+    public void Die(GameManager.DeathType deathType)
     {
 
-        if(!IsDuplicate)
-            GameManager.main.PlayerDied();
+        if(!gm)
+        {
+
+            Destroy(gameObject);
+
+        }
+        else
+        {
+
+            if(!IsDuplicate)
+                GameManager.main.PlayerDied(deathType);
+
+        }
 
     }
 

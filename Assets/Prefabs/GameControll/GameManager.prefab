@@ -111,12 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CursorLight: {fileID: 0}
-  Background: {fileID: 0}
+  NormalDeath: {fileID: 5247517641393889444, guid: 3ef42d1bc7ee860469c8d4a00fcf3ec7, type: 3}
+  AcidDeath: {fileID: 6899503995899847043, guid: 5b46983c7ef27b84eb7124f5c5513c21, type: 3}
   Player: {fileID: 0}
-  DangerMask: {fileID: 0}
-  PlayerLight: {fileID: 0}
-  PlayerDangerLight: {fileID: 0}
   Dupe: {fileID: 0}
-  BiPolarWait: 0
-  Level1: 0
   IsSplit: 0

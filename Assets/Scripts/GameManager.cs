@@ -6,11 +6,21 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
+    public enum DeathType
+    {
+
+        Normal,
+        Acid
+
+    }
+
     public static GameManager main;
-    public GameObject CursorLight;
-    public GameObject Background;
+    public GameObject CursorLight, NormalDeath, AcidDeath;
+    [HideInInspector]
     public GameObject Player;
+    [HideInInspector]
     public GameObject Dupe;
+    [HideInInspector]
     public bool IsSplit;
     private float backgroundOffsetX;
     private Vector3 mousePosition;
@@ -50,8 +60,21 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void PlayerDied()
+    public void PlayerDied(DeathType deathType = DeathType.Normal)
     {
+
+        switch (deathType)
+        {
+            
+            case DeathType.Normal:
+            Instantiate(NormalDeath, Player.transform.position, Quaternion.identity);
+            break;
+
+            case DeathType.Acid:
+            Instantiate(AcidDeath, Player.transform.position, Quaternion.identity);
+            break;
+
+        }
 
         Destroy(Player);
         if(Dupe)
