@@ -6,7 +6,7 @@ public class BiPolarBehavior : MonoBehaviour
 {
 
     public float ModeSwitchTime, ManicMultiplier, DepMultiplier;
-    public Light PlayerLight;
+    public GameObject DepLight, ManicLight;
     public Color Manic, Depressed;
     public SpriteMask DangerMask;
     private PlayerAbilites abilites;
@@ -55,20 +55,10 @@ public class BiPolarBehavior : MonoBehaviour
 
         yield return new WaitForSeconds(ModeSwitchTime);
 
-        if(manic)
-        {
+        ManicLight.SetActive(manic);
+        DepLight.SetActive(!manic);
+        DangerMask.enabled = !manic;
 
-            //PlayerLight.color = Manic;
-            DangerMask.enabled = false;
-        
-        }
-        else
-        {
-
-            //PlayerLight.color = Depressed;
-            DangerMask.enabled = true;
-
-        }
         manic = !manic;
 
         StartCoroutine(ModeSwitcher());
