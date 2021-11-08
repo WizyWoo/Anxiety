@@ -12,7 +12,7 @@ public class BiPolarBehavior : MonoBehaviour
     private PlayerController playerController;
     private PlayerMovement movement;
     private GameObject player;
-    private float originalMoveSpeed, originalJumpHeight;
+    private float originalMoveSpeed, originalJumpHeight, originalDashPower;
     private bool manic;
 
     private void Start()
@@ -24,12 +24,13 @@ public class BiPolarBehavior : MonoBehaviour
         movement = player.GetComponent<PlayerMovement>();
         originalMoveSpeed = movement.MoveSpeed;
         originalJumpHeight = movement.JumpHeight;
+        originalDashPower = abilites.DashPower;
 
         StartCoroutine(ModeSwitcher());
 
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
 
         if(manic)
@@ -37,6 +38,7 @@ public class BiPolarBehavior : MonoBehaviour
 
             movement.MoveSpeed = originalMoveSpeed * ManicMultiplier;
             movement.JumpHeight = originalJumpHeight * ManicMultiplier;
+            abilites.DashPower = originalDashPower * ManicMultiplier;
 
         }
         else
@@ -44,6 +46,7 @@ public class BiPolarBehavior : MonoBehaviour
 
             movement.MoveSpeed = originalMoveSpeed * DepMultiplier;
             movement.JumpHeight = originalJumpHeight * DepMultiplier;
+            abilites.DashPower = originalDashPower * DepMultiplier;
 
         }
 
@@ -54,11 +57,10 @@ public class BiPolarBehavior : MonoBehaviour
 
         yield return new WaitForSeconds(ModeSwitchTime);
 
+        manic = !manic;
         ManicLight.SetActive(manic);
         DepLight.SetActive(!manic);
         DangerMask.enabled = !manic;
-
-        manic = !manic;
 
         StartCoroutine(ModeSwitcher());
 

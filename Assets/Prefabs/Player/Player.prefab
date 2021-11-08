@@ -330,7 +330,7 @@ MonoBehaviour:
   ShouldSlide: 0
   MovementEnabled: 1
   PM2D: {fileID: 6200000, guid: d1cbbee2c44d9034f8c0e042d4ee36a5, type: 2}
-  JumpHeight: 6
+  JumpHeight: 16
   FallSpeed: 20
   JumpOnOff: 0
   GroundedOverride: 0
@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b22288296fca7f478b968f582b307a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHealth: 4
+  PlayerHealth: 1
   PlayerCam: {fileID: 0}
   IsDuplicate: 0
 --- !u!50 &6646570181702327676

@@ -1523,10 +1523,6 @@ PrefabInstance:
       propertyPath: JumpOnOff
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 816501296715157107, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: JumpHeight
-      value: 23
-      objectReference: {fileID: 0}
     - target: {fileID: 2748001105006932138, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
       value: 1
@@ -1602,10 +1598,6 @@ PrefabInstance:
     - target: {fileID: 6646570181702327673, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_SortingLayer
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646570181702327675, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: PlayerHealth
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6646570181702327678, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: DashOnOff
@@ -3028,7 +3020,7 @@ MonoBehaviour:
   m_ApplyToSortingLayers: 0000000095cc2619a12acd74110e8d4e918f0fb6
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
+  m_LightOrder: 1
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
