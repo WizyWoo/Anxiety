@@ -71,6 +71,8 @@ public class BiPolarBehavior : MonoBehaviour
         }
         manic = !manic;
 
+        StartCoroutine(ModeSwitcher());
+
     }
     
 }
