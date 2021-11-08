@@ -35,10 +35,15 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        CursorLight.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
-        
-        cameraObject.transform.position = new Vector3(activePlayer.transform.position.x, activePlayer.transform.position.y, -10);
+        if(Player)
+        {
+
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            CursorLight.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+            
+            cameraObject.transform.position = new Vector3(activePlayer.transform.position.x, activePlayer.transform.position.y, -10);
+
+        }
 
         if(Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
