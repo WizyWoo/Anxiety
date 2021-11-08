@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pause
+  - Hurty
+  - stress
   layers:
   - Default
   - TransparentFX
