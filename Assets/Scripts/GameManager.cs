@@ -27,10 +27,10 @@ public class GameManager : MonoBehaviour
     private bool playerSwapped;
     private GameObject cameraObject, activePlayer;
 
+    private void Awake() => main = this;
+
     void Start()
     {
-
-        main = this;
 
         if(!Player)
             Player = GameObject.FindGameObjectWithTag("Player");

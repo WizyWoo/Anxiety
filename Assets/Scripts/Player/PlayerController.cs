@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public bool IsDuplicate;
     private Rigidbody2D rb2D;
     private float invincibilityTimer;
+    [SerializeField]
     private GameManager gm;
 
     void Start()
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
         rb2D = gameObject.GetComponent<Rigidbody2D>();
 
-        if(!gm)
+        if(gm == null)
             gm = GameManager.main;
 
     }
@@ -63,16 +64,19 @@ public class PlayerController : MonoBehaviour
 
             Debug.Log("Took damage from: " + col.gameObject.name);
             
-            if(col.gameObject.name.Contains("acid"))
+            if(col.gameObject.name.Contains("Acid"))
             {
 
                 tempDeathType = GameManager.DeathType.Acid;
+                Debug.Log("Acid damage");
 
             }
             else
             {
 
                 tempDeathType = GameManager.DeathType.Normal;
+                
+                Debug.Log("Normal damage");
 
             }
 
