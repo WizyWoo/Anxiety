@@ -5,7 +5,7 @@ using UnityEngine;
 public class FloatingPlatform : MonoBehaviour
 {
 
-    public Transform Target;
+    public Transform Platform, Target;
     public float Speed;
 
     private void OnTriggerStay2D(Collider2D col)
@@ -14,7 +14,7 @@ public class FloatingPlatform : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
 
-            transform.Translate(Vector2.MoveTowards(transform.position, Target.position, Speed));
+            Vector2.MoveTowards(new Vector2(Platform.position.x, Platform.position.y), new Vector2(Target.position.x, Target.position.y), Speed);
 
         }
 

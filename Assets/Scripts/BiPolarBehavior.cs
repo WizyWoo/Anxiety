@@ -58,14 +58,14 @@ public class BiPolarBehavior : MonoBehaviour
         if(manic)
         {
 
-            PlayerLight.color = Manic;
+            //PlayerLight.color = Manic;
             DangerMask.enabled = false;
         
         }
         else
         {
 
-            PlayerLight.color = Depressed;
+            //PlayerLight.color = Depressed;
             DangerMask.enabled = true;
 
         }
