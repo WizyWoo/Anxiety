@@ -7,7 +7,6 @@ public class BiPolarBehavior : MonoBehaviour
 
     public float ModeSwitchTime, ManicMultiplier, DepMultiplier;
     public GameObject DepLight, ManicLight;
-    public Color Manic, Depressed;
     public SpriteMask DangerMask;
     private PlayerAbilites abilites;
     private PlayerController playerController;
@@ -24,7 +23,7 @@ public class BiPolarBehavior : MonoBehaviour
         playerController = player.GetComponent<PlayerController>();
         movement = player.GetComponent<PlayerMovement>();
         originalMoveSpeed = movement.MoveSpeed;
-        originalMoveSpeed = movement.JumpHeight;
+        originalJumpHeight = movement.JumpHeight;
 
         StartCoroutine(ModeSwitcher());
 
