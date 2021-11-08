@@ -49,6 +49,18 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    private void OnCollisionStay2D(Collision2D col)
+    {
+
+        if(col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
+        {
+
+            TakeDamage();
+
+        }
+
+    }
+
     public void TakeDamage()
     {
 
