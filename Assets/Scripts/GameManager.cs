@@ -82,6 +82,8 @@ public class GameManager : MonoBehaviour
 
         }
 
+        DeathMessageObject.SetActive(true);
+
         Destroy(Player);
         if(Dupe)
             Destroy(Dupe);

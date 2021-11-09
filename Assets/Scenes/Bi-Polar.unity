@@ -143,6 +143,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloatingPlatform
       objectReference: {fileID: 0}
+    - target: {fileID: 3275457594182445346, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -462,6 +466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloatingPlatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3275457594182445346, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -541,7 +549,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 104.66677
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -549,7 +557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -118.51047
+      value: -169.8398
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2476,6 +2484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FloatingPlatform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3275457594182445346, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -3071,10 +3083,6 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1317867025
-      objectReference: {fileID: 0}
     - target: {fileID: 5960670658361914973, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_Name
       value: DeathAcidShit (1)
@@ -3295,7 +3303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1600324475
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3328,7 +3336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.11792451, g: 1, b: 0.7391309, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3337,16 +3345,16 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MinSize: 5
+    m_MaxSize: 50
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!222 &1600324477
@@ -3375,6 +3383,10 @@ PrefabInstance:
     - target: {fileID: 3275457594182445344, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_Name
       value: FloatingPlatform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3275457594182445346, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_RootOrder
@@ -3864,7 +3876,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
