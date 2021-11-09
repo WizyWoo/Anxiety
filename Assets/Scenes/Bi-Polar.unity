@@ -145,7 +145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_LocalScale.y
@@ -464,7 +464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_LocalScale.y
@@ -517,15 +517,23 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 592353412}
     m_Modifications:
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1317867025
+      objectReference: {fileID: 0}
     - target: {fileID: 5960670658361914973, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_Name
       value: DeathAcidShit
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_LocalScale.x
@@ -553,15 +561,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -577,6 +585,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+--- !u!4 &396172570 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+  m_PrefabInstance: {fileID: 396172569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &397406493 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6615282694887817325, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
@@ -607,6 +620,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 592353412}
     m_Modifications:
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1317867025
+      objectReference: {fileID: 0}
     - target: {fileID: 5960670658361914973, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_Name
       value: DeathAcidShit (3)
@@ -1030,6 +1051,7 @@ Transform:
   - {fileID: 1705398999}
   - {fileID: 1847325564}
   - {fileID: 1290984945}
+  - {fileID: 396172570}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1519,6 +1541,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 592353412}
     m_Modifications:
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1317867025
+      objectReference: {fileID: 0}
     - target: {fileID: 5960670658361914973, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_Name
       value: DeathAcidShit
@@ -1881,6 +1911,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 592353412}
     m_Modifications:
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1317867025
+      objectReference: {fileID: 0}
     - target: {fileID: 5960670658361914973, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_Name
       value: DeathAcidShit (2)
@@ -2440,7 +2478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_LocalScale.y
@@ -2714,7 +2752,7 @@ Transform:
   m_LocalScale: {x: 3.4733, y: 2.8645, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1345499453
 PrefabInstance:
@@ -3015,7 +3053,7 @@ RectTransform:
   - {fileID: 1863166614}
   - {fileID: 1600324475}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3029,6 +3067,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 592353412}
     m_Modifications:
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1317867025
+      objectReference: {fileID: 0}
     - target: {fileID: 5960670658361914973, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_Name
       value: DeathAcidShit (1)
@@ -3332,7 +3378,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3895,10 +3941,10 @@ SpriteMask:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9a9af711e13c60d438bce17a32c32724, type: 3}
   m_MaskAlphaCutoff: 1
-  m_FrontSortingLayerID: -1240494191
-  m_BackSortingLayerID: 0
-  m_FrontSortingLayer: 4
-  m_BackSortingLayer: 0
+  m_FrontSortingLayerID: 1317867025
+  m_BackSortingLayerID: 1959602849
+  m_FrontSortingLayer: 3
+  m_BackSortingLayer: 2
   m_FrontSortingOrder: 0
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 1
@@ -3941,8 +3987,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9a9af711e13c60d438bce17a32c32724, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3963,8 +4009,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1881435032}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.9, y: -2.4, z: 0}
-  m_LocalScale: {x: 19, y: 19, z: 1}
+  m_LocalPosition: {x: -17.5, y: -2.4, z: 0}
+  m_LocalScale: {x: 19.1, y: 19.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
@@ -4171,7 +4217,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 1
+  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1900959204
 Transform:
@@ -4424,11 +4470,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9a9af711e13c60d438bce17a32c32724, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4446,8 +4492,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1942635178}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.9, y: -2.4, z: 0}
-  m_LocalScale: {x: 19, y: 19, z: 1}
+  m_LocalPosition: {x: -17.5, y: -2.4, z: 0}
+  m_LocalScale: {x: 19.1, y: 19.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
