@@ -114,6 +114,8 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void RestartButton() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
     /*private IEnumerator BiPolarVision()
     {
 
