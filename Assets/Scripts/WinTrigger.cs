@@ -5,11 +5,12 @@ using UnityEngine;
 public class WinTrigger : MonoBehaviour
 {
     public GameObject WinText;
+    private GameObject Player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        Player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -24,6 +25,7 @@ public class WinTrigger : MonoBehaviour
        if(collision.gameObject.tag == "Player")
         {
             WinText.SetActive(true) ;
+            Player.SetActive(false);
         }
 
     }
