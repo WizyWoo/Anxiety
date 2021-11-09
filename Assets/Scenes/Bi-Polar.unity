@@ -3418,6 +3418,10 @@ PrefabInstance:
       propertyPath: CursorLight
       value: 
       objectReference: {fileID: 890750697}
+    - target: {fileID: 6615282694887817315, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
+      propertyPath: DeathMessageObject
+      value: 
+      objectReference: {fileID: 1600324474}
     - target: {fileID: 6615282694887817325, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
       propertyPath: m_Name
       value: GameManager

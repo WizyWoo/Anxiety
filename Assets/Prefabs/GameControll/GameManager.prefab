@@ -113,6 +113,9 @@ MonoBehaviour:
   CursorLight: {fileID: 0}
   NormalDeath: {fileID: 5247517641393889444, guid: 3ef42d1bc7ee860469c8d4a00fcf3ec7, type: 3}
   AcidDeath: {fileID: 6899503995899847043, guid: 5b46983c7ef27b84eb7124f5c5513c21, type: 3}
+  DeathMessageObject: {fileID: 0}
+  AcidDeathMSG: You dissolved in acid!
+  NormalDeathMSG: You got impaled on a spike
   Player: {fileID: 0}
   Dupe: {fileID: 0}
   IsSplit: 0

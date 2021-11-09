@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class GameManager : MonoBehaviour
     }
 
     public static GameManager main;
-    public GameObject CursorLight, NormalDeath, AcidDeath;
+    public GameObject CursorLight, NormalDeath, AcidDeath, DeathMessageObject;
+    public string AcidDeathMSG, NormalDeathMSG;
     [HideInInspector]
     public GameObject Player;
     [HideInInspector]
@@ -63,15 +65,19 @@ public class GameManager : MonoBehaviour
     public void PlayerDied(DeathType deathType = DeathType.Normal)
     {
 
+        Text deathMSGTXT = DeathMessageObject.GetComponent<Text>();
+
         switch (deathType)
         {
             
             case DeathType.Normal:
             Instantiate(NormalDeath, Player.transform.position, Quaternion.identity);
+            deathMSGTXT.text = NormalDeathMSG;
             break;
 
             case DeathType.Acid:
             Instantiate(AcidDeath, Player.transform.position, Quaternion.identity);
+            deathMSGTXT.text = AcidDeathMSG;
             break;
 
         }
