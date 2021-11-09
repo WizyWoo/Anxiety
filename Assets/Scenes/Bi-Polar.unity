@@ -1717,6 +1717,10 @@ PrefabInstance:
       propertyPath: DashOnOff
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6646570181702327678, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+      propertyPath: DashPower
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
 --- !u!1001 &1003338101
