@@ -2376,14 +2376,6 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 8250573282833736808, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1317867025
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250573282833736808, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8250573282833736809, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2439,26 +2431,6 @@ PrefabInstance:
     - target: {fileID: 8250573282833736809, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -181.081
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250573282833736810, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
-      propertyPath: MaxDistance
-      value: 125.50351
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250573282833736810, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 8e60db791a7cde94382c9baebe37c059, type: 3}
-    - target: {fileID: 8250573282833736810, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
-      propertyPath: rolloffMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250573282833736810, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
-      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
-      value: 0.1388889
-      objectReference: {fileID: 0}
-    - target: {fileID: 8250573282833736810, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8250573282833736815, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
       propertyPath: m_Name
