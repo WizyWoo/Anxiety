@@ -321,6 +321,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5979259235814258182, guid: d5be17d491cf11b468aa02f738a1db11, type: 3}
   m_PrefabInstance: {fileID: 127188530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &134402946 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1376689009207393985, guid: 209618669d06cc44da1d42bfd4e03ea9, type: 3}
+  m_PrefabInstance: {fileID: 570135171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &148250894
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1809,6 +1814,10 @@ PrefabInstance:
       propertyPath: CursorLight
       value: 
       objectReference: {fileID: 1201734049}
+    - target: {fileID: 6615282694887817315, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
+      propertyPath: DeathMessageObject
+      value: 
+      objectReference: {fileID: 134402946}
     - target: {fileID: 6615282694887817325, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
       propertyPath: m_Name
       value: GameManager
