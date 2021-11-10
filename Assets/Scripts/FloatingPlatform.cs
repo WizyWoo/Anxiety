@@ -40,6 +40,7 @@ public class FloatingPlatform : MonoBehaviour
         {
 
             Vector2 temp = Vector2.MoveTowards(new Vector2(Platform.position.x, Platform.position.y), new Vector2(Target.position.x, Target.position.y), Speed);
+            col.transform.position -= Platform.position - new Vector3(temp.x, temp.y, 0);
             Platform.position = new Vector3(temp.x, temp.y, 0);
 
         }

@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Movement
     [Header("Movement")]
-    [Range(0, 10)]
+    [Range(0, 50)]
     public float MoveSpeed;
     [Tooltip("should be between 0 and 1")]
     public float ControlPowerInAir, Friction;
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         rb2D.sharedMaterial = PM2D;
         playerCollider.sharedMaterial = PM2D;
         speedMultiplier = 1f;
-        yGroundCheckOffset = (-playerCollider.size.y * 0.002f) + playerCollider.offset.y;
+        yGroundCheckOffset = -0.002f + playerCollider.offset.y;
         groundCheckDist = 0.5f * transform.localScale.y;
         jumpPower = 1f;
 
@@ -128,9 +128,9 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        //Checks if you're exceeding your max movement speed, if yes, player cannot accelerate further
         if (rb2D.velocity.x >= (MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") > 0) xMoveDir = 0;
-        else
-        if (rb2D.velocity.x <= (-MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") < 0) xMoveDir = 0;
+        else if (rb2D.velocity.x <= (-MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") < 0) xMoveDir = 0;
         else xMoveDir = Input.GetAxis("Horizontal");
 
         if(Input.GetAxisRaw("Horizontal") == -1)
@@ -140,7 +140,31 @@ public class PlayerMovement : MonoBehaviour
 
         yVel = rb2D.velocity.y - JumpHeight;
 
-        movementVector = new Vector2(rb2D.velocity.x + (speedMultiplier * xMoveDir * playerControlPower), rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower));
+        //Checks if you're allowed to move in the players desired direction and if you're grounded, then checks if you are trying to move in the opposite direction of your current x velocity, 
+        //if yes, the velocity in the x direction is set to 0 and starts moving in the players desired direction. If player is grounded but not moving slow movement until stopped.
+        //if not grounded then player will fly freely through the air with reduced control.
+        if(xMoveDir != 0 && IsGrounded)
+        {
+
+            if(xMoveDir < 0 && rb2D.velocity.x > 0)
+                {movementVector = new Vector2(speedMultiplier * xMoveDir * playerControlPower, rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower)); Debug.Log(xMoveDir + " Xdir oposite to vel");}
+            else if(xMoveDir > 0 && rb2D.velocity.x < 0)
+                {movementVector = new Vector2(speedMultiplier * xMoveDir * playerControlPower, rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower)); Debug.Log(xMoveDir + " Xdir oposite to vel");}
+            else movementVector = new Vector2(rb2D.velocity.x + (speedMultiplier * xMoveDir * playerControlPower), rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower));
+
+        }
+        else if(IsGrounded)
+        {
+
+            movementVector = new Vector2(rb2D.velocity.x * (damping / SpeedDampening), rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower));
+
+        }
+        else
+        {
+
+            movementVector = new Vector2(rb2D.velocity.x + (speedMultiplier * xMoveDir * playerControlPower), rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower));
+
+        }
 
         if (Input.GetAxisRaw("Horizontal") == 0)
         {

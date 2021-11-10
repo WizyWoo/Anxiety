@@ -6,17 +6,12 @@ public class PlayerController : MonoBehaviour
 {
 
     public int PlayerHealth;
-    public GameObject PlayerCam;
     public bool IsDuplicate;
-    private Rigidbody2D rb2D;
     private float invincibilityTimer;
-    [SerializeField]
     private GameManager gm;
 
     void Start()
     {
-
-        rb2D = gameObject.GetComponent<Rigidbody2D>();
 
         if(gm == null)
             gm = GameManager.main;

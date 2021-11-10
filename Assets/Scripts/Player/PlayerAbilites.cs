@@ -21,7 +21,7 @@ public class PlayerAbilites : MonoBehaviour
     private PlayerMovement movemenScript;
     private Camera mainCam;
     private LayerMask nonBlocking;
-    public GameManager gm;
+    private GameManager gm;
 
     void Start()
     {
@@ -133,7 +133,7 @@ public class PlayerAbilites : MonoBehaviour
         Vector2 dashDir = mousePos - new Vector2(transform.position.x, transform.position.y);
         dashDir = dashDir.normalized;
 
-        rb2D.velocity += dashDir * charge * DashPower;
+        rb2D.velocity = dashDir * charge * DashPower;
 
     }
 

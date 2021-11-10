@@ -322,15 +322,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dca08f43dbb50f4596c88ba3dfb767f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 10
+  MoveSpeed: 14
   ControlPowerInAir: 0.2
-  Friction: 0
+  Friction: 1
   SpeedDampening: 0.8
   SprintOnOff: 1
   ShouldSlide: 0
   MovementEnabled: 1
   PM2D: {fileID: 6200000, guid: d1cbbee2c44d9034f8c0e042d4ee36a5, type: 2}
-  JumpHeight: 16
+  JumpHeight: 32
   FallSpeed: 20
   JumpOnOff: 0
   GroundedOverride: 0
@@ -350,12 +350,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelectedAbility: 0
   DashPower: 8
-  ChargeSpeed: 4
+  ChargeSpeed: 6
   MaxDashCharge: 5
   SplitCooldown: 0
   DashOnOff: 1
   SplitOnOff: 0
-  gm: {fileID: 0}
 --- !u!114 &6646570181702327675
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -369,7 +368,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerHealth: 1
-  PlayerCam: {fileID: 0}
   IsDuplicate: 0
 --- !u!50 &6646570181702327676
 Rigidbody2D:
