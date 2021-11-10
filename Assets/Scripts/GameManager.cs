@@ -11,19 +11,20 @@ public class GameManager : MonoBehaviour
     {
 
         Normal,
-        Acid
+        Acid,
+        Stress
 
     }
 
     public static GameManager main;
-    public GameObject CursorLight, NormalDeath, AcidDeath, DeathMessageObject;
-    public string AcidDeathMSG, NormalDeathMSG;
+    public GameObject CursorLight, NormalDeath, AcidDeath, StressDeath, DeathMessageObject;
+    public string AcidDeathMSG, NormalDeathMSG, StressDeathMSG;
     [HideInInspector]
     public GameObject Player;
     [HideInInspector]
     public GameObject Dupe;
     [HideInInspector]
-    public bool IsSplit;
+    public bool IsSplit, GamePaused;
     private float backgroundOffsetX;
     private Vector3 mousePosition;
     private bool playerSwapped;
@@ -78,6 +79,11 @@ public class GameManager : MonoBehaviour
             case DeathType.Acid:
             Instantiate(AcidDeath, Player.transform.position, Quaternion.identity);
             deathMSGTXT.text = AcidDeathMSG;
+            break;
+
+            case DeathType.Stress:
+            Instantiate(StressDeath, Player.transform.position, Quaternion.identity);
+            deathMSGTXT.text = StressDeathMSG;
             break;
 
         }

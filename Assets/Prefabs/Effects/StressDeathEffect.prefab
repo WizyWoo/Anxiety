@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 5247517641393889445}
   - component: {fileID: 751792443747406420}
   m_Layer: 0
-  m_Name: NormalDeathEffect
+  m_Name: StressDeathEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -279,8 +279,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 4
-      minScalar: 2
+      scalar: 16
+      minScalar: 6
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3792,7 +3792,7 @@ ParticleSystem:
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.6
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -3845,7 +3845,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 0.1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
