@@ -15,8 +15,10 @@ public class PlayerAbilites : MonoBehaviour
     public Abilities SelectedAbility;
     public float DashPower, ChargeSpeed, MaxDashCharge, SplitCooldown;
     public bool DashOnOff, SplitOnOff;
+    public Transform HoldPosition;
     private float dashCharge, originalCamSize, resizeSmoother, sizeA, splitCooldownTimer;
     private bool occupied, isSplit;
+    private GameObject holding;
     private Rigidbody2D rb2D;
     private PlayerMovement movemenScript;
     private Camera mainCam;
@@ -40,6 +42,13 @@ public class PlayerAbilites : MonoBehaviour
 
     void Update()
     {
+
+        if(holding)
+        {
+
+            holding.transform.position = HoldPosition.position;
+
+        }
 
         if(DashOnOff && movemenScript.IsGrounded)
         {
@@ -91,11 +100,34 @@ public class PlayerAbilites : MonoBehaviour
 
         }
 
+        if(Input.GetKeyDown(KeyCode.E))
+            PickupObject();
+
         splitCooldownTimer -= Time.deltaTime;
 
         if(mainCam.orthographicSize < originalCamSize && !occupied) {resizeCam(); resizeSmoother += Time.deltaTime * 50f;}
 
         occupied = false;
+        
+    }
+
+    public void PickupObject()
+    {
+
+        holding = gm.Dupe;
+
+        /*if(forcePickup)
+        {
+
+
+
+        }
+        else
+        {
+
+            
+            
+        }*/
         
     }
 

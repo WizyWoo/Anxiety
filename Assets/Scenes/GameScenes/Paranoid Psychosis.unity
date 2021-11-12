@@ -1872,6 +1872,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816501296715157107, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+      propertyPath: JumpOnOff
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3768102680520929579, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1974,6 +1978,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6646570181702327672, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646570181702327678, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+      propertyPath: DashOnOff
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7861909502673266129, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}

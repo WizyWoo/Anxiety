@@ -6,6 +6,18 @@ using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
 
+    public bool UseTrigger;
+    public int SceneToLoad;
+
     public void LoadSceneNum(int num) => SceneManager.LoadScene(num);
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+
+        if(UseTrigger)
+            if(col.gameObject.tag == "Player")
+                LoadSceneNum(SceneToLoad);
+
+    }
 
 }

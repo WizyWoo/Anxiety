@@ -332,7 +332,8 @@ MonoBehaviour:
   PM2D: {fileID: 6200000, guid: d1cbbee2c44d9034f8c0e042d4ee36a5, type: 2}
   JumpHeight: 32
   FallSpeed: 20
-  JumpOnOff: 0
+  DashPower: 64
+  JumpOnOff: 1
   GroundedOverride: 0
   IsGrounded: 0
   PlayerSprite: {fileID: 6646570181702327673}
@@ -353,7 +354,7 @@ MonoBehaviour:
   ChargeSpeed: 6
   MaxDashCharge: 5
   SplitCooldown: 0
-  DashOnOff: 1
+  DashOnOff: 0
   SplitOnOff: 0
 --- !u!114 &6646570181702327675
 MonoBehaviour:

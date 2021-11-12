@@ -19,10 +19,10 @@ public class PlayerMovement : MonoBehaviour
     private float yVel, jumpPower, damping;
     private Vector2 movementVector;
     //Jumping
-    public float JumpHeight, FallSpeed;
+    public float JumpHeight, FallSpeed, DashPower;
     public bool JumpOnOff, GroundedOverride;
-    private float playerControlPower, speedMultiplier, xMoveDir;
-    private int jumpOnOff;
+    private float playerControlPower, speedMultiplier, xMoveDir, doubleJumpAC;
+    private int jumpOnOff, doubleJumpAvailible, spopp;
     private bool jumpInput;
     //GroundCheck
     [Header("Do not touch!")]
@@ -49,11 +49,14 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+    void Update()
     {
 
+        if(doubleJumpAC > 0)
+            doubleJumpAC -= Time.deltaTime;
+
         if(JumpOnOff)
-            if (Input.GetAxisRaw("Vertical") != 0 || Input.GetKey(KeyCode.Space))
+            if (Input.GetAxisRaw("Vertical") != 0 || Input.GetKeyDown(KeyCode.Space))
                 jumpInput = true;
             else
                 jumpInput = false;
@@ -69,6 +72,9 @@ public class PlayerMovement : MonoBehaviour
 
                 if (hit2D.collider.isTrigger == false)
                 {
+                    
+                    if(doubleJumpAC <= 0)
+                        doubleJumpAvailible = 0;
 
                     playerControlPower = 1;
                     IsGrounded = true;
@@ -76,6 +82,8 @@ public class PlayerMovement : MonoBehaviour
                     {
 
                         jumpOnOff = 1;
+                        doubleJumpAvailible = 1;
+                        doubleJumpAC = 0.2f;
 
                     }
 
@@ -147,9 +155,9 @@ public class PlayerMovement : MonoBehaviour
         {
 
             if(xMoveDir < 0 && rb2D.velocity.x > 0)
-                {movementVector = new Vector2(speedMultiplier * xMoveDir * playerControlPower, rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower)); Debug.Log(xMoveDir + " Xdir oposite to vel");}
+                movementVector = new Vector2(speedMultiplier * xMoveDir * playerControlPower, rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower));
             else if(xMoveDir > 0 && rb2D.velocity.x < 0)
-                {movementVector = new Vector2(speedMultiplier * xMoveDir * playerControlPower, rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower)); Debug.Log(xMoveDir + " Xdir oposite to vel");}
+                movementVector = new Vector2(speedMultiplier * xMoveDir * playerControlPower, rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower));
             else movementVector = new Vector2(rb2D.velocity.x + (speedMultiplier * xMoveDir * playerControlPower), rb2D.velocity.y + (-yVel * jumpOnOff * jumpPower));
 
         }
@@ -181,6 +189,19 @@ public class PlayerMovement : MonoBehaviour
 
         }
         else damping = SpeedDampening;
+
+        if(!IsGrounded && doubleJumpAvailible == 1 && Input.GetKeyDown(KeyCode.Space))
+        {
+
+            doubleJumpAvailible = 0;
+            doubleJumpAC = 0;
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 dashDir = mousePos - new Vector2(transform.position.x, transform.position.y);
+            dashDir = dashDir.normalized;
+
+            movementVector += dashDir * DashPower;
+
+        }
 
         jumpOnOff = 0;
 

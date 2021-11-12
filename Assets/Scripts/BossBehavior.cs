@@ -9,15 +9,7 @@ public class BossBehavior : MonoBehaviour
     public enum attackType
     {
 
-        AllAttacks,
-        FireballAttack,
-        DashAttack,
-        SlimeStorm,
-        FireballRain,
-        RandomAttack,
-        Pause,
-        StopAttacking,
-        CompleteStop
+
 
     }
 
@@ -148,39 +140,7 @@ public class BossBehavior : MonoBehaviour
         switch (attack)
         {
             
-            case attackType.AllAttacks:
-            StartCoroutine(FireballAttack(FireballAttackSpeed, true));
-            break;
-
-            case attackType.FireballAttack:
-            StartCoroutine(FireballAttack(FireballAttackSpeed, false));
-            break;
-
-            case attackType.DashAttack:
-            StartCoroutine(DashAttack(false));
-            break;
-
-            case attackType.SlimeStorm:
-            int RandomNum = Random.Range(0, FireballAttackPos.Length);
-            transform.position = FireballAttackPos[RandomNum].position;
-            Destination = FireballAttackPos[RandomNum].position;
-            StartCoroutine(SlimeStorm());
-            break;
-
-            case attackType.FireballRain:
-            StartCoroutine(FireballRain());
-            break;
-
-            case attackType.RandomAttack:
-            RandomAttack();
-            break;
-
-            case attackType.Pause:
-            StartCoroutine(pauseFor(AttackPause * 2));
-            break;
-
-            case attackType.StopAttacking:
-            break;
+            
 
         } 
     }
