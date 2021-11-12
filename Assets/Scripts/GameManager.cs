@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-
+        Time.timeScale = 1;
         if(!Player)
             Player = GameObject.FindGameObjectWithTag("Player");
         activePlayer = Player;
