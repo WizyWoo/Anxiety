@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private void OnCollisionStay2D(Collision2D col)
+    /*private void OnCollisionStay2D(Collision2D col)
     {
 
         if(col.gameObject.layer == LayerMask.NameToLayer("Enemy"))
@@ -79,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
         }
 
-    }
+    }*/
 
     public void TakeDamage(GameManager.DeathType damageFrom = GameManager.DeathType.Normal)
     {

@@ -12,12 +12,14 @@ public class GameManager : MonoBehaviour
 
         Normal,
         Acid,
+        AcidDrop,
         Stress
 
     }
 
     public static GameManager main;
-    public GameObject CursorLight, NormalDeath, AcidDeath, StressDeath, DeathMessageObject;
+    public GameObject CursorLight, DeathMessageObject;
+    public GameObject NormalDeath, AcidDeath, StressDeath, SplitEffect;
     public string AcidDeathMSG, NormalDeathMSG, StressDeathMSG;
     [HideInInspector]
     public GameObject Player;
@@ -77,6 +79,11 @@ public class GameManager : MonoBehaviour
             break;
 
             case DeathType.Acid:
+            Instantiate(AcidDeath, Player.transform.position, Quaternion.identity);
+            deathMSGTXT.text = AcidDeathMSG;
+            break;
+
+            case DeathType.AcidDrop:
             Instantiate(AcidDeath, Player.transform.position, Quaternion.identity);
             deathMSGTXT.text = AcidDeathMSG;
             break;

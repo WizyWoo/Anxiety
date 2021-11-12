@@ -48,6 +48,14 @@ public class PlayerAbilites : MonoBehaviour
 
             holding.transform.position = HoldPosition.position;
 
+            Rigidbody2D tempRB;
+            if(holding.TryGetComponent<Rigidbody2D>(out tempRB))
+            {
+
+                tempRB.velocity = Vector2.zero;
+
+            }
+
         }
 
         if(DashOnOff && movemenScript.IsGrounded)
@@ -111,23 +119,28 @@ public class PlayerAbilites : MonoBehaviour
         
     }
 
-    public void PickupObject()
+    public void PickupObject(GameObject forcePickup = null)
     {
 
-        holding = gm.Dupe;
-
-        /*if(forcePickup)
+        if(forcePickup && !holding)
         {
 
+            holding = forcePickup;
 
+        }
+        else if(holding)
+        {
 
+            holding = null;
+            
         }
         else
         {
 
-            
-            
-        }*/
+            Debug.Log("Pickup nearest object");
+            holding = gm.Dupe;
+
+        }
         
     }
 
@@ -141,6 +154,7 @@ public class PlayerAbilites : MonoBehaviour
     private void Split()
     {
 
+        Instantiate(gm.SplitEffect, transform.position, Quaternion.identity);
         GameObject duplicate = Instantiate(gameObject, transform.position, Quaternion.identity);
         splitCooldownTimer = SplitCooldown;
         gm.IsSplit = true;
