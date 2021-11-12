@@ -330,9 +330,9 @@ MonoBehaviour:
   ShouldSlide: 0
   MovementEnabled: 1
   PM2D: {fileID: 6200000, guid: d1cbbee2c44d9034f8c0e042d4ee36a5, type: 2}
-  JumpHeight: 32
+  JumpHeight: 16
   FallSpeed: 20
-  DashPower: 64
+  DashPower: 36
   JumpOnOff: 1
   GroundedOverride: 0
   IsGrounded: 0
@@ -356,6 +356,7 @@ MonoBehaviour:
   SplitCooldown: 0
   DashOnOff: 0
   SplitOnOff: 0
+  HoldPosition: {fileID: 0}
 --- !u!114 &6646570181702327675
 MonoBehaviour:
   m_ObjectHideFlags: 0

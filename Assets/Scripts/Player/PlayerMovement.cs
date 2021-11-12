@@ -200,6 +200,8 @@ public class PlayerMovement : MonoBehaviour
             dashDir = dashDir.normalized;
 
             movementVector += dashDir * DashPower;
+            
+            movementVector = new Vector2(Mathf.Clamp(movementVector.x, -DashPower, DashPower), Mathf.Clamp(movementVector.y, -DashPower, DashPower));
 
         }
 

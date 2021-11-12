@@ -441,14 +441,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 816501296715157107, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: DashPower
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 816501296715157107, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: JumpHeight
-      value: 16
-      objectReference: {fileID: 0}
     - target: {fileID: 6646570181702327650, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_Name
       value: Player
