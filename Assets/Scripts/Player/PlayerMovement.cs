@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
             doubleJumpAC -= Time.deltaTime;
 
         if(JumpOnOff)
-            if (Input.GetAxisRaw("Vertical") != 0 || Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetAxisRaw("Vertical") != 0 && Input.GetAxisRaw("Vertical") != -1 || Input.GetKeyDown(KeyCode.Space))
                 jumpInput = true;
             else
                 jumpInput = false;
