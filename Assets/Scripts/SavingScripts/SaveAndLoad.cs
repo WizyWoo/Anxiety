@@ -6,10 +6,10 @@ using UnityEngine;
 public class SaveAndLoad
 {
 
-    public SaveClass()
+    public void SaveClass()
     {
 
-
+        
 
     }
     
