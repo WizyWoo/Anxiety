@@ -367,6 +367,7 @@ MonoBehaviour:
   JumpOnOff: 1
   GroundedOverride: 0
   IsGrounded: 0
+  DashEffect: {fileID: 5247517641393889444, guid: 0f776a082f18ecf469160b60c4127525, type: 3}
   PlayerSprite: {fileID: 6646570181702327673}
 --- !u!114 &6646570181702327678
 MonoBehaviour:
@@ -386,8 +387,9 @@ MonoBehaviour:
   MaxDashCharge: 5
   SplitCooldown: 0
   DashOnOff: 0
-  SplitOnOff: 0
+  SplitOnOff: 1
   HoldPosition: {fileID: 7468231847680512123}
+  ShadowClone: {fileID: 5758115521975056572, guid: d6b4edd07aa68444da86e7a0709ab900, type: 3}
 --- !u!114 &6646570181702327675
 MonoBehaviour:
   m_ObjectHideFlags: 0

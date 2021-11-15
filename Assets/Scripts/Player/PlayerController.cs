@@ -115,6 +115,8 @@ public class PlayerController : MonoBehaviour
 
             if(!IsDuplicate)
                 GameManager.main.PlayerDied(deathType);
+            else
+                GameManager.main.DupeDied();
 
         }
 

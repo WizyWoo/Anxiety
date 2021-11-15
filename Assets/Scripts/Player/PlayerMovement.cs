@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     private float yGroundCheckOffset, groundCheckDist;
     private LayerMask maskPlayer;
     //References
+    public GameObject DashEffect;
     public SpriteRenderer PlayerSprite;
     private CapsuleCollider2D playerCollider;
     private Rigidbody2D rb2D;
@@ -199,9 +200,13 @@ public class PlayerMovement : MonoBehaviour
             Vector2 dashDir = mousePos - new Vector2(transform.position.x, transform.position.y);
             dashDir = dashDir.normalized;
 
+
             movementVector += dashDir * DashPower;
             
             movementVector = new Vector2(Mathf.Clamp(movementVector.x, -DashPower, DashPower), Mathf.Clamp(movementVector.y, -DashPower, DashPower));
+
+            float dif = Mathf.Atan2(movementVector.y, movementVector.x) * Mathf.Rad2Deg;
+            Instantiate(DashEffect, transform.position, Quaternion.Euler(0, 0, dif));
 
         }
 
