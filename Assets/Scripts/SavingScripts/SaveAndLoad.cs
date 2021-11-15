@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
-public class SaveAndLoad
+public static class SaveAndLoad
 {
 
-    public void SaveClass()
+    public static void SaveClass()
     {
 
-        
+
 
     }
     
