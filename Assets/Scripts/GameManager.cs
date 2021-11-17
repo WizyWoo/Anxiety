@@ -18,15 +18,16 @@ public class GameManager : MonoBehaviour
     }
 
     public static GameManager main;
+    [Header("References")]
     public GameObject CursorLight, DeathMessageObject;
     public GameObject NormalDeath, AcidDeath, StressDeath, SplitEffect, DupeDeath;
     public string AcidDeathMSG, NormalDeathMSG, StressDeathMSG;
-    [HideInInspector]
-    public GameObject Player;
-    [HideInInspector]
-    public GameObject Dupe;
-    [HideInInspector]
-    public bool IsSplit, GamePaused;
+    public Text SynapseScore;
+    public GameObject[] Synapses;
+    [HideInInspector] public GameObject Player;
+    [HideInInspector] public GameObject Dupe;
+    [HideInInspector] public bool IsSplit, GamePaused;
+    private int synapsesPopped;
     private float backgroundOffsetX;
     private Vector3 mousePosition;
     private bool playerSwapped;
@@ -36,14 +37,25 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
         Time.timeScale = 1;
         if(!Player)
             Player = GameObject.FindGameObjectWithTag("Player");
         activePlayer = Player;
         cameraObject = Camera.main.gameObject;
 
+        SynapseScore.text = "Synapses popped: 0/" + Synapses.Length ;
+
         /*if(Level1)
             StartCoroutine(BiPolarVision());*/
+
+    }
+
+    public void PoppedSynapse()
+    {
+
+        synapsesPopped++;
+        SynapseScore.text = "Synapses popped: " + synapsesPopped + '/' + Synapses.Length;
 
     }
 
