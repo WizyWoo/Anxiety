@@ -16,10 +16,10 @@ public class CollisionDamage : MonoBehaviour
 
             col.gameObject.GetComponent<PlayerController>().TakeDamage(DamageType);
 
-            if(SelfDieOnCol)
-                Destroy(gameObject);
-
         }
+
+        if(SelfDieOnCol)
+            Destroy(gameObject);
 
     }
 

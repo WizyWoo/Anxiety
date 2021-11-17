@@ -32,6 +32,7 @@ public class Synapse : MonoBehaviour
             if(SynapseHealth <= 0)
             {
 
+                GameManager.main.PoppedSynapse();
                 Instantiate(SynapseBoom, transform.position, Quaternion.identity);
                 Destroy(gameObject);
 
