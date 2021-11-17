@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager main;
     public GameObject CursorLight, DeathMessageObject;
-    public GameObject NormalDeath, AcidDeath, StressDeath, SplitEffect;
+    public GameObject NormalDeath, AcidDeath, StressDeath, SplitEffect, DupeDeath;
     public string AcidDeathMSG, NormalDeathMSG, StressDeathMSG;
     [HideInInspector]
     public GameObject Player;
@@ -62,6 +62,15 @@ public class GameManager : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+    }
+
+    public void DupeDied()
+    {
+
+        IsSplit = false;
+        Instantiate(DupeDeath, Dupe.transform.position, Quaternion.identity);
+        Destroy(Dupe);
 
     }
 

@@ -16,6 +16,7 @@ public class PlayerAbilites : MonoBehaviour
     public float DashPower, ChargeSpeed, MaxDashCharge, SplitCooldown;
     public bool DashOnOff, SplitOnOff;
     public Transform HoldPosition;
+    public GameObject ShadowClone;
     private float dashCharge, originalCamSize, resizeSmoother, sizeA, splitCooldownTimer;
     private bool occupied, isSplit;
     private GameObject holding;
@@ -155,7 +156,7 @@ public class PlayerAbilites : MonoBehaviour
     {
 
         Instantiate(gm.SplitEffect, transform.position, Quaternion.identity);
-        GameObject duplicate = Instantiate(gameObject, transform.position, Quaternion.identity);
+        GameObject duplicate = Instantiate(ShadowClone, transform.position, Quaternion.identity);
         splitCooldownTimer = SplitCooldown;
         gm.IsSplit = true;
         duplicate.GetComponent<PlayerController>().GoDormant();
