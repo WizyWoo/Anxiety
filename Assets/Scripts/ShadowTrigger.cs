@@ -26,19 +26,23 @@ public class ShadowTrigger : MonoBehaviour
 
         if (collision.gameObject.tag == "Player")
         {
-            if(Switch == false)
-            {
-             GoodShadow.SetActive(true);
-             BadShadow.SetActive(true);
-                Switch = true;
-            }
+            
+            GoodShadow.SetActive(true);
+            BadShadow.SetActive(true);
 
-            else
-            {
-                GoodShadow.SetActive(false);
-                BadShadow.SetActive(false);
-            }
+        }
 
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+
+        if (collision.gameObject.tag == "Player")
+        {
+
+            GoodShadow.SetActive(false);
+            BadShadow.SetActive(false);
+            
         }
 
     }

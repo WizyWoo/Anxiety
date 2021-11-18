@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 1376689009101825329}
   - component: {fileID: 1376689009101825330}
   - component: {fileID: 1376689009101825331}
+  - component: {fileID: 8829495121272352136}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -315,6 +316,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &8829495121272352136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376689009101825340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 346b66483b2d1c344a6e3c3bb18cd862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UseTrigger: 0
+  SceneToLoad: 0
 --- !u!1 &1376689009207393985
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,11 +477,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 50
+    m_FontSize: 60
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 5
-    m_MaxSize: 50
+    m_MaxSize: 60
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
