@@ -435,7 +435,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.264
   m_Color: {r: 1, g: 0.88093454, b: 0, a: 1}
-  m_Intensity: 3.88
+  m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 0000000095cc2619a12acd74110e8d4e918f0fb6
@@ -1249,6 +1249,10 @@ PrefabInstance:
     - target: {fileID: 405254388, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[5].y
       value: -1.8235887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1221360993, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"collection":{"$content":[{"name":"collider","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Rotation","value":{"x":0.0,"y":0.0,"z":124.036,"$type":"UnityEngine.Vector3"},"$version":"A"},{"name":"Eye","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
       objectReference: {fileID: 0}
     - target: {fileID: 958879960442401301, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7824,6 +7828,10 @@ PrefabInstance:
     - target: {fileID: 958879960442401301, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180.656
+      objectReference: {fileID: 0}
+    - target: {fileID: 4042113171139352073, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
+      propertyPath: m_Intensity
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4042113171139352073, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
       propertyPath: m_LocalBounds.m_Center.y
