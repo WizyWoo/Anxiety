@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8962364938803384017}
   - component: {fileID: 8962364938803384014}
   - component: {fileID: 8962364938803384016}
-  - component: {fileID: 8962364938803384015}
+  - component: {fileID: 2476768900874566914}
   m_Layer: 7
   m_Name: Synapse
   m_TagString: Untagged
@@ -212,8 +212,8 @@ MonoBehaviour:
   MaxShake: 0.2
   SynapseBoom: {fileID: 4639856437659071871, guid: 575b7e7c75c8e8140ab6ab1f1d8bf71d, type: 3}
   SynapseDamage: {fileID: 1975309488579028356, guid: 2a5c419d621259649bb17b5ddc49c4e9, type: 3}
---- !u!60 &8962364938803384015
-PolygonCollider2D:
+--- !u!61 &2476768900874566914
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -234,12 +234,7 @@ PolygonCollider2D:
     adaptiveTilingThreshold: 0.5
     drawMode: 1
     adaptiveTiling: 0
-  m_AutoTiling: 1
-  m_Points:
-    m_Paths:
-    - - {x: -0.43359375, y: 0.25}
-      - {x: -0.43359375, y: -0.25}
-      - {x: 0, y: -0.5}
-      - {x: 0.43359375, y: -0.25}
-      - {x: 0.43359375, y: 0.25}
-      - {x: 0, y: 0.5}
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10}
+  m_EdgeRadius: 0
