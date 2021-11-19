@@ -119,3 +119,4 @@ MonoBehaviour:
   Current: 0
   T: 0
   PlayerTransform: {fileID: 0}
+  Shadows: []
