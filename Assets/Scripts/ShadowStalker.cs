@@ -18,7 +18,7 @@ public class ShadowStalker : MonoBehaviour
         foreach (Transform t in Shadows)
         {
 
-            shadowDictionary.Add(t, Camera.main.WorldToViewportPoint(t.position));
+            shadowDictionary.Add(t, Camera.main.ViewportToWorldPoint(t.position));
             
         }
 
