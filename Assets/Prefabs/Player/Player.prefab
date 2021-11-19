@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 14
-  ControlPowerInAir: 0.2
+  ControlPowerInAir: 0.8
   Friction: 1
   SpeedDampening: 0.8
   SprintOnOff: 1
@@ -364,6 +364,7 @@ MonoBehaviour:
   JumpHeight: 16
   FallSpeed: 20
   DashPower: 36
+  WidthReduction: 0.9
   JumpOnOff: 1
   GroundedOverride: 0
   IsGrounded: 0

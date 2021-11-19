@@ -19,10 +19,10 @@ public class PlayerMovement : MonoBehaviour
     private float yVel, jumpPower, damping;
     private Vector2 movementVector;
     //Jumping
-    public float JumpHeight, FallSpeed, DashPower;
+    public float JumpHeight, FallSpeed, DashPower, WidthReduction;
     public bool JumpOnOff, GroundedOverride;
-    private float playerControlPower, speedMultiplier, xMoveDir, doubleJumpAC;
-    private int jumpOnOff, doubleJumpAvailible, spopp;
+    private float playerControlPower, speedMultiplier, xMoveDir;
+    private int jumpOnOff, doubleJumpAvailible;
     private bool jumpInput;
     //GroundCheck
     [Header("Do not touch!")]
@@ -53,9 +53,6 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-        if(doubleJumpAC > 0)
-            doubleJumpAC -= Time.deltaTime;
-
         if(JumpOnOff)
             if (Input.GetAxisRaw("Vertical") != 0 && Input.GetAxisRaw("Vertical") != -1 || Input.GetKeyDown(KeyCode.Space))
                 jumpInput = true;
@@ -68,14 +65,16 @@ public class PlayerMovement : MonoBehaviour
         if(!GroundedOverride)
         {
 
-            if(hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * playerCollider.size.x * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
+            if(hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * (playerCollider.size.x * WidthReduction) * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
             {
 
                 if (hit2D.collider.isTrigger == false)
                 {
                     
-                    if(doubleJumpAC <= 0)
-                        doubleJumpAvailible = 0;
+                    /*if(doubleJumpAC <= 0)
+                        doubleJumpAvailible = 0;*/
+
+                    doubleJumpAvailible = 1;
 
                     playerControlPower = 1;
                     IsGrounded = true;
@@ -83,8 +82,7 @@ public class PlayerMovement : MonoBehaviour
                     {
 
                         jumpOnOff = 1;
-                        doubleJumpAvailible = 1;
-                        doubleJumpAC = 0.2f;
+                        //doubleJumpAC = 0.2f;
 
                     }
 
@@ -195,13 +193,11 @@ public class PlayerMovement : MonoBehaviour
         {
 
             doubleJumpAvailible = 0;
-            doubleJumpAC = 0;
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 dashDir = mousePos - new Vector2(transform.position.x, transform.position.y);
             dashDir = dashDir.normalized;
 
-
-            movementVector += dashDir * DashPower;
+            movementVector = dashDir * DashPower;
             
             movementVector = new Vector2(Mathf.Clamp(movementVector.x, -DashPower, DashPower), Mathf.Clamp(movementVector.y, -DashPower, DashPower));
 
