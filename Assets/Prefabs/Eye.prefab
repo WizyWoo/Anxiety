@@ -887,7 +887,7 @@ MonoBehaviour:
     _json: '{"declarations":{"collection":{"$content":[{"name":"collider","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Rotation","value":{"x":0.0,"y":0.0,"z":-181.081,"$type":"UnityEngine.Vector3"},"$version":"A"},{"name":"Eye","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
     _objectReferences:
     - {fileID: 405254388}
-    - {fileID: 1356013521436894596}
+    - {fileID: 8280661109287238180}
 --- !u!1 &8280661109287238180
 GameObject:
   m_ObjectHideFlags: 0
