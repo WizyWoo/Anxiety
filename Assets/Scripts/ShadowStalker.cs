@@ -18,7 +18,8 @@ public class ShadowStalker : MonoBehaviour
         foreach (Transform t in Shadows)
         {
 
-            shadowDictionary.Add(t, Camera.main.ViewportToWorldPoint(t.position));
+            
+            shadowDictionary.Add(t, t.position);
             
         }
 
@@ -33,7 +34,7 @@ public class ShadowStalker : MonoBehaviour
         {
             
             shadowDictionary.TryGetValue(t, out Vector2 tempVector);
-            t.position = Vector2.Lerp(tempVector, PlayerTransform.position, Current);
+            t.position = Vector2.Lerp(tempVector, Vector2.zero, Current);
 
         }
 
