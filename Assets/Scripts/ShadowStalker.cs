@@ -17,7 +17,6 @@ public class ShadowStalker : MonoBehaviour
 
         foreach (Transform t in Shadows)
         {
-
             
             shadowDictionary.Add(t, t.position);
             
@@ -34,7 +33,8 @@ public class ShadowStalker : MonoBehaviour
         {
             
             shadowDictionary.TryGetValue(t, out Vector2 tempVector);
-            t.position = Vector2.Lerp(tempVector, Vector2.zero, Current);
+            t.position = Vector2.Lerp(tempVector + new Vector2(transform.position.x, transform.position.y), transform.position, Current);
+            t.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, Current + 0.1f);
 
         }
 
