@@ -357,6 +357,7 @@ MonoBehaviour:
   ControlPowerInAir: 0.8
   Friction: 1
   SpeedDampening: 0.8
+  CoyoteTime: 0.1
   SprintOnOff: 1
   ShouldSlide: 0
   MovementEnabled: 1
@@ -387,6 +388,7 @@ MonoBehaviour:
   ChargeSpeed: 6
   MaxDashCharge: 5
   SplitCooldown: 0
+  ThrowPower: 0
   DashOnOff: 0
   SplitOnOff: 1
   HoldPosition: {fileID: 7468231847680512123}
