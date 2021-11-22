@@ -501,7 +501,7 @@ MonoBehaviour:
   PM2D: {fileID: 6200000, guid: d1cbbee2c44d9034f8c0e042d4ee36a5, type: 2}
   JumpHeight: 16
   FallSpeed: 20
-  DashPower: 36
+  DashPower: 42
   WidthReduction: 0.9
   JumpOnOff: 1
   GroundedOverride: 0
