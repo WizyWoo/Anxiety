@@ -4,15 +4,41 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public GameObject Ambiance, PlayerWalking;
+    public AudioSource[] AudioSources;
+    private GameObject player;
+    private Rigidbody2D playerRB;
+
+    private void Start()
     {
-        
+
+        foreach (AudioSource source in AudioSources)
+        {
+
+            source.volume = 1;
+            
+        }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
+
         
+
     }
+
+    public void ApplySoundLevel(float volume)
+    {
+
+        foreach (AudioSource source in AudioSources)
+        {
+
+            source.volume = volume;
+            
+        }
+
+    }
+
 }
