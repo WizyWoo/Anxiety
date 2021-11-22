@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float MoveSpeed;
     [Tooltip("should be between 0 and 1")]
     public float ControlPowerInAir, Friction;
-    public float SpeedDampening;
+    public float SpeedDampening, CoyoteTime;
     public bool SprintOnOff, ShouldSlide;
     public bool MovementEnabled;
     [Tooltip("should be the Player physicsMaterial 2D")]
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     //Jumping
     public float JumpHeight, FallSpeed, DashPower, WidthReduction;
     public bool JumpOnOff, GroundedOverride;
-    private float playerControlPower, speedMultiplier, xMoveDir;
+    private float playerControlPower, speedMultiplier, xMoveDir, coyote, coyoteCD;
     private int jumpOnOff, doubleJumpAvailible;
     private bool jumpInput;
     //GroundCheck
@@ -59,6 +59,13 @@ public class PlayerMovement : MonoBehaviour
             else
                 jumpInput = false;
 
+        if(coyoteCD > 0)
+        {
+
+            coyote = 0;
+
+        }
+
         RaycastHit2D hit2D;
         ShouldSlide = false;
 
@@ -68,13 +75,11 @@ public class PlayerMovement : MonoBehaviour
             if(hit2D = Physics2D.CircleCast(transform.position + new Vector3(0, yGroundCheckOffset, 0), 0.5f * (playerCollider.size.x * WidthReduction) * transform.localScale.y, new Vector2(0, -1), groundCheckDist, maskPlayer))
             {
 
-                if (hit2D.collider.isTrigger == false)
+                if(hit2D.collider.isTrigger == false)
                 {
-                    
-                    /*if(doubleJumpAC <= 0)
-                        doubleJumpAvailible = 0;*/
 
                     doubleJumpAvailible = 1;
+                    coyote = CoyoteTime;
 
                     playerControlPower = 1;
                     IsGrounded = true;
@@ -82,12 +87,18 @@ public class PlayerMovement : MonoBehaviour
                     {
 
                         jumpOnOff = 1;
-                        //doubleJumpAC = 0.2f;
 
                     }
 
                 }
-                else 
+                else if(jumpInput && rb2D.velocity.y < JumpHeight && coyote > 0)
+                {
+
+                    jumpOnOff = 1;
+                    IsGrounded = true;
+
+                }
+                else
                 {
                     
                     IsGrounded = false;
@@ -96,7 +107,14 @@ public class PlayerMovement : MonoBehaviour
                 }
 
             }
-            else 
+            else if(jumpInput && rb2D.velocity.y < JumpHeight && coyote > 0)
+            {
+
+                jumpOnOff = 1;
+                IsGrounded = true;
+
+            }
+            else
             {
                 
                 IsGrounded = false;
@@ -108,7 +126,15 @@ public class PlayerMovement : MonoBehaviour
         else
             IsGrounded = false;
 
-        if (IsGrounded == false)
+        if(jumpOnOff == 1)
+        {
+
+            coyote = 0;
+            coyoteCD = 0.1f;
+
+        }
+
+        if(IsGrounded == false)
         {
 
             playerControlPower = ControlPowerInAir;
@@ -127,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if (SprintOnOff)
+        if(SprintOnOff)
         {
 
             if (Input.GetKey(KeyCode.LeftShift)) speedMultiplier = 1.6f;
@@ -136,8 +162,8 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //Checks if you're exceeding your max movement speed, if yes, player cannot accelerate further
-        if (rb2D.velocity.x >= (MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") > 0) xMoveDir = 0;
-        else if (rb2D.velocity.x <= (-MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") < 0) xMoveDir = 0;
+        if(rb2D.velocity.x >= (MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") > 0) xMoveDir = 0;
+        else if(rb2D.velocity.x <= (-MoveSpeed * speedMultiplier) && Input.GetAxis("Horizontal") < 0) xMoveDir = 0;
         else xMoveDir = Input.GetAxis("Horizontal");
 
         if(Input.GetAxisRaw("Horizontal") == -1)
@@ -206,8 +232,6 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        jumpOnOff = 0;
-
         if(!MovementEnabled)
         {
 
@@ -220,6 +244,15 @@ public class PlayerMovement : MonoBehaviour
             rb2D.simulated = MovementEnabled;
 
         rb2D.velocity = movementVector;
+
+        //Timers and value resets
+        jumpOnOff = 0;
+
+        if(coyote > 0)
+            coyote -= Time.deltaTime;
+
+        if(coyoteCD > 0)
+            coyoteCD -= Time.deltaTime;
 
     }
 
