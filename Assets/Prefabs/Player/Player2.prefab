@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7720198420664669973}
   - component: {fileID: 7295841073364054091}
   - component: {fileID: 3875372004307377278}
+  - component: {fileID: 8982411527078333010}
+  - component: {fileID: 9140908590194083749}
   m_Layer: 0
   m_Name: Heart
   m_TagString: Untagged
@@ -103,6 +105,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8982411527078333010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613656258867987454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
+--- !u!114 &9140908590194083749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613656258867987454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
+    _objectReferences:
+    - {fileID: 11400000, guid: b171b7dd2844d644787270f515dc7691, type: 2}
 --- !u!1 &5334335569541698239
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +494,7 @@ MonoBehaviour:
   ControlPowerInAir: 0.8
   Friction: 1
   SpeedDampening: 0.8
+  CoyoteTime: 0
   SprintOnOff: 1
   ShouldSlide: 0
   MovementEnabled: 1
@@ -491,6 +525,7 @@ MonoBehaviour:
   ChargeSpeed: 6
   MaxDashCharge: 5
   SplitCooldown: 0
+  ThrowPower: 0
   DashOnOff: 0
   SplitOnOff: 1
   HoldPosition: {fileID: 7468231847680512123}
