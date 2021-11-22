@@ -13,7 +13,7 @@ public class PlayerAbilites : MonoBehaviour
     }
 
     public Abilities SelectedAbility;
-    public float DashPower, ChargeSpeed, MaxDashCharge, SplitCooldown;
+    public float DashPower, ChargeSpeed, MaxDashCharge, SplitCooldown, ThrowPower;
     public bool DashOnOff, SplitOnOff;
     public Transform HoldPosition;
     public GameObject ShadowClone;
@@ -132,6 +132,16 @@ public class PlayerAbilites : MonoBehaviour
         else if(holding)
         {
 
+            if(holding.TryGetComponent<Rigidbody2D>(out Rigidbody2D holdingRB))
+            {
+
+                Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                Vector2 throwDir = mousePos - new Vector2(transform.position.x, transform.position.y);
+                throwDir = throwDir.normalized;
+
+                holdingRB.velocity = throwDir * ThrowPower;
+
+            }
             holding = null;
             
         }
