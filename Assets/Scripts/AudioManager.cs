@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
             playerWalkingCD = PlayerWalkingCooldown;
 
         }
-        else if(playerRB.velocity.x == 0 || !PlayerGrounded)
+        else if(Mathf.Abs(playerRB.velocity.x) < 0.1f || !PlayerGrounded)
         {
 
             playerWalkingCD = 0;
