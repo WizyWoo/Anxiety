@@ -235,7 +235,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
-        if(!audioManager)
+        if(audioManager)
             audioManager.PlayerGrounded = IsGrounded;
 
         if(!MovementEnabled)
