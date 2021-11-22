@@ -792,6 +792,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &644537943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8182200564317242375, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
+  m_PrefabInstance: {fileID: 6594501020633386461}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b64c2ad8e5e2c242a19379b0bc83e06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &746426192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1229,8 +1240,43 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7415025191906635253, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415025191906635253, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 644537943}
+    - target: {fileID: 7415025191906635253, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ChangeVolSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415025191906635253, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415025191906635253, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1134667578}
+    - target: {fileID: 7415025191906635253, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.UI.Slider, UnityEngine.UI
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+--- !u!114 &1134667578 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7415025191906635253, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+  m_PrefabInstance: {fileID: 1134667577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1189657771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2279110803827623077, guid: e36076e2544a92442b1a74f76aa34793, type: 3}
@@ -1966,33 +2012,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 937467158}
     m_Modifications:
-    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
-      propertyPath: m_SortingLayer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
-      propertyPath: m_SortingLayerID
-      value: 1317867025
-      objectReference: {fileID: 0}
-    - target: {fileID: 1385900267840293719, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
-      propertyPath: m_RenderingLayerMask
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5139295621046497117, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].time
-      value: 0.8800129
-      objectReference: {fileID: 0}
-    - target: {fileID: 5139295621046497117, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
-      propertyPath: rolloffCustomCurve.m_Curve.Array.data[1].value
-      value: 0.073366284
-      objectReference: {fileID: 0}
     - target: {fileID: 5960670658361914973, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_Name
       value: DeathAcidShit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6261309157031135371, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: TrailModule.widthOverTrail.scalar
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9083101040028871080, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_RootOrder

@@ -50,7 +50,7 @@ MonoBehaviour:
   AudioSources:
   - {fileID: 2224463198187155405}
   - {fileID: 5140657973437427859}
-  PlayerWalkingCooldown: 0.5
+  PlayerWalkingCooldown: 100
   PlayerGrounded: 0
   volume: 1
 --- !u!1 &4195240875095379277

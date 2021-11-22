@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -74,10 +75,11 @@ public class AudioManager : MonoBehaviour
     {
 
         AudioSources.Add(sourceToAdd);
+        sourceOriginalVol.Add(sourceToAdd, sourceToAdd.volume);
 
     }
 
-    public void ApplySoundLevel(float volumeChange)
+    public void ApplyVolumeLevel(float volumeChange)
     {
 
         volume = volumeChange;
@@ -85,9 +87,23 @@ public class AudioManager : MonoBehaviour
         foreach (AudioSource source in AudioSources)
         {
 
-            source.volume = volume;
+            if(sourceOriginalVol.TryGetValue(source, out float originlVol))
+            {
+
+                source.volume = volume * originlVol;
+
+            }
+            else
+                source.volume = volume;
             
         }
+
+    }
+
+    public void ChangeVolSlider(Slider volSlider)
+    {
+
+        ApplyVolumeLevel(volSlider.value);
 
     }
 

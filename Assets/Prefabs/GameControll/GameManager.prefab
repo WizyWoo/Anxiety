@@ -117,9 +117,11 @@ MonoBehaviour:
   StressDeath: {fileID: 5247517641393889444, guid: 3dc4fb14cab18384bab1ba97ec4db489, type: 3}
   SplitEffect: {fileID: 5247517641393889444, guid: 20cdab7f858de2040a2ebe7e64170d73, type: 3}
   DupeDeath: {fileID: 6899503995899847043, guid: 13557ee1d356072418473f9aaca366c7, type: 3}
-  AcidDeathMSG: You dissolved in acid!
+  AcidDeathMSG: You drowned in depression
   NormalDeathMSG: You got impaled on a spike
   StressDeathMSG: You stressed to death
+  SynapseScore: {fileID: 0}
+  Synapses: []
   Player: {fileID: 0}
   Dupe: {fileID: 0}
   IsSplit: 0

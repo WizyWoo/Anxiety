@@ -169,8 +169,8 @@ AudioSource:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.89737743
-      value: 0.06483662
+      time: 0.8800129
+      value: 0.073366284
       inSlope: -1.1801066
       outSlope: -1.1801066
       tangentMode: 0
@@ -264,7 +264,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -331,7 +331,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 7.5
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -438,7 +438,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.00019693369, b: 0.066037714, a: 0}
+      maxColor: {r: 0, g: 0.00019693369, b: 0.066037714, a: 0.019607844}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -882,9 +882,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0.5, z: 0}
+    m_Position: {x: 0, y: 0.45, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 0.1, z: 1}
+    m_Scale: {x: 1, y: 0, z: 1}
     placementMode: 1
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -1082,7 +1082,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1758,7 +1758,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2899,7 +2899,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.15
+      scalar: 0.09
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4206,7 +4206,7 @@ ParticleSystem:
     dieWithParticles: 1
     sizeAffectsWidth: 0
     sizeAffectsLifetime: 0
-    inheritParticleColor: 1
+    inheritParticleColor: 0
     generateLightingData: 0
     splitSubEmitterRibbons: 0
     attachRibbonsToTransform: 0
@@ -4214,7 +4214,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0.0026315555, g: 0, b: 0.066037714, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4292,16 +4292,16 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 0.2816051
-          value: 0.4048157
-          inSlope: 3.7339077
-          outSlope: 3.7339077
+          value: 0.13009647
+          inSlope: 2.2942564
+          outSlope: 2.2942564
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.20946111
+          inWeight: 0.32893124
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.52258193
-          value: 0.45114905
+          time: 0.5986928
+          value: 0.10498816
           inSlope: -1.4302686
           outSlope: -1.4302686
           tangentMode: 0
@@ -4333,8 +4333,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.2730114
-          value: 0.4416511
+          time: 0.33337516
+          value: 0.20538402
           inSlope: -1.5345017
           outSlope: -1.5345017
           tangentMode: 0
@@ -4342,8 +4342,8 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.08040213
         - serializedVersion: 3
-          time: 0.594432
-          value: 0.60813683
+          time: 0.5734359
+          value: 0.31693047
           inSlope: 1.5996222
           outSlope: 1.5996222
           tangentMode: 0
