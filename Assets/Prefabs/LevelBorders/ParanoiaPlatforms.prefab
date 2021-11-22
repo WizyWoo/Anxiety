@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 3731676458348272689}
   - component: {fileID: 392194190357324028}
   - component: {fileID: 4076045493326036528}
+  - component: {fileID: 1966711649}
   m_Layer: 0
   m_Name: LevelBorder 4
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217960521004282362}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.64, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 179229881124443684}
@@ -52,7 +53,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 335d6bb845690b74993704d16dbaa5eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -70,8 +71,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: 363.67007, y: 64.44812, z: 0}
@@ -141,7 +142,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!68 &4076045493326036528
 EdgeCollider2D:
@@ -157,7 +158,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.4
   m_Points:
   - {x: 363.67007, y: 64.44812}
   - {x: 363.41196, y: 60.060192}
@@ -177,6 +178,32 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1966711649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217960521004282362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000095cc2619a12acd74110e8d4e918f0fb6
+  m_ShapePath:
+  - {x: 362.6538, y: 52.074898, z: 0}
+  - {x: 362.6538, y: 69.33605, z: 0}
+  - {x: 396.17615, y: 69.33605, z: 0}
+  - {x: 396.17615, y: 52.074898, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 81524
 --- !u!1 &1236546406697019084
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +217,7 @@ GameObject:
   - component: {fileID: 1197067125882525417}
   m_Layer: 0
   m_Name: LevelBorder 0
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +256,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 335d6bb845690b74993704d16dbaa5eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -247,8 +274,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: 146.55577, y: 0.08849907, z: 0}
@@ -345,7 +372,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!68 &1197067125882525417
 EdgeCollider2D:
@@ -361,7 +388,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.4
   m_Points:
   - {x: 146.55577, y: 0.08849907}
   - {x: 140.21077, y: -2.555252}
@@ -421,7 +448,7 @@ GameObject:
   - component: {fileID: 7713141958505468251}
   m_Layer: 0
   m_Name: LevelBorder 5
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -434,7 +461,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5308918690448062242}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 179229881124443684}
@@ -460,7 +487,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 335d6bb845690b74993704d16dbaa5eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -478,8 +505,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: 291.6136, y: 205.18954, z: 0}
@@ -546,7 +573,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!68 &7713141958505468251
 EdgeCollider2D:
@@ -562,7 +589,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.4
   m_Points:
   - {x: 291.6136, y: 205.18954}
   - {x: 291.09738, y: 197.44614}
@@ -590,9 +617,10 @@ GameObject:
   - component: {fileID: 2822208406130797497}
   - component: {fileID: 790943890106828228}
   - component: {fileID: 8302197304589187146}
+  - component: {fileID: 1966711651}
   m_Layer: 0
   m_Name: LevelBorder 2
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -631,7 +659,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 335d6bb845690b74993704d16dbaa5eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -649,8 +677,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: 231.96721, y: 66.047165, z: 0}
@@ -717,7 +745,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!68 &8302197304589187146
 EdgeCollider2D:
@@ -733,7 +761,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.4
   m_Points:
   - {x: 231.96721, y: 66.047165}
   - {x: 230.1604, y: 59.852436}
@@ -750,6 +778,32 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1966711651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6191558101644179990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000095cc2619a12acd74110e8d4e918f0fb6
+  m_ShapePath:
+  - {x: 229.6604, y: 57.02942, z: 0}
+  - {x: 229.6604, y: 66.547165, z: 0}
+  - {x: 256.47177, y: 66.547165, z: 0}
+  - {x: 256.47177, y: 57.02942, z: 0}
+  m_ShapePathHash: 0
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 81528
 --- !u!1 &6303529770141081513
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,9 +815,10 @@ GameObject:
   - component: {fileID: 6521380936765897998}
   - component: {fileID: 432586034964134730}
   - component: {fileID: 3080883708337152051}
+  - component: {fileID: 1966711652}
   m_Layer: 0
   m_Name: LevelBorder 1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -802,7 +857,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 335d6bb845690b74993704d16dbaa5eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -820,8 +875,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: 230.14264, y: 22.471302, z: 0}
@@ -887,7 +942,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!68 &3080883708337152051
 EdgeCollider2D:
@@ -903,7 +958,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.4
   m_Points:
   - {x: 230.14264, y: 22.471302}
   - {x: 231.46452, y: 17.183796}
@@ -919,6 +974,33 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1966711652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6303529770141081513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000095cc2619a12acd74110e8d4e918f0fb6
+  m_ShapePath:
+  - {x: 229.89412, y: 16.541979, z: 0}
+  - {x: 229.64264, y: 25.086308, z: 0}
+  - {x: 257.08017, y: 25.086308, z: 0}
+  - {x: 257.08017, y: 15.787531, z: 0}
+  - {x: 237.16356, y: 15.93502, z: 0}
+  m_ShapePathHash: -1586935297
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 81530
 --- !u!1 &7960316497345047235
 GameObject:
   m_ObjectHideFlags: 0
@@ -930,9 +1012,10 @@ GameObject:
   - component: {fileID: 735074291058951944}
   - component: {fileID: 8721547466576854054}
   - component: {fileID: 6571232655171819041}
+  - component: {fileID: 1966711650}
   m_Layer: 0
   m_Name: LevelBorder 3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -971,7 +1054,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 335d6bb845690b74993704d16dbaa5eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -989,8 +1072,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: 269.0919, y: 86.027504, z: 0}
@@ -1061,7 +1144,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!68 &6571232655171819041
 EdgeCollider2D:
@@ -1077,7 +1160,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.4
   m_Points:
   - {x: 269.0919, y: 86.027504}
   - {x: 266.76886, y: 82.93014}
@@ -1098,6 +1181,33 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1966711650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960316497345047235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000095cc2619a12acd74110e8d4e918f0fb6
+  m_ShapePath:
+  - {x: 266.98413, y: 80.552025, z: 0}
+  - {x: 266.26886, y: 88.07619, z: 0}
+  - {x: 293.85455, y: 88.07619, z: 0}
+  - {x: 285.62897, y: 66.96196, z: 0}
+  - {x: 279.7444, y: 80.2448, z: 0}
+  m_ShapePathHash: -170339703
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 81526
 --- !u!1 &8207835111669991145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,9 +1219,10 @@ GameObject:
   - component: {fileID: 3533432281683259715}
   - component: {fileID: 4813738656402060723}
   - component: {fileID: 4302290641782180439}
+  - component: {fileID: 1966711648}
   m_Layer: 0
   m_Name: LevelBorder 6
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1124,8 +1235,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8207835111669991145}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -15.94, y: 0, z: 0}
+  m_LocalScale: {x: 1.05, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 179229881124443684}
   m_RootOrder: 6
@@ -1150,7 +1261,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 335d6bb845690b74993704d16dbaa5eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1168,8 +1279,8 @@ LineRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1240494191
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Positions:
   - {x: 354.85144, y: 3.4037733, z: 0}
@@ -1265,7 +1376,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!68 &4302290641782180439
 EdgeCollider2D:
@@ -1281,7 +1392,7 @@ EdgeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
+  m_EdgeRadius: 0.4
   m_Points:
   - {x: 354.85144, y: 3.4037733}
   - {x: 355.6258, y: 10.630953}
@@ -1327,6 +1438,41 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1966711648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8207835111669991145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 0000000095cc2619a12acd74110e8d4e918f0fb6
+  m_ShapePath:
+  - {x: 296.53397, y: -20.58648, z: 0}
+  - {x: 305.169, y: 14.704596, z: 0}
+  - {x: 299.07635, y: 33.46992, z: 0}
+  - {x: 307.60913, y: 47.543842, z: 0}
+  - {x: 310.34396, y: 101.21452, z: 0}
+  - {x: 380.64658, y: 102.92046, z: 0}
+  - {x: 380.3146, y: 93.60419, z: 0}
+  - {x: 353.507, y: 91.47176, z: 0}
+  - {x: 336.0414, y: 75.26535, z: 0}
+  - {x: 333.1982, y: 52.66166, z: 0}
+  - {x: 355.94122, y: 52.23523, z: 0}
+  - {x: 356.75357, y: 44.98499, z: 0}
+  - {x: 329.87457, y: -11.630301, z: 0}
+  m_ShapePathHash: -1987992947
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 81522
 --- !u!1 &8943893281316830635
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,7 +1484,7 @@ GameObject:
   - component: {fileID: 179229881124443684}
   m_Layer: 0
   m_Name: ParanoiaPlatforms
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
