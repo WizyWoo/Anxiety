@@ -1982,6 +1982,10 @@ PrefabInstance:
       propertyPath: m_RenderingLayerMask
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5139295621046497117, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
+      propertyPath: MinDistance
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 5960670658361914973, guid: e2b8decbdc1ed7a4a9924985c1b95c6d, type: 3}
       propertyPath: m_Name
       value: DeathAcidShit
@@ -2552,5 +2556,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2224463198187155405, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140657973437427859, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140657973437427859, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 6ecfca3aa45d9b8419d2f480ca98628f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cca9a782510c234986a9e97a9093059, type: 3}

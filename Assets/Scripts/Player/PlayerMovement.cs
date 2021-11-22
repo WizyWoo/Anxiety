@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer PlayerSprite;
     private CapsuleCollider2D playerCollider;
     private Rigidbody2D rb2D;
+    private AudioManager audioManager;
 
     void Start()
     {
@@ -47,6 +48,8 @@ public class PlayerMovement : MonoBehaviour
         yGroundCheckOffset = -0.002f + playerCollider.offset.y;
         groundCheckDist = 0.5f * transform.localScale.y;
         jumpPower = 1f;
+        if(!audioManager)
+            audioManager = AudioManager.main;
 
     }
 
@@ -231,6 +234,8 @@ public class PlayerMovement : MonoBehaviour
             Instantiate(DashEffect, transform.position, Quaternion.Euler(0, 0, dif));
 
         }
+
+        audioManager.PlayerGrounded = IsGrounded;
 
         if(!MovementEnabled)
         {
