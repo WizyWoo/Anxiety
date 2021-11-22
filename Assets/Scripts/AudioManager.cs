@@ -7,7 +7,7 @@ public class AudioManager : MonoBehaviour
 {
 
     //The AudioManager has 1 extra script for objects that are spawned in during playmode (DetachedAudio). Use that script to add the audio source to the manager or if the audio is gonna play once and dissapear don't turn on the AddToManager bool
-    public static AudioManager main;
+    public static AudioManager main {get; private set;}
     public AudioSource Ambiance, PlayerWalking;
     public List<AudioSource> AudioSources;
     public float PlayerWalkingCooldown;
@@ -19,7 +19,12 @@ public class AudioManager : MonoBehaviour
     private float volume;
     private Dictionary<AudioSource, float> sourceOriginalVol;
 
-    private void Awake() => main = this;
+    private void Awake()
+    {
+        
+        main = this;
+    
+    }
 
     private void Start()
     {

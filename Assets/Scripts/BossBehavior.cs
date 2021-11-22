@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Linq;
 
 public class BossBehavior : MonoBehaviour
-{
+{/*
 
     public enum attackType
     {
@@ -507,4 +507,4 @@ public class BossBehavior : MonoBehaviour
 
     }
 
-}
+*/}
