@@ -76,8 +76,10 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void AddThisToList(AudioSource sourceToAdd)
+    public void AddThisToList(GameObject sourceGO)
     {
+
+        AudioSource sourceToAdd = sourceGO.GetComponent<AudioSource>();
 
         AudioSources.Add(sourceToAdd);
         sourceOriginalVol.Add(sourceToAdd, sourceToAdd.volume);

@@ -27,7 +27,7 @@ public class DetachedAudio : MonoBehaviour
         }
 
         if(AddToManager)
-            AudioManager.main.AddThisToList(Source);
+            AudioManager.main.AddThisToList(gameObject);
         
     }
 
