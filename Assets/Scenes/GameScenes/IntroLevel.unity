@@ -2154,6 +2154,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 816501296715157107, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+      propertyPath: ExtraGrav
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6646570181702327650, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2201,6 +2205,10 @@ PrefabInstance:
     - target: {fileID: 6646570181702327672, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646570181702327676, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+      propertyPath: m_GravityScale
+      value: 7.18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
