@@ -5,3 +5,4 @@ Assets/XR
 !ProjectSettings
 !ProjectSettings/*
 !.gitignore
+Assets/PhysMats/PlayerMaterial.physicsMaterial2D
