@@ -452,12 +452,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5140657973437427859, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
       propertyPath: m_Volume
-      value: 1
+      value: 0.235
       objectReference: {fileID: 0}
     - target: {fileID: 5140657973437427859, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 77112b0a42a862448b8d28e8224dc4a7, type: 3}
+      objectReference: {fileID: 8300000, guid: 22cbf3cf65332bd448b1ba6e3faed668, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
 --- !u!4 &360611360 stripped
@@ -1442,6 +1442,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 546073016}
     m_Modifications:
+    - target: {fileID: 1221360993, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
+      propertyPath: _data._json
+      value: '{"declarations":{"collection":{"$content":[{"name":"collider","value":{"$content":0,"$type":"UnityEngine.Object"},"$version":"A"},{"name":"Rotation","value":{"x":0.0,"y":0.0,"z":0.0,"$type":"UnityEngine.Vector3"},"$version":"A"},{"name":"Eye","value":{"$content":1,"$type":"UnityEngine.Object"},"$version":"A"}],"$version":"A"},"$version":"A"}}'
+      objectReference: {fileID: 0}
     - target: {fileID: 6540695970538647058, guid: 927bb41c4b47ad245a7d538d77848045, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.23276982
