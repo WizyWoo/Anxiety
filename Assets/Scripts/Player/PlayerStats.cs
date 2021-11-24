@@ -2,15 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class PlayerStats
 {
 
     public int Deaths;
 
-    public PlayerStats(int previousDeaths)
+    public PlayerStats(int deaths, PlayerStats stats, bool overWrite = false)
     {
 
-        Deaths = previousDeaths + 1;
+        if(stats != null)
+        {
+
+            Deaths = stats.Deaths + deaths;
+
+        }
+        else
+        {
+
+            Deaths = deaths;
+
+        }
 
     }
 
