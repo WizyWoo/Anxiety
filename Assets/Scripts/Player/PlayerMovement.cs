@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private float yVel, jumpPower, damping;
     private Vector2 movementVector;
     //Jumping
-    public float JumpHeight, FallSpeed, DashPower, WidthReduction;
+    public float JumpHeight, FallSpeed, ExtraGrav, DashPower, WidthReduction;
     public bool JumpOnOff, GroundedOverride;
     private float playerControlPower, speedMultiplier, xMoveDir, coyote, coyoteCD;
     private int jumpOnOff, doubleJumpAvailible;
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     
                     IsGrounded = false;
-                    rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y - (FallSpeed * Time.deltaTime));
+                    rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y - (ExtraGrav * Time.deltaTime));
 
                 }
 
@@ -121,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 
                 IsGrounded = false;
-                rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y - (FallSpeed * Time.deltaTime));
+                rb2D.velocity = new Vector2(rb2D.velocity.x, rb2D.velocity.y - (ExtraGrav * Time.deltaTime));
 
             }
 
@@ -232,6 +232,13 @@ public class PlayerMovement : MonoBehaviour
 
             float dif = Mathf.Atan2(movementVector.y, movementVector.x) * Mathf.Rad2Deg;
             Instantiate(DashEffect, transform.position, Quaternion.Euler(0, 0, dif));
+
+        }
+
+        if(!IsGrounded && rb2D.velocity.y < 0)
+        {
+
+            //movementVector = movementVector + Vector2.down * (FallSpeed * Time.deltaTime);
 
         }
 
