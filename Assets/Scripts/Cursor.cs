@@ -20,9 +20,17 @@ public class Cursor : MonoBehaviour
     {
 
         if(Input.GetMouseButton(1))
+        {
+
             emission.rateOverTime = ParticleAmount;
+        
+        }
         else
+        {
+
             emission.rateOverTime = 0;
+
+        }
 
     }
 
