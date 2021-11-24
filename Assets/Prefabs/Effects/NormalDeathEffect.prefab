@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 751792443747406420}
   - component: {fileID: -1223693303973923095}
   - component: {fileID: 1394953667795484030}
+  - component: {fileID: 7831286523172204942}
   m_Layer: 0
   m_Name: NormalDeathEffect
   m_TagString: Untagged
@@ -5101,3 +5102,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Source: {fileID: 0}
   AddToManager: 0
+--- !u!114 &7831286523172204942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5247517641393889444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7267466b99e6c45973e3158174f9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
