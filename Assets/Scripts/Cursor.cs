@@ -5,15 +5,24 @@ using UnityEngine;
 public class Cursor : MonoBehaviour
 {
 
+    public int ParticleAmount;
     public ParticleSystem CursorParticles;
+    private ParticleSystem.EmissionModule emission;
+
+    private void Start()
+    {
+
+        emission = CursorParticles.emission;
+
+    }
 
     private void Update()
     {
 
         if(Input.GetMouseButton(1))
-            CursorParticles.enableEmission = true;
+            emission.rateOverTime = ParticleAmount;
         else
-            CursorParticles.enableEmission = false;
+            emission.rateOverTime = 0;
 
     }
 
