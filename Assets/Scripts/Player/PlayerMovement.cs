@@ -238,7 +238,7 @@ public class PlayerMovement : MonoBehaviour
         if(!IsGrounded && rb2D.velocity.y < 0)
         {
 
-            //movementVector = movementVector + Vector2.down * (FallSpeed * Time.deltaTime);
+            movementVector = movementVector + Vector2.down * (FallSpeed * Time.deltaTime);
 
         }
 
