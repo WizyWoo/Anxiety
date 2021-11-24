@@ -499,10 +499,10 @@ MonoBehaviour:
   ShouldSlide: 0
   MovementEnabled: 1
   PM2D: {fileID: 6200000, guid: d1cbbee2c44d9034f8c0e042d4ee36a5, type: 2}
-  JumpHeight: 16
+  JumpHeight: 20
   FallSpeed: 20
-  ExtraGrav: 20
-  DashPower: 42
+  ExtraGrav: 32
+  DashPower: 48
   WidthReduction: 0.9
   JumpOnOff: 1
   GroundedOverride: 0
