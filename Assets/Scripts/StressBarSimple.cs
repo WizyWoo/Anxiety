@@ -9,12 +9,15 @@ public class StressBarSimple : MonoBehaviour
     public float StressDecreaseMult, CooldownSpeed, Stress, StressDecCD;
     public Image bar, Vignette;
     private ShadowStalker shadows;
+    public Animator animator;
 
     private void Start()
     {
 
         shadows = Camera.main.GetComponentInChildren<ShadowStalker>();
         bar.fillAmount = 0;
+        animator = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>();
+        animator.SetInteger("stressLev", 0);
 
     }
 
@@ -44,6 +47,7 @@ public class StressBarSimple : MonoBehaviour
         shadows.T = Stress;
         bar.fillAmount = shadows.Current;
         Vignette.color = new Color(1, 1, 1, Stress);
+        animator.SetInteger("stressLev", (int)(Stress * 6));
 
         if(Stress >= 1)
         {
