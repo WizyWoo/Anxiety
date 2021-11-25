@@ -24,6 +24,7 @@ public class EyeEnemy : MonoBehaviour
         shadows = Camera.main.GetComponentInChildren<ShadowStalker>();
         layerMask = ~((1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        stressBar = Camera.main.GetComponentInChildren<StressBarSimple>();
 
     }
     

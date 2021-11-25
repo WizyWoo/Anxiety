@@ -17,7 +17,7 @@ public class Synapse : MonoBehaviour
 
         originalPos = transform.position;
         maxHhealth = SynapseHealth;
-        DamageBar.color = new Color(SynapseHealth / maxHhealth, 0, 0);
+        DamageBar.color = new Color(SynapseHealth / maxHhealth, SynapseHealth / maxHhealth, SynapseHealth / maxHhealth);
 
     }
 
@@ -28,7 +28,7 @@ public class Synapse : MonoBehaviour
         {
 
             SynapseHealth--;
-            DamageBar.color = new Color(SynapseHealth / maxHhealth, 0, 0);
+            DamageBar.color = new Color(SynapseHealth / maxHhealth, SynapseHealth / maxHhealth, SynapseHealth / maxHhealth);
             if(SynapseHealth <= 0)
             {
 

@@ -44,7 +44,7 @@ ParticleSystem:
   m_GameObject: {fileID: 4639856437659071871}
   serializedVersion: 8
   lengthInSec: 5
-  simulationSpeed: 1
+  simulationSpeed: 3
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
@@ -225,7 +225,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.3679245, g: 0.06768423, b: 0.06768423, a: 1}
+      maxColor: {r: 1, g: 0.97272485, b: 0.5235849, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4821,8 +4821,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb6135bb6ff7d7948aba3f1bec37f5ad, type: 2}
-  - {fileID: 2100000, guid: bb6135bb6ff7d7948aba3f1bec37f5ad, type: 2}
+  - {fileID: 2100000, guid: 2a8c02f0b01e38c4695d6eac2f32bf62, type: 2}
+  - {fileID: 2100000, guid: 2a8c02f0b01e38c4695d6eac2f32bf62, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -175,8 +175,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b75705aa71e3d440b0941d47c07c655, type: 3}
+--- !u!1 &8664925310314607052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1365407589694506569, guid: 9b75705aa71e3d440b0941d47c07c655, type: 3}
+  m_PrefabInstance: {fileID: 7695835233048524677}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8664925310314607053 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1365407589694506568, guid: 9b75705aa71e3d440b0941d47c07c655, type: 3}
   m_PrefabInstance: {fileID: 7695835233048524677}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8696386995048854346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8664925310314607052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3bd5db4f780bf24e9ee56c575781fc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StressDecreaseMult: 0.15
+  CooldownSpeed: 0.5
+  Stress: 0
+  StressDecCD: 0
+  bar: {fileID: 0}

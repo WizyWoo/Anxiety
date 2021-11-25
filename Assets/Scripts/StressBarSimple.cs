@@ -27,6 +27,13 @@ public class StressBarSimple : MonoBehaviour
             Stress -= StressDecreaseMult * Time.deltaTime;
 
         }
+        else if(StressDecCD <= 4)
+        {
+
+            Stress -= (StressDecreaseMult * 0.15f) * Time.deltaTime;
+            StressDecCD -= CooldownSpeed * Time.deltaTime;
+
+        }
         else
         {
 
