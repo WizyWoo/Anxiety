@@ -469,7 +469,7 @@ MonoBehaviour:
   JumpHeight: 20
   FallSpeed: 20
   ExtraGrav: 32
-  DashPower: 48
+  DashPower: 50
   WidthReduction: 0.9
   JumpOnOff: 1
   GroundedOverride: 0
