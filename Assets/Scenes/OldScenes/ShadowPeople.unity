@@ -1789,9 +1789,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShadowPerson
       objectReference: {fileID: 0}
-    - target: {fileID: 260732120135549159, guid: 5bad419196ad10e4bbaf9ce7b0aae0b2, type: 3}
-      propertyPath: moveWithTransform
-      value: 1
+    - target: {fileID: 260732120135549158, guid: 5bad419196ad10e4bbaf9ce7b0aae0b2, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 260732120135549160, guid: 5bad419196ad10e4bbaf9ce7b0aae0b2, type: 3}
       propertyPath: m_RootOrder
