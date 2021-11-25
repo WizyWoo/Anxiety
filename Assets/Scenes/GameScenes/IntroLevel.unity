@@ -2022,7 +2022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2944867263203751860, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.2
+      value: 4.1
       objectReference: {fileID: 0}
     - target: {fileID: 2944867263203751860, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2030,7 +2030,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2944867263203751866, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: m_Text
-      value: You are not goign to make it!
+      value: You are not going to make it!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944867263203751866, guid: 08070150e75072341addee3a24a9b217, type: 3}
+      propertyPath: m_FontSize
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2944867263203751867, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: m_IsActive
@@ -2040,13 +2044,21 @@ PrefabInstance:
       propertyPath: m_Text
       value: You can do it, just be careful!
       objectReference: {fileID: 0}
+    - target: {fileID: 2944867263623832833, guid: 08070150e75072341addee3a24a9b217, type: 3}
+      propertyPath: m_FontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 2944867263623832833, guid: 08070150e75072341addee3a24a9b217, type: 3}
+      propertyPath: m_CharacterSize
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 2944867263623832835, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 2944867263623832835, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2944867263623832835, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2054,7 +2066,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2944867263623832838, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3116503410613225297, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
@@ -2071,6 +2083,18 @@ PrefabInstance:
     - target: {fileID: 3116503410613225299, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116503410613225310, guid: 08070150e75072341addee3a24a9b217, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116503411985024065, guid: 08070150e75072341addee3a24a9b217, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3116503411985024065, guid: 08070150e75072341addee3a24a9b217, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.4
       objectReference: {fileID: 0}
     - target: {fileID: 3116503411985024078, guid: 08070150e75072341addee3a24a9b217, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
