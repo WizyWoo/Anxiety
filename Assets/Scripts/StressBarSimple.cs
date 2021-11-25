@@ -7,7 +7,7 @@ public class StressBarSimple : MonoBehaviour
 {
 
     public float StressDecreaseMult, CooldownSpeed, Stress, StressDecCD;
-    public Image bar;
+    public Image bar, Vignette;
     private ShadowStalker shadows;
 
     private void Start()
@@ -43,6 +43,7 @@ public class StressBarSimple : MonoBehaviour
 
         shadows.T = Stress;
         bar.fillAmount = shadows.Current;
+        Vignette.color = new Color(1, 1, 1, Stress);
 
         if(Stress >= 1)
         {
