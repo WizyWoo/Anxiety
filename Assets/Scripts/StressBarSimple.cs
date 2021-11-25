@@ -13,7 +13,6 @@ public class StressBarSimple : MonoBehaviour
     private void Start()
     {
 
-        bar = GetComponent<Image>();
         shadows = Camera.main.GetComponentInChildren<ShadowStalker>();
         bar.fillAmount = 0;
 
@@ -36,6 +35,7 @@ public class StressBarSimple : MonoBehaviour
         }
 
         shadows.T = Stress;
+        bar.fillAmount = shadows.Current;
 
         if(Stress >= 1)
         {
@@ -43,8 +43,6 @@ public class StressBarSimple : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().TakeDamage(GameManager.DeathType.Stress);
             
         }
-
-        bar.fillAmount = shadows.Current;
 
     }
 

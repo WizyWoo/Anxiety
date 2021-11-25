@@ -53,6 +53,7 @@ public class EyeEnemy : MonoBehaviour
 
                     float stress = stressBar.Stress;
                     stress = Mathf.Clamp(stress += StressMult * Time.deltaTime, 0, 1);
+                    stressBar.Stress = stress;
                     stressBar.StressDecCD = StressCooldown;
 
                 }
