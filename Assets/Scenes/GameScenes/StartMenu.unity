@@ -952,7 +952,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -28.862793, y: -38.81552}
+  m_AnchoredPosition: {x: -400, y: -100}
   m_SizeDelta: {x: 1000, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728724819
@@ -988,9 +988,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Controls:\r\n\r\nA \u2013 D or Arrow Keys : Left and right movement\r\n\r\nSpace
-    : Hold/Press for Dash/Jump\r. \nLaunches player in the direction of the cursor\n\r\nEscape
-    : Menu "
+  m_Text: "Controls:\r\n\r\n\r\n-\tUse A-D or the Right and Left Arrow keys to move
+    around\r\n-\tPress Space to Jump, press Space again while airborn to dash in
+    the direction of the cursor\r\n-\tPress esc to open the pause menu\r\n-\tPress
+    F or left mouse repeatedly to destroy synapses\r\n"
 --- !u!222 &728724820
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1254,7 +1255,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Shadow people test
+  m_Text: Level 2
 --- !u!222 &939277777
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1295,7 +1296,7 @@ RectTransform:
   - {fileID: 1959106417}
   - {fileID: 728724818}
   m_Father: {fileID: 1765888868}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1315,7 +1316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.6226415, g: 0.502225, b: 0.502225, a: 0.9372549}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1925,7 +1926,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1765888868}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -2149,12 +2150,12 @@ RectTransform:
   m_Children:
   - {fileID: 1175100853}
   - {fileID: 770553171}
-  - {fileID: 991952381}
+  - {fileID: 1870744948}
   - {fileID: 1393175487}
   - {fileID: 22348220}
   - {fileID: 1015930940}
-  - {fileID: 1870744948}
   - {fileID: 1588410990}
+  - {fileID: 991952381}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2465,7 +2466,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1765888868}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5.976}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
