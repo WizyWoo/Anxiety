@@ -1192,6 +1192,10 @@ PrefabInstance:
       propertyPath: Vignette
       value: 
       objectReference: {fileID: 445575377}
+    - target: {fileID: 8696386995048854346, guid: a0ade07d01e25e54288f8103f356e9f7, type: 3}
+      propertyPath: CooldownSpeed
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ade07d01e25e54288f8103f356e9f7, type: 3}
 --- !u!1 &786917709 stripped
