@@ -42,13 +42,33 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-4167704477372336063
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 09bf30229f0cbf041a91227eeb1d42a9
+  m_EffectName: ParamEQ
+  m_MixLevel: 1037f09424935464aafa8f6efd09d7c5
+  m_Parameters:
+  - m_ParameterName: Center freq
+    m_GUID: 7ced65a9447546649908c41265a4dca8
+  - m_ParameterName: Octave range
+    m_GUID: 9d1b71a3420f3aa47a36a4200cf57d2c
+  - m_ParameterName: Frequency gain
+    m_GUID: d5c7d1813f42b0043a59486961d42123
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Reverb but Cool
+  m_Name: No touchy
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -58,7 +78,10 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters: []
-  m_AudioMixerGroupViews: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - 4f1be9a506471434cb1e984140ff1f89
+    name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
@@ -77,6 +100,9 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 24400004}
   - {fileID: -7625276927668819305}
+  - {fileID: -4167704477372336063}
+  - {fileID: 5306741210589619911}
+  - {fileID: 277222178157633691}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -127,7 +153,7 @@ AudioMixerSnapshotController:
     c34bb69ba9a47934086a2abf94ae228a: 80.1
     42a04f2c2d67a6f4ba09aee5f7f04b45: 3.3
     a2935f3d4b3153747863b98f445c2214: 5
-    7a7d094dd0a040148a0a8004f1467cf0: -1097
+    7a7d094dd0a040148a0a8004f1467cf0: -1820
     12fb95fda2a01b9409b4171db95dd919: 1089
     8ddc740e45e78cc4c80ac6624299f27d: 1.35
     0454a23e7421c144daabad2b99dd3f70: 2000
@@ -137,3 +163,55 @@ AudioMixerSnapshotController:
     50c258fea81fff8408ecca6e63565e78: 1
     1459888f3be9cc44d8ce048be322627f: -2332
   m_TransitionOverrides: {}
+--- !u!244 &277222178157633691
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 0e123ef0154587f4e8eb888e21a1edcd
+  m_EffectName: Chorus
+  m_MixLevel: e8bb038eac91de942a43a925907e4eb5
+  m_Parameters:
+  - m_ParameterName: Dry mix
+    m_GUID: b8fef2fe6fef29c448f001668ac7fae2
+  - m_ParameterName: Wet mix tap 1
+    m_GUID: 046e73f4768eb964a9e3756e65b8acbf
+  - m_ParameterName: Wet mix tap 2
+    m_GUID: f099bc565076cc446931e00af388c896
+  - m_ParameterName: Wet mix tap 3
+    m_GUID: cd6ccf8e91f52b14b886d5c08549bcca
+  - m_ParameterName: Delay
+    m_GUID: 8c089924c03909b488eaf5779916b86d
+  - m_ParameterName: Rate
+    m_GUID: cdfa374e196aada46b95c6a51ff528d3
+  - m_ParameterName: Depth
+    m_GUID: e79d47b1709cc9f4a9e69c399711204d
+  - m_ParameterName: Feedback
+    m_GUID: 01149f0abc2ba864a8c19bae31ab4067
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &5306741210589619911
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: d20968ac6885e1d439bd3057312ab713
+  m_EffectName: Pitch Shifter
+  m_MixLevel: b956e0bd6c943eb44ad1b1d2796d4cdd
+  m_Parameters:
+  - m_ParameterName: Pitch
+    m_GUID: 8ddc740e45e78cc4c80ac6624299f27d
+  - m_ParameterName: FFT size
+    m_GUID: 12fb95fda2a01b9409b4171db95dd919
+  - m_ParameterName: Overlap
+    m_GUID: a55c0757375735949a2b89de7bed9fe0
+  - m_ParameterName: Max channels
+    m_GUID: a2935f3d4b3153747863b98f445c2214
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
