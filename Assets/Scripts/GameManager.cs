@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager main;
     [Header("References")]
-    public GameObject CursorLight, DeathMessageObject;
+    public GameObject CursorLight, DeathMessageObject, CheckpointControllerPrefab;
     public GameObject NormalDeath, AcidDeath, StressDeath, SplitEffect, DupeDeath;
     public string AcidDeathMSG, NormalDeathMSG, StressDeathMSG;
     public Text SynapseScore;
@@ -32,19 +32,35 @@ public class GameManager : MonoBehaviour
     private Vector3 mousePosition;
     private bool playerSwapped;
     private GameObject cameraObject, activePlayer;
+    private Checkpoint cp;
 
     private void Awake() => main = this;
 
     void Start()
     {
 
-        Time.timeScale = 1;
+        if(Checkpoint.CheckPointController)
+            Instantiate(CheckpointControllerPrefab);
+
         if(!Player)
             Player = GameObject.FindGameObjectWithTag("Player");
+        
+        cp = Checkpoint.CheckPointController;
+        Player.transform.position = cp.CheckpointPosition;
+
+        Time.timeScale = 1;
         activePlayer = Player;
         cameraObject = Camera.main.gameObject;
 
-        SynapseScore.text = "Synapses popped: 0/" + Synapses.Length ;
+        SynapseScore.text = "Synapses popped: 0/" + Synapses.Length;
+
+        for(int i = 0; i < cp.CheckpointNR; i++)
+        {
+
+            Destroy(Synapses[i]);
+            PoppedSynapse();
+
+        }
 
         /*if(Level1)
             StartCoroutine(BiPolarVision());*/
