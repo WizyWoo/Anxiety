@@ -15,6 +15,7 @@ public class EyeEnemy : MonoBehaviour
     private StressBarSimple stressBar;
     private Transform playerTransform;
     private LayerMask layerMask;
+    private PolygonCollider2D visionArea;
     private bool inView;
     private float checkCD;
     private int curEye;
@@ -22,6 +23,7 @@ public class EyeEnemy : MonoBehaviour
     private void Start()
     {
 
+        visionArea = GetComponent<PolygonCollider2D>();
         originalRot = TurnyThing.rotation;
         shadows = Camera.main.GetComponentInChildren<ShadowStalker>();
         layerMask = ~((1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
@@ -69,6 +71,7 @@ public class EyeEnemy : MonoBehaviour
                     inView = false;
                     checkCD = 0.5f;
                     GetComponent<PolygonCollider2D>().enabled = true;
+                    NormalEye.SetActive(true);
                     StartCoroutine(blink());
 
                 }
@@ -93,8 +96,11 @@ public class EyeEnemy : MonoBehaviour
     public IEnumerator blink()
     {
 
+        yield return new WaitForSeconds(BlinkInterval);
+        
         Blinky.SetActive(true);
         NormalEye.SetActive(false);
+        visionArea.enabled = false;
 
         yield return new WaitForSeconds(BlinkSpeed);
 
@@ -109,8 +115,8 @@ public class EyeEnemy : MonoBehaviour
 
         Blinky.SetActive(false);
         NormalEye.SetActive(true);
+        visionArea.enabled = true;
 
-        yield return new WaitForSeconds(BlinkInterval);
 
         StartCoroutine(blink());
 
