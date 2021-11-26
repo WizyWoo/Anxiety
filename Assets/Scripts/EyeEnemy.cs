@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class EyeEnemy : MonoBehaviour
 {
 
-    public float StressMult, StressCooldown;
-    public GameObject NormalEye, RedEye;
+    public float StressMult, StressCooldown, BlinkSpeed, BlinkInterval;
+    public GameObject NormalEye, RedEye, Blinky;
+    public Vector3[] EyeRots;
     public Transform TurnyThing;
     private Quaternion originalRot;
     private ShadowStalker shadows;
@@ -16,6 +17,7 @@ public class EyeEnemy : MonoBehaviour
     private LayerMask layerMask;
     private bool inView;
     private float checkCD;
+    private int curEye;
 
     private void Start()
     {
@@ -25,6 +27,7 @@ public class EyeEnemy : MonoBehaviour
         layerMask = ~((1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         stressBar = Camera.main.GetComponentInChildren<StressBarSimple>();
+        StartCoroutine(blink());
 
     }
     
@@ -33,6 +36,8 @@ public class EyeEnemy : MonoBehaviour
 
         if(inView)
         {
+
+            NormalEye.SetActive(false);
 
             RaycastHit2D hit;
             if(hit = Physics2D.Raycast(TurnyThing.position, playerTransform.position - TurnyThing.position, Mathf.Infinity, layerMask))
@@ -64,6 +69,7 @@ public class EyeEnemy : MonoBehaviour
                     inView = false;
                     checkCD = 0.5f;
                     GetComponent<PolygonCollider2D>().enabled = true;
+                    StartCoroutine(blink());
 
                 }
 
@@ -77,11 +83,36 @@ public class EyeEnemy : MonoBehaviour
 
         }
 
-        NormalEye.SetActive(!inView);
         RedEye.SetActive(inView);
         
         if(checkCD > 0)
             checkCD -= Time.deltaTime;
+
+    }
+
+    public IEnumerator blink()
+    {
+
+        Blinky.SetActive(true);
+        NormalEye.SetActive(false);
+
+        yield return new WaitForSeconds(BlinkSpeed);
+
+        if(EyeRots.Length > 1)
+        {
+
+            curEye++;
+
+            TurnyThing.rotation = Quaternion.Euler(0, 0, EyeRots[curEye].z);
+
+        }
+
+        Blinky.SetActive(false);
+        NormalEye.SetActive(true);
+
+        yield return new WaitForSeconds(BlinkInterval);
+
+        StartCoroutine(blink());
 
     }
 
@@ -93,6 +124,7 @@ public class EyeEnemy : MonoBehaviour
 
             inView = true;
             GetComponent<PolygonCollider2D>().enabled = false;
+            StopAllCoroutines();
 
         }
 

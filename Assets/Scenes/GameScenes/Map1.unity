@@ -1206,6 +1206,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 546073016}
     m_Modifications:
+    - target: {fileID: 1071695483255711796, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071695483255711796, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042141602347687813, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3818012615987707816, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8739521513010634555, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8739521514113664293, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
       value: -8.368493
@@ -1298,7 +1318,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eye2.0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1222108096424460861, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
 --- !u!4 &794891091 stripped
 Transform:
@@ -2808,18 +2829,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 546073016}
     m_Modifications:
-    - target: {fileID: 8739521512666311459, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
-      propertyPath: m_PointLightOuterRadius
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739521512666311459, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739521512666311459, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[4]
-      value: -1240494191
-      objectReference: {fileID: 0}
     - target: {fileID: 8739521514113664293, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[1].x
       value: -14.273038
