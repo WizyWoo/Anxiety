@@ -56,7 +56,6 @@ public class AudioManager : MonoBehaviour
 
             PlayerWalking.Play();
             playerWalkingCD = PlayerWalkingCooldown;
-            Debug.Log("Grounded and moving");
             playerWalkingCD = PlayerWalkingCooldown;
 
         }
@@ -80,10 +79,10 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    public void AddThisToList(GameObject sourceGO)
+    public void AddThisToList(AudioSource sourceToAdd)
     {
 
-        AudioSource sourceToAdd = sourceGO.GetComponent<AudioSource>();
+        //AudioSource sourceToAdd = sourceGO.GetComponent<AudioSource>();
 
         AudioSources.Add(sourceToAdd);
         sourceOriginalVol.Add(sourceToAdd, sourceToAdd.volume);

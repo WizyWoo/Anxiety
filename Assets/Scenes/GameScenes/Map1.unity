@@ -524,14 +524,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2224463198187155405, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
-      propertyPath: m_Pitch
-      value: 1
+    - target: {fileID: 8182200564317242375, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
+      propertyPath: PlayerWalkingCooldown
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2224463198187155405, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0691cd681128c414cb42879b656a67a5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
 --- !u!4 &360611360 stripped
