@@ -524,6 +524,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2224463198187155405, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
+      propertyPath: m_Pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2224463198187155405, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0691cd681128c414cb42879b656a67a5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
 --- !u!4 &360611360 stripped
@@ -2109,6 +2117,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1355325326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8962364938803384012, guid: 7ebb9ab1e7cc31f49938a4db7c5dea1f, type: 3}
+  m_PrefabInstance: {fileID: 1700610023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1393219059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3275457594182445347, guid: 164acf1cb1d12bb429c78a7e72838086, type: 3}
@@ -2910,6 +2923,14 @@ PrefabInstance:
       propertyPath: DeathMessageObject
       value: 
       objectReference: {fileID: 1985020993}
+    - target: {fileID: 6615282694887817315, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
+      propertyPath: Synapses.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6615282694887817315, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
+      propertyPath: Synapses.Array.data[0]
+      value: 
+      objectReference: {fileID: 1355325326}
     - target: {fileID: 6615282694887817325, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
       propertyPath: m_Name
       value: GameManager

@@ -39,14 +39,16 @@ public class GameManager : MonoBehaviour
     void Start()
     {
 
-        if(Checkpoint.CheckPointController)
+        if(!Checkpoint.CheckPointController)
             Instantiate(CheckpointControllerPrefab);
 
         if(!Player)
             Player = GameObject.FindGameObjectWithTag("Player");
         
         cp = Checkpoint.CheckPointController;
-        Player.transform.position = cp.CheckpointPosition;
+
+        if(cp.CheckpointPosition != Vector3.zero)
+            Player.transform.position = cp.CheckpointPosition;
 
         Time.timeScale = 1;
         activePlayer = Player;

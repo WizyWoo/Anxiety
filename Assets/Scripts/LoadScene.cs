@@ -16,7 +16,12 @@ public class LoadScene : MonoBehaviour
 
         if(UseTrigger)
             if(col.gameObject.tag == "Player")
-                LoadSceneNum(SceneToLoad);
+                {
+
+                    Checkpoint.CheckPointController.FinishedLevel();
+                    LoadSceneNum(SceneToLoad);
+
+                }
 
     }
 
