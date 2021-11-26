@@ -13,9 +13,5 @@ public class Checkpoint : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
     }
-
-    void Update()
-    {
-        
-    }
+    
 }
