@@ -825,7 +825,7 @@ GameObject:
   - component: {fileID: 448948183}
   - component: {fileID: 448948182}
   m_Layer: 0
-  m_Name: Instructions Jump
+  m_Name: Instructions Eye
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -839,7 +839,8 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 448948181}
-  m_Text: "Space for jump, Space while airborn \nto dash towards the cursor."
+  m_Text: "Being in the eye sight will cause \nyou stress, if the stress bar gets\nfilled
+    you will die"
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1.39
