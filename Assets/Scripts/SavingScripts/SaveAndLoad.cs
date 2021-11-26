@@ -28,6 +28,24 @@ public static class SaveAndLoad
 
     }
 
+    public static void SaveSettings(float vol = 1)
+    {
+
+        string savePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "AnxietySettingsData.anx");
+        BinaryFormatter formatter = new BinaryFormatter();
+
+        FileStream stream = new FileStream(savePath, FileMode.Create);
+
+
+        SettingsData settings = new SettingsData(vol);
+        
+        formatter.Serialize(stream, settings);
+        stream.Close();
+
+        Debug.Log("Settings saved succsessfully!");
+
+    }
+
     public static PlayerStats LoadStats()
     {
 
@@ -61,6 +79,42 @@ public static class SaveAndLoad
         }
 
         return loadedStats;
+
+    }
+
+    public static SettingsData LoadSettings()
+    {
+
+        string loadPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "AnxietySettingsData.anx");
+        SettingsData settings = null;
+        
+        if(File.Exists(loadPath))
+        {
+
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            Stream stream = new FileStream(loadPath, FileMode.OpenOrCreate);
+            settings = formatter.Deserialize(stream) as SettingsData;
+
+            stream.Close();
+
+        }
+        else
+        {
+            
+            Debug.Log("No SettingsData file found on path: " + loadPath + " Creating empty file...");
+            SaveSettings();
+
+            BinaryFormatter formatter = new BinaryFormatter();
+
+            Stream stream = new FileStream(loadPath, FileMode.Open);
+            settings = formatter.Deserialize(stream) as SettingsData;
+
+            stream.Close();
+
+        }
+
+        return settings;
 
     }
 

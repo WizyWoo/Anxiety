@@ -29,6 +29,8 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
 
+        volume = SaveAndLoad.LoadSettings().Volume;
+
         sourceOriginalVol = new Dictionary<AudioSource, float>();
 
         player = GameObject.FindGameObjectWithTag("Player");
@@ -41,6 +43,8 @@ public class AudioManager : MonoBehaviour
             source.volume = volume * source.volume;
             
         }
+
+        Debug.Log(player.name);
 
     }
 

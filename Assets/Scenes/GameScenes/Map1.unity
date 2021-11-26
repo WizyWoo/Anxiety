@@ -1783,6 +1783,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -126.08333
       objectReference: {fileID: 0}
+    - target: {fileID: 2686400230498112057, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2686400231281023712, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -1833,7 +1837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3341601996179026738, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.48
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3341601996179026738, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1841,16 +1845,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3341601996179026738, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.48
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5773274784257418744, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.48
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5773274784257418744, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7072756236775566534, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1971111956}
     - target: {fileID: 7415025191906635253, guid: 43bd8ef6abc77a74aabc885fe70179d0, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 2
