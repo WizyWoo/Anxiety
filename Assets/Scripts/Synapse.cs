@@ -34,6 +34,7 @@ public class Synapse : MonoBehaviour
 
                 GameManager.main.PoppedSynapse();
                 Instantiate(SynapseBoom, transform.position, Quaternion.identity);
+                Checkpoint.CheckPointController.CheckpointReached(transform.position);
                 Destroy(gameObject);
 
             }
