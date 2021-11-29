@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BiPolarBehavior : MonoBehaviour
-{
+{/*
 
     public float ModeSwitchTime, ManicMultiplier, DepMultiplier;
     public GameObject DepLight, ManicLight;
@@ -66,4 +66,4 @@ public class BiPolarBehavior : MonoBehaviour
 
     }
     
-}
+*/}

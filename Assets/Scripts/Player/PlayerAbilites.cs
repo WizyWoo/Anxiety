@@ -13,16 +13,16 @@ public class PlayerAbilites : MonoBehaviour
     }
 
     public Abilities SelectedAbility;
-    public float DashPower, ChargeSpeed, MaxDashCharge, SplitCooldown, ThrowPower;
-    public bool DashOnOff, SplitOnOff;
+    public float /*DashPower, ChargeSpeed, MaxDashCharge,*/ SplitCooldown, ThrowPower;
+    public bool /*DashOnOff,*/ SplitOnOff;
     public Transform HoldPosition;
     public GameObject ShadowClone;
-    private float dashCharge, originalCamSize, resizeSmoother, sizeA, splitCooldownTimer;
+    private float /*dashCharge, originalCamSize, resizeSmoother, sizeA,*/ splitCooldownTimer;
     private bool occupied, isSplit;
     private GameObject holding;
     private Rigidbody2D rb2D;
     private PlayerMovement movemenScript;
-    private Camera mainCam;
+    //private Camera mainCam;
     private LayerMask nonBlocking;
     private GameManager gm;
 
@@ -31,9 +31,9 @@ public class PlayerAbilites : MonoBehaviour
         
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         movemenScript = gameObject.GetComponent<PlayerMovement>();
-        dashCharge = 1;
-        mainCam = Camera.main;
-        originalCamSize = mainCam.orthographicSize;
+        //dashCharge = 1;
+        //mainCam = Camera.main;
+        //originalCamSize = mainCam.orthographicSize;
         nonBlocking = ~((1 << LayerMask.NameToLayer("Player")) + (1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
         
         if(gm == null)
@@ -59,7 +59,7 @@ public class PlayerAbilites : MonoBehaviour
 
         }
 
-        if(DashOnOff && movemenScript.IsGrounded)
+        /*if(DashOnOff && movemenScript.IsGrounded)
         {
             
             if(Input.GetKey(KeyCode.Space))
@@ -78,7 +78,7 @@ public class PlayerAbilites : MonoBehaviour
 
             }
 
-        }
+        }*/
 
         if(Input.GetKeyDown(KeyCode.Q))
         {
@@ -114,9 +114,9 @@ public class PlayerAbilites : MonoBehaviour
 
         splitCooldownTimer -= Time.deltaTime;
 
-        if(mainCam.orthographicSize < originalCamSize && !occupied) {resizeCam(); resizeSmoother += Time.deltaTime * 50f;}
+        //if(mainCam.orthographicSize < originalCamSize && !occupied) {resizeCam(); resizeSmoother += Time.deltaTime * 50f;}
 
-        occupied = false;
+        //occupied = false;
         
     }
 
@@ -155,12 +155,12 @@ public class PlayerAbilites : MonoBehaviour
         
     }
 
-    private void resizeCam()
+    /*private void resizeCam()
     {
 
         mainCam.orthographicSize = Mathf.Lerp(sizeA, originalCamSize, resizeSmoother);
 
-    }
+    }*/
 
     private void Split()
     {
@@ -175,7 +175,7 @@ public class PlayerAbilites : MonoBehaviour
 
     }
 
-    private void Dash(float charge)
+    /*private void Dash(float charge)
     {
 
         movemenScript.GroundedOverride = true;
@@ -192,7 +192,7 @@ public class PlayerAbilites : MonoBehaviour
 
         rb2D.velocity = dashDir * charge * DashPower;
 
-    }
+    }*/
 
     private IEnumerator GroundedRevert()
     {
