@@ -29,7 +29,7 @@ public class BoltShot : MonoBehaviour
    
 
             RaycastHit2D hit;
-            if(hit = Physics2D.Raycast(Synapse.position, playerTransform.position - Synapse.position, Mathf.Infinity, layerMask))
+            if(hit = Physics2D.Raycast(Synapse.position, playerTransform - Synapse.position, Mathf.Infinity, layerMask))
             {
 
                 Debug.DrawLine(Synapse.position, hit.point, Color.green, 10f);
@@ -37,7 +37,7 @@ public class BoltShot : MonoBehaviour
                 if(hit.collider.tag == "Player")
                 {
 
-                    Vector3 tempVector = playerTransform.position;
+                    Vector3 tempVector = playerTransform;
                     tempVector.z = 0;
 
                     tempVector.x = tempVector.x - Synapse.position.x;
