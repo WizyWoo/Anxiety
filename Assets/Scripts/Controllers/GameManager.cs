@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     public static GameManager main;
     [Header("References")]
     public GameObject CursorLight, DeathMessageObject, CheckpointControllerPrefab;
-    public GameObject NormalDeath, AcidDeath, StressDeath, SplitEffect, DupeDeath;
-    public string AcidDeathMSG, NormalDeathMSG, StressDeathMSG;
+    public GameObject NormalDeath, AcidDeath, StressDeath, ElectricDeath, SplitEffect, DupeDeath;
+    public string AcidDeathMSG, NormalDeathMSG, StressDeathMSG, ElectricDeathMSG;
     public Text SynapseScore;
     public GameObject[] Synapses;
     [HideInInspector] public GameObject Player;
@@ -134,8 +134,8 @@ public class GameManager : MonoBehaviour
             break;
 
             case DeathType.Electricity:
-            Instantiate(StressDeath, Player.transform.position, Quaternion.identity);
-            deathMSGTXT.text = StressDeathMSG;
+            Instantiate(ElectricDeath, Player.transform.position, Quaternion.identity);
+            deathMSGTXT.text = ElectricDeathMSG;
             break;
 
         }

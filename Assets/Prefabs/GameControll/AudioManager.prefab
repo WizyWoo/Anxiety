@@ -44,13 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64c2ad8e5e2c242a19379b0bc83e06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ambiance: {fileID: 2224463198187155405}
-  PlayerWalking: {fileID: 0}
   AudioSources:
   - {fileID: 2224463198187155405}
-  - {fileID: 0}
-  PlayerWalkingCooldown: 100
-  PlayerGrounded: 0
   volume: 1
 --- !u!1 &4195240875095379277
 GameObject:

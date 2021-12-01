@@ -667,6 +667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerAudioSource: {fileID: 4672332047362319760}
   WalkSound: {fileID: 8300000, guid: 94224f3dd0e70c14c940bf6d1de9f83f, type: 3}
+  LandingSound: {fileID: 8300000, guid: 8f5fe3193e5585e4fbae9b7919f5fa09, type: 3}
   WalkModifier: 0.1
 --- !u!95 &3477686605488901560
 Animator:

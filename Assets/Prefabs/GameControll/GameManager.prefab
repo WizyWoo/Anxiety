@@ -116,11 +116,13 @@ MonoBehaviour:
   NormalDeath: {fileID: 5247517641393889444, guid: 3ef42d1bc7ee860469c8d4a00fcf3ec7, type: 3}
   AcidDeath: {fileID: 6899503995899847043, guid: 5b46983c7ef27b84eb7124f5c5513c21, type: 3}
   StressDeath: {fileID: 5247517641393889444, guid: 3dc4fb14cab18384bab1ba97ec4db489, type: 3}
+  ElectricDeath: {fileID: 5247517641393889444, guid: 3dc4fb14cab18384bab1ba97ec4db489, type: 3}
   SplitEffect: {fileID: 5247517641393889444, guid: 20cdab7f858de2040a2ebe7e64170d73, type: 3}
   DupeDeath: {fileID: 6899503995899847043, guid: 13557ee1d356072418473f9aaca366c7, type: 3}
   AcidDeathMSG: You drowned in depression
   NormalDeathMSG: You got impaled on a spike
   StressDeathMSG: You stressed to death
+  ElectricDeathMSG: You got electrocuted
   SynapseScore: {fileID: 0}
   Synapses: []
   Player: {fileID: 0}

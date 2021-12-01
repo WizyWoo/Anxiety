@@ -6,7 +6,7 @@ public class PlayerAnimationController : MonoBehaviour
 {
 
     public AudioSource PlayerAudioSource;
-    public AudioClip WalkSound;
+    public AudioClip WalkSound, LandingSound;
     public float WalkModifier;
     private int animMode;
     private float walking;
@@ -28,6 +28,13 @@ public class PlayerAnimationController : MonoBehaviour
     {
 
         PlayerAudioSource.PlayOneShot(WalkSound);
+
+    }
+
+    public void PlayLandingSound()
+    {
+
+        PlayerAudioSource.PlayOneShot(LandingSound);
 
     }
 
@@ -94,6 +101,7 @@ public class PlayerAnimationController : MonoBehaviour
     {
 
         jumped = false;
+        PlayLandingSound();
 
     }
 
