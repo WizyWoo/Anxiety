@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
         Normal,
         Acid,
         AcidDrop,
-        Stress
+        Stress,
+        Electricity
 
     }
 
@@ -128,6 +129,11 @@ public class GameManager : MonoBehaviour
             break;
 
             case DeathType.Stress:
+            Instantiate(StressDeath, Player.transform.position, Quaternion.identity);
+            deathMSGTXT.text = StressDeathMSG;
+            break;
+
+            case DeathType.Electricity:
             Instantiate(StressDeath, Player.transform.position, Quaternion.identity);
             deathMSGTXT.text = StressDeathMSG;
             break;
