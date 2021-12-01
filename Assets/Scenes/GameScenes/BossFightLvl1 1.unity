@@ -225,6 +225,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3178694413811476467, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
+      propertyPath: _data._objectReferences.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 83fe32e9c70273949aa69880c178679f, type: 2}
+    - target: {fileID: 6489117090850858639, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
+      propertyPath: m_Size.x
+      value: 18.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489117090850858639, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
+      propertyPath: m_Size.y
+      value: 14.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489117090850858639, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489117090850858639, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6489117091282903408, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
       propertyPath: m_SortingLayer
       value: 4
@@ -239,11 +259,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6489117091282903411, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.9
+      value: 44.2
       objectReference: {fileID: 0}
     - target: {fileID: 6489117091282903411, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.8
+      value: 15.6
       objectReference: {fileID: 0}
     - target: {fileID: 6489117091282903411, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -366,6 +386,10 @@ PrefabInstance:
     - target: {fileID: 7300047084363107428, guid: f2d11ff1e3b91db40b302709af782a47, type: 3}
       propertyPath: m_Name
       value: Platform  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300047084363107428, guid: f2d11ff1e3b91db40b302709af782a47, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7300047084363107433, guid: f2d11ff1e3b91db40b302709af782a47, type: 3}
       propertyPath: m_SortingLayer
@@ -521,7 +545,7 @@ GameObject:
   - component: {fileID: 555123800}
   m_Layer: 0
   m_Name: SynapsePos (3)
-  m_TagString: synapse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -935,6 +959,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 8664925310314607052, guid: a0ade07d01e25e54288f8103f356e9f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0ade07d01e25e54288f8103f356e9f7, type: 3}
 --- !u!1 &647326275
@@ -1086,7 +1114,7 @@ GameObject:
   - component: {fileID: 736939384}
   m_Layer: 0
   m_Name: SynapsePos
-  m_TagString: synapse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1651,6 +1679,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2068942428}
     - target: {fileID: 6615282694887817315, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
+      propertyPath: DeathMessageObject
+      value: 
+      objectReference: {fileID: 1908482776}
+    - target: {fileID: 6615282694887817315, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
       propertyPath: Synapses.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1676,7 +1708,7 @@ GameObject:
   - component: {fileID: 1395747604}
   m_Layer: 0
   m_Name: SynapsePos (1)
-  m_TagString: synapse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1881,7 +1913,7 @@ GameObject:
   - component: {fileID: 1515023018}
   m_Layer: 0
   m_Name: SynapsePos (4)
-  m_TagString: synapse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1910,6 +1942,10 @@ PrefabInstance:
     - target: {fileID: 7300047084363107428, guid: f2d11ff1e3b91db40b302709af782a47, type: 3}
       propertyPath: m_Name
       value: Platform  (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7300047084363107428, guid: f2d11ff1e3b91db40b302709af782a47, type: 3}
+      propertyPath: m_TagString
+      value: Ground
       objectReference: {fileID: 0}
     - target: {fileID: 7300047084363107433, guid: f2d11ff1e3b91db40b302709af782a47, type: 3}
       propertyPath: m_SortingLayer
@@ -1988,7 +2024,7 @@ GameObject:
   - component: {fileID: 1766350163}
   m_Layer: 0
   m_Name: SynapsePos (2)
-  m_TagString: synapse
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2179,6 +2215,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 14.435}
+--- !u!1 &1908482776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1376689009207393985, guid: 209618669d06cc44da1d42bfd4e03ea9, type: 3}
+  m_PrefabInstance: {fileID: 703666841}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1963213819 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7300047084363107435, guid: f2d11ff1e3b91db40b302709af782a47, type: 3}
@@ -2343,6 +2384,10 @@ PrefabInstance:
     - target: {fileID: 6646570181702327672, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646570181702327675, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+      propertyPath: PlayerHealth
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}

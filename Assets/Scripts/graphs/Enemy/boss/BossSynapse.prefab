@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: -7653418031140821194}
   m_Layer: 7
   m_Name: BossSynapse
-  m_TagString: Untagged
+  m_TagString: synapse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

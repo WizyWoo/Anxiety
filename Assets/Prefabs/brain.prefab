@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6489117090850858638}
   - component: {fileID: 6489117090850858639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Space To move
   m_TagString: Untagged
   m_Icon: {fileID: 0}
