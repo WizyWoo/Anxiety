@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 816501296715157107}
   - component: {fileID: 6646570181702327678}
   - component: {fileID: 6646570181702327675}
+  - component: {fileID: 2111228268824318637}
   - component: {fileID: 3477686605488901560}
   - component: {fileID: 6646570181702327676}
   - component: {fileID: 6646570181702327677}
@@ -509,6 +510,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHealth: 1
   IsDuplicate: 0
+--- !u!114 &2111228268824318637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646570181702327650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34290feee04223546a9c267721e5d317, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WalkModifier: 0.1
 --- !u!95 &3477686605488901560
 Animator:
   serializedVersion: 3
