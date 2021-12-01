@@ -27,25 +27,32 @@ public class Synapse : MonoBehaviour
         if(playerInRange && (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Mouse0)))
         {
 
-            SynapseHealth--;
-            DamageBar.color = new Color(SynapseHealth / maxHhealth, SynapseHealth / maxHhealth, SynapseHealth / maxHhealth);
-            if(SynapseHealth <= 0)
-            {
-
-                GameManager.main.PoppedSynapse();
-                Instantiate(SynapseBoom, transform.position, Quaternion.identity);
-                Checkpoint.CheckPointController.CheckpointReached(transform.position);
-                Destroy(gameObject);
-
-            }
-            else
-            {
-
-                StartCoroutine(Shake());
-                Instantiate(SynapseDamage, transform.position, Quaternion.identity);
-
-            }
+            DamageSynapse();
             
+        }
+
+    }
+
+    public void DamageSynapse()
+    {
+
+        SynapseHealth--;
+        DamageBar.color = new Color(SynapseHealth / maxHhealth, SynapseHealth / maxHhealth, SynapseHealth / maxHhealth);
+        if(SynapseHealth <= 0)
+        {
+
+            GameManager.main.PoppedSynapse();
+            Instantiate(SynapseBoom, transform.position, Quaternion.identity);
+            Checkpoint.CheckPointController.CheckpointReached(transform.position);
+            Destroy(gameObject);
+
+        }
+        else
+        {
+
+            StartCoroutine(Shake());
+            Instantiate(SynapseDamage, transform.position, Quaternion.identity);
+
         }
 
     }
@@ -66,7 +73,7 @@ public class Synapse : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D col)
     {
 
         if(col.gameObject.tag == "Player") playerInRange = true;

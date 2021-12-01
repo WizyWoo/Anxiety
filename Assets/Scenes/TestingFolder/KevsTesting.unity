@@ -419,10 +419,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2224463198187155405, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5140657973437427859, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 5e1a5d5a4e4a10d42bd48f04beb99130, type: 3}
+    - target: {fileID: 8182200564317242375, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
+      propertyPath: AudioSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cca9a782510c234986a9e97a9093059, type: 3}
 --- !u!1001 &852248086
@@ -800,10 +808,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3477686605488901560, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: m_Controller
+    - target: {fileID: 2111228268824318637, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+      propertyPath: ac
       value: 
-      objectReference: {fileID: 9100000, guid: 7eb131d5915de594fb625fa5b704a6b9, type: 2}
+      objectReference: {fileID: 8300000, guid: 6f3e4ad7093328f4b8efe7637db12a4a, type: 3}
+    - target: {fileID: 2111228268824318637, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+      propertyPath: au
+      value: 
+      objectReference: {fileID: 1779874983}
     - target: {fileID: 6646570181702327650, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: m_Name
       value: Player
@@ -856,10 +868,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6646570181702327673, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ab6e8187632945d4bb00df2ea8b4282a, type: 3}
     - target: {fileID: 6646570181702327675, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
       propertyPath: DeathEffect
       value: 
@@ -881,6 +889,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1779874983 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4672332047362319760, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+  m_PrefabInstance: {fileID: 1300778321}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1999449017
 GameObject:
   m_ObjectHideFlags: 0

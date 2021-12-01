@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
 
+    public AudioSource PlayerAudioSource;
+    public AudioClip WalkSound;
     public float WalkModifier;
     private int animMode;
     private float walking;
@@ -19,6 +21,13 @@ public class PlayerAnimationController : MonoBehaviour
         animator = GetComponent<Animator>();
         movement = GetComponent<PlayerMovement>();
         rb2D = GetComponent<Rigidbody2D>();
+
+    }
+
+    public void PlayWalkSound()
+    {
+
+        PlayerAudioSource.PlayOneShot(WalkSound);
 
     }
 
