@@ -364,6 +364,7 @@ GameObject:
   - component: {fileID: 816501296715157107}
   - component: {fileID: 6646570181702327678}
   - component: {fileID: 6646570181702327675}
+  - component: {fileID: 3477686605488901560}
   - component: {fileID: 6646570181702327676}
   - component: {fileID: 6646570181702327677}
   - component: {fileID: 7790689385329968041}
@@ -489,12 +490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedAbility: 0
-  DashPower: 8
-  ChargeSpeed: 6
-  MaxDashCharge: 5
   SplitCooldown: 0
   ThrowPower: 0
-  DashOnOff: 0
   SplitOnOff: 1
   HoldPosition: {fileID: 7468231847680512123}
   ShadowClone: {fileID: 5758115521975056572, guid: d6b4edd07aa68444da86e7a0709ab900, type: 3}
@@ -512,6 +509,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHealth: 1
   IsDuplicate: 0
+--- !u!95 &3477686605488901560
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646570181702327650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7eb131d5915de594fb625fa5b704a6b9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!50 &6646570181702327676
 Rigidbody2D:
   serializedVersion: 4
