@@ -739,7 +739,7 @@ GameObject:
   - component: {fileID: 635897498}
   m_Layer: 0
   m_Name: SP
-  m_TagString: Untagged
+  m_TagString: synapse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -834,7 +834,7 @@ GameObject:
   - component: {fileID: 804068887}
   m_Layer: 0
   m_Name: SP (1)
-  m_TagString: Untagged
+  m_TagString: synapse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2051,7 +2051,7 @@ GameObject:
   - component: {fileID: 1741087950}
   m_Layer: 0
   m_Name: SP (2)
-  m_TagString: Untagged
+  m_TagString: synapse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2164,7 +2164,7 @@ GameObject:
   - component: {fileID: 1887247938}
   m_Layer: 0
   m_Name: SP (3)
-  m_TagString: Untagged
+  m_TagString: synapse
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
