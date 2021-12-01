@@ -10,7 +10,7 @@ public class PlayerAnimationController : MonoBehaviour
     public float WalkModifier;
     private int animMode;
     private float walking;
-    private bool grounded;
+    private bool grounded, jumped;
     private Animator animator;
     private PlayerMovement movement;
     private Rigidbody2D rb2D;
@@ -73,11 +73,27 @@ public class PlayerAnimationController : MonoBehaviour
 
         }
         
+        animator.SetBool("Grounded", grounded);
+        animator.SetBool("Jump", jumped);
         animator.SetFloat("Walking", walking);
         animator.SetInteger("AnimMode", animMode);
 
         if(walking >= 1)
             walking = 0;
+
+    }
+
+    public void JumpAnimTrigger()
+    {
+
+        jumped = true;
+
+    }
+
+    public void Jumped()
+    {
+
+        jumped = false;
 
     }
 
