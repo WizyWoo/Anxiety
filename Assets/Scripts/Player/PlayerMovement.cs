@@ -35,12 +35,14 @@ public class PlayerMovement : MonoBehaviour
     private CapsuleCollider2D playerCollider;
     private Rigidbody2D rb2D;
     private AudioManager audioManager;
+    private PlayerAnimationController playerAnimControl;
 
     void Start()
     {
 
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         playerCollider = gameObject.GetComponent<CapsuleCollider2D>();
+        playerAnimControl = GetComponent<PlayerAnimationController>();
         maskPlayer = ~((1 << LayerMask.NameToLayer("Player")) + (1 << LayerMask.NameToLayer("Air")) + (1 << LayerMask.NameToLayer("Enemy")));
         rb2D.sharedMaterial = PM2D;
         playerCollider.sharedMaterial = PM2D;
@@ -134,6 +136,7 @@ public class PlayerMovement : MonoBehaviour
 
             coyote = 0;
             coyoteCD = 0.1f;
+            playerAnimControl.JumpAnimTrigger();
 
         }
 
