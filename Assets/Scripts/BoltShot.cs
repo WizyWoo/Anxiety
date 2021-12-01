@@ -37,7 +37,7 @@ public class BoltShot : MonoBehaviour
     }
     //public void Shoot()
     //{
-
+    
    
 
     //        RaycastHit2D hit;
