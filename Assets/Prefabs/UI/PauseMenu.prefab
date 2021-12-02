@@ -274,7 +274,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2686400229428390993}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 843128743035600977}
+        m_TargetAssemblyTypeName: SaveSettings, Assembly-CSharp
+        m_MethodName: SaveSettingsDat
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7415025191906635253}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2686400229551325190
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +405,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30.3368, y: -1.7845}
+  m_AnchoredPosition: {x: 0, y: -1.7845}
   m_SizeDelta: {x: 335.99, y: 255.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2686400229682961213
@@ -580,7 +592,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2686400229774905400}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 843128743035600977}
+        m_TargetAssemblyTypeName: SaveSettings, Assembly-CSharp
+        m_MethodName: SaveSettingsDat
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 7415025191906635253}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2686400229906831261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1141,7 +1165,6 @@ RectTransform:
   - {fileID: 2686400229682961208}
   - {fileID: 1628326087683335173}
   - {fileID: 3119230807264926805}
-  - {fileID: 5657925042872620596}
   m_Father: {fileID: 2686400231281023717}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1428,11 +1451,11 @@ RectTransform:
   m_Father: {fileID: 2686400230498112056}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 841, y: -798.5}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -274}
   m_SizeDelta: {x: 300, y: 40}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7415025191906635253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1523,18 +1546,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3079402656623097203}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1858152394005577122}
-  m_Father: {fileID: 2686400230498112056}
-  m_RootOrder: 4
+  m_Father: {fileID: 3119230807264926805}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -687.4022, y: -525}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: 0, y: -110}
+  m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3576361785192641330
 CanvasRenderer:
@@ -1621,18 +1644,6 @@ MonoBehaviour:
       - m_Target: {fileID: 843128743035600977}
         m_TargetAssemblyTypeName: SaveSettings, Assembly-CSharp
         m_MethodName: SaveSettingsDat
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 7415025191906635253}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Slider, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: ChangeVolSlider
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 7415025191906635253}
@@ -1757,18 +1768,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 5
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Save
 --- !u!1 &6569696334913797548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,13 +1808,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 5657925042872620596}
   m_Father: {fileID: 2686400230498112056}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3, y: -224}
+  m_AnchoredPosition: {x: 0, y: -224}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3922197567633927956
@@ -1828,7 +1840,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1841,7 +1853,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 6
     m_MaxSize: 60
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1

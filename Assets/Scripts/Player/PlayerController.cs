@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
 
     public int PlayerHealth;
     public bool IsDuplicate;
+    public Text HealthText;
     private float invincibilityTimer;
     private GameManager gm;
 
@@ -15,6 +17,13 @@ public class PlayerController : MonoBehaviour
 
         if(gm == null)
             gm = GameManager.main;
+
+        if(HealthText)
+        {
+
+            HealthText.text = "Player Health: " + PlayerHealth;
+
+        }
 
     }
 
@@ -96,6 +105,13 @@ public class PlayerController : MonoBehaviour
         {
 
             Die(damageFrom);
+
+        }
+
+        if(HealthText)
+        {
+
+            HealthText.text = "Player Health: " + PlayerHealth;
 
         }
 

@@ -16,7 +16,8 @@ public class StressBarSimple : MonoBehaviour
 
         shadows = Camera.main.GetComponentInChildren<ShadowStalker>();
         bar.fillAmount = 0;
-        animator = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>();
+        if(!animator)
+            animator = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<Animator>();
         animator.SetInteger("stressLev", 0);
 
     }
