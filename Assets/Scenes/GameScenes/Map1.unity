@@ -547,6 +547,14 @@ PrefabInstance:
       value: StaticPlatform (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 160b7b1ae13f0834c83baba104213844, type: 3}
+    - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_DrawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_SortingLayer
       value: 4
       objectReference: {fileID: 0}
@@ -560,7 +568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalScale.y
@@ -605,6 +613,10 @@ PrefabInstance:
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058592515264923156, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
@@ -1294,6 +1306,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 445575377}
     - target: {fileID: 8696386995048854346, guid: a0ade07d01e25e54288f8103f356e9f7, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 830190496}
+    - target: {fileID: 8696386995048854346, guid: a0ade07d01e25e54288f8103f356e9f7, type: 3}
       propertyPath: CooldownSpeed
       value: 1.5
       objectReference: {fileID: 0}
@@ -1439,6 +1455,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8739521514244234985, guid: c71ec27fbe696fc46b0e11d027fd6669, type: 3}
   m_PrefabInstance: {fileID: 794891090}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &830190496 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5334599617421201959, guid: 372e7fbb3b51c7d40940a153549c5b06, type: 3}
+  m_PrefabInstance: {fileID: 1692228433}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &871253532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1449,6 +1470,14 @@ PrefabInstance:
     - target: {fileID: 959935659463932769, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_Name
       value: StaticPlatform (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 160b7b1ae13f0834c83baba104213844, type: 3}
+    - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_DrawMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_SortingLayer
@@ -1464,7 +1493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalScale.y
@@ -1509,6 +1538,10 @@ PrefabInstance:
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058592515264923156, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
@@ -2196,21 +2229,9 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
-      propertyPath: m_SortingLayerID
-      value: -1240494191
-      objectReference: {fileID: 0}
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2240,17 +2261,9 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+    - target: {fileID: 9058592515264923156, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
@@ -2600,6 +2613,14 @@ PrefabInstance:
       value: StaticPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 160b7b1ae13f0834c83baba104213844, type: 3}
+    - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_DrawMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2998251157181780779, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_SortingLayer
       value: 4
       objectReference: {fileID: 0}
@@ -2613,7 +2634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalScale.y
@@ -2658,6 +2679,10 @@ PrefabInstance:
     - target: {fileID: 6974913940590752349, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058592515264923156, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}
+      propertyPath: m_SpriteTilingProperty.drawMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b16543d227e8734bbf21fba991aa39e, type: 3}

@@ -46,7 +46,7 @@ public class PlayerAnimationController : MonoBehaviour
         if(grounded)
         {
 
-            if(Mathf.Abs(rb2D.velocity.x) > 0)
+            if(Mathf.Abs(rb2D.velocity.x) > 0 && Mathf.Abs(Input.GetAxis("Horizontal")) > 0)
             {
 
                 animMode = 1;
