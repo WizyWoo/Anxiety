@@ -9,6 +9,7 @@ TagManager:
   - stress
   - Ground
   - synapse
+  - checkpoint
   layers:
   - Default
   - TransparentFX
