@@ -302,7 +302,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: brain
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6489117091282903422, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
+    - {fileID: 6489117091282903410, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7d3fe6bff5add394ca4a12681d39decf, type: 3}
 --- !u!1 &322260691
 GameObject:
