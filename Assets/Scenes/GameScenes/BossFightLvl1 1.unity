@@ -2872,6 +2872,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Electricuted
       objectReference: {fileID: 0}
+    - target: {fileID: 5076460207766461331, guid: 19360abb5a58eec4bb575fedef471fe6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5076460207766461357, guid: 19360abb5a58eec4bb575fedef471fe6, type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5076460207766461358, guid: 19360abb5a58eec4bb575fedef471fe6, type: 3}
       propertyPath: m_RootOrder
       value: 23
