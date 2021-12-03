@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 6358419534551324886}
   - component: {fileID: -683242638480488855}
   - component: {fileID: -7653418031140821194}
+  - component: {fileID: 4926972526529209099}
   m_Layer: 7
   m_Name: BossSynapse
   m_TagString: synapse
@@ -5149,3 +5150,20 @@ MonoBehaviour:
     _json: '{"nest":{"source":"Macro","macro":0,"embed":null}}'
     _objectReferences:
     - {fileID: 11400000, guid: 7b35c635e7090cd40ac059b6a848ef29, type: 2}
+--- !u!114 &4926972526529209099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8962364938803384012}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5d0bdc6184617c4d9df20757f63310e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DamageBar: {fileID: 0}
+  SynapseHealth: 20
+  MaxShake: 0.2
+  SynapseBoom: {fileID: 4639856437659071871, guid: 575b7e7c75c8e8140ab6ab1f1d8bf71d, type: 3}
+  SynapseDamage: {fileID: 1975309488579028356, guid: 2a5c419d621259649bb17b5ddc49c4e9, type: 3}
