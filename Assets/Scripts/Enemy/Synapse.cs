@@ -46,7 +46,7 @@ public class Synapse : MonoBehaviour
             {
 
                 DamageSynapse();
-                playerRB.velocity = (playerRB.velocity * -1) * 0.3f;
+                playerRB.velocity = (playerRB.velocity * -1) * 0.1f;
                 
             }
 
