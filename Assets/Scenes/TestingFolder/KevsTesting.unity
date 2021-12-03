@@ -1072,6 +1072,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2476768900874566914, guid: 7ebb9ab1e7cc31f49938a4db7c5dea1f, type: 3}
+      propertyPath: m_Size.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2476768900874566914, guid: 7ebb9ab1e7cc31f49938a4db7c5dea1f, type: 3}
+      propertyPath: m_Size.y
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8962364938803384012, guid: 7ebb9ab1e7cc31f49938a4db7c5dea1f, type: 3}
       propertyPath: m_Name
       value: Synapse

@@ -22,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public float JumpHeight, FallSpeed, ExtraGrav, DashPower, WidthReduction;
     public bool JumpOnOff, GroundedOverride;
     private float playerControlPower, speedMultiplier, xMoveDir, coyote, coyoteCD;
-    private int jumpOnOff, doubleJumpAvailible;
+    private int jumpOnOff; 
+    public int doubleJumpAvailible;
     private bool jumpInput;
     //GroundCheck
     [Header("Do not touch!")]
