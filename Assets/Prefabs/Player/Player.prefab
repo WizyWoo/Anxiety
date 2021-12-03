@@ -618,6 +618,7 @@ MonoBehaviour:
   WidthReduction: 0.9
   JumpOnOff: 1
   GroundedOverride: 0
+  doubleJumpAvailible: 0
   IsGrounded: 0
   DashEffect: {fileID: 5247517641393889444, guid: 0f776a082f18ecf469160b60c4127525, type: 3}
   PlayerSprite: {fileID: 6646570181702327673}
@@ -651,8 +652,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b22288296fca7f478b968f582b307a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ElectricityEffect: {fileID: 5076460207766461331, guid: 19360abb5a58eec4bb575fedef471fe6, type: 3}
   PlayerHealth: 1
   IsDuplicate: 0
+  HealthText: {fileID: 0}
 --- !u!114 &2111228268824318637
 MonoBehaviour:
   m_ObjectHideFlags: 0
