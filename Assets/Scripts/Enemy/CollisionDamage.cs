@@ -14,7 +14,7 @@ public class CollisionDamage : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
 
-            col.gameObject.GetComponent<PlayerController>().TakeDamage(DamageType);
+            col.gameObject.GetComponent<PlayerController>().Die(DamageType);
 
         }
 
