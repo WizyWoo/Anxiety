@@ -6,12 +6,10 @@ public class ShadowTrigger : MonoBehaviour
 {
     public GameObject GoodShadow, BadShadow;
     private GameObject Player;
-    bool Switch;
 
     // Start is called before the first frame update
     void Start()
     {
-        Switch = false;
         Player = GameObject.Find("Player");
     }
 
