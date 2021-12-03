@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public GameObject Player;
     [HideInInspector] public GameObject Dupe;
     [HideInInspector] public bool IsSplit, GamePaused;
-    private int synapsesPopped;
+    public int synapsesPopped;
     private float backgroundOffsetX;
     private Vector3 mousePosition;
     private bool playerSwapped;

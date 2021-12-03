@@ -1970,7 +1970,7 @@ PrefabInstance:
     - target: {fileID: 6615282694887817315, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
       propertyPath: Synapses.Array.data[0]
       value: 
-      objectReference: {fileID: 1396254485}
+      objectReference: {fileID: 645458923}
     - target: {fileID: 6615282694887817315, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
       propertyPath: Synapses.Array.data[1]
       value: 
@@ -1978,7 +1978,7 @@ PrefabInstance:
     - target: {fileID: 6615282694887817315, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
       propertyPath: Synapses.Array.data[2]
       value: 
-      objectReference: {fileID: 645458923}
+      objectReference: {fileID: 1396254485}
     - target: {fileID: 6615282694887817325, guid: e289bed36538aa8468cd7f6db41d484d, type: 3}
       propertyPath: m_Name
       value: GameManager
