@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
 
+    public GameObject ElectricityEffect;
     public int PlayerHealth;
     public bool IsDuplicate;
     public Text HealthText;
@@ -97,6 +98,8 @@ public class PlayerController : MonoBehaviour
         {
 
             invincibilityTimer = 1.2f;
+            if(damageFrom == GameManager.DeathType.Electricity)
+                Instantiate(ElectricityEffect, transform.position, Quaternion.identity);
             PlayerHealth -= 1;
 
         }
