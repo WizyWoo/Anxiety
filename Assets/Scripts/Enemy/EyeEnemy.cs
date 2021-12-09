@@ -16,7 +16,7 @@ public class EyeEnemy : MonoBehaviour
     private Transform playerTransform;
     private LayerMask layerMask;
     private PolygonCollider2D visionArea;
-    private bool inView;
+    private bool inView, blinkRunning;
     private float checkCD;
     private int curEye;
 
@@ -30,6 +30,7 @@ public class EyeEnemy : MonoBehaviour
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
         stressBar = Camera.main.GetComponentInChildren<StressBarSimple>();
         StartCoroutine(blink());
+        blinkRunning = true;
 
     }
     
@@ -39,8 +40,6 @@ public class EyeEnemy : MonoBehaviour
         if(inView)
         {
 
-            NormalEye.SetActive(false);
-
             RaycastHit2D hit;
             if(hit = Physics2D.Raycast(TurnyThing.position, playerTransform.position - TurnyThing.position, Mathf.Infinity, layerMask))
             {
@@ -49,6 +48,10 @@ public class EyeEnemy : MonoBehaviour
 
                 if(hit.collider.tag == "Player")
                 {
+
+                    NormalEye.SetActive(false);
+                    StopAllCoroutines();
+                    blinkRunning = false;
 
                     Vector3 tempVector = playerTransform.position;
                     tempVector.z = 0;
@@ -72,7 +75,13 @@ public class EyeEnemy : MonoBehaviour
                     checkCD = 0.5f;
                     GetComponent<PolygonCollider2D>().enabled = true;
                     NormalEye.SetActive(true);
-                    StartCoroutine(blink());
+                    if(!blinkRunning)
+                    {
+
+                        blinkRunning = true;
+                        StartCoroutine(blink());
+
+                    }
 
                 }
 
@@ -117,7 +126,6 @@ public class EyeEnemy : MonoBehaviour
         NormalEye.SetActive(true);
         visionArea.enabled = true;
 
-
         StartCoroutine(blink());
 
     }
@@ -130,7 +138,6 @@ public class EyeEnemy : MonoBehaviour
 
             inView = true;
             GetComponent<PolygonCollider2D>().enabled = false;
-            StopAllCoroutines();
 
         }
 
