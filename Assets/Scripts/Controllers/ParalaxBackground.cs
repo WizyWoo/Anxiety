@@ -5,8 +5,8 @@ using UnityEngine;
 public class ParalaxBackground : MonoBehaviour
 {
 
-    public float BackParalax, MidParalax, FrontParalax;
-    public Transform Back, Mid, Front;
+    public float BGParalax, BackParalax, MidParalax, FrontParalax;
+    public Transform BG, Back, Mid, Front;
     private Transform player;
 
     private void Start()
@@ -22,6 +22,7 @@ public class ParalaxBackground : MonoBehaviour
         Front.position = player.position * FrontParalax;
         Mid.position = player.position * MidParalax;
         Back.position = player.position * BackParalax;
+        BG.position = player.position * BGParalax;
 
     }
 
