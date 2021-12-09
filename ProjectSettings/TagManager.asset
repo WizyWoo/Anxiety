@@ -44,11 +44,11 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
   - name: Background
     uniqueID: 421973141
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
   - name: BiPolarDisorder
     uniqueID: 1959602849
