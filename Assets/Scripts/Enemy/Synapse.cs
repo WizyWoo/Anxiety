@@ -14,7 +14,7 @@ public class Synapse : MonoBehaviour
 
     private void Start()
     {
-        
+
         originalPos = transform.position;
 
         DamageBar.color = new Color(SynapseHealth / maxHhealth, SynapseHealth / maxHhealth, SynapseHealth / maxHhealth);
@@ -24,7 +24,7 @@ public class Synapse : MonoBehaviour
     private void Update()
     {
 
-        if(playerInRange && Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Mouse0))
+        if(playerInRange && (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Mouse0)))
         {
 
             DamageSynapse();
