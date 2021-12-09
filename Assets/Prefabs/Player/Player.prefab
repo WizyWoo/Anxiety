@@ -637,7 +637,7 @@ MonoBehaviour:
   SelectedAbility: 0
   SplitCooldown: 0
   ThrowPower: 0
-  SplitOnOff: 1
+  SplitOnOff: 0
   HoldPosition: {fileID: 7468231847680512123}
   ShadowClone: {fileID: 5758115521975056572, guid: d6b4edd07aa68444da86e7a0709ab900, type: 3}
 --- !u!114 &6646570181702327675
