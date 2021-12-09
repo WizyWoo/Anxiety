@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageBar: {fileID: 8962364938803384014}
-  SynapseHealth: 1
+  SynapseHealth: 15
   MaxShake: 0.2
   HitSpeedNeeded: 40
   SynapseBoom: {fileID: 4639856437659071871, guid: 575b7e7c75c8e8140ab6ab1f1d8bf71d, type: 3}
