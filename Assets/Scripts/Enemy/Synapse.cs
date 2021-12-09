@@ -7,30 +7,15 @@ public class Synapse : MonoBehaviour
 
     public SpriteRenderer DamageBar;
     public float SynapseHealth, MaxShake, HitSpeedNeeded;
-    public bool HitWithJump;
     public GameObject SynapseBoom, SynapseDamage;
     private float maxHhealth;
     private bool playerInRange;
     private Vector2 originalPos;
-    private Rigidbody2D playerRB;
-    private PlayerMovement pm;
 
     private void Start()
     {
-
-        playerRB = GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>();
-        pm = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        originalPos = transform.position;
         
-        if(HitWithJump)
-            maxHhealth = 1;
-        else
-        {
-
-            SynapseHealth = 15;
-            maxHhealth = 15;
-
-        }
+        originalPos = transform.position;
 
         DamageBar.color = new Color(SynapseHealth / maxHhealth, SynapseHealth / maxHhealth, SynapseHealth / maxHhealth);
 
@@ -39,30 +24,12 @@ public class Synapse : MonoBehaviour
     private void Update()
     {
 
-        if(HitWithJump)
+        if(playerInRange && Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Mouse0))
         {
 
-            if(playerInRange && pm.doubleJumpAvailible == 0 && playerRB.velocity.magnitude > HitSpeedNeeded)
-            {
-
-                DamageSynapse();
-                playerRB.velocity = (playerRB.velocity * -1) * 0.1f;
-                
-            }
-
+            DamageSynapse();
+            
         }
-        else
-        {
-
-            if(playerInRange && Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.Mouse0))
-            {
-
-                DamageSynapse();
-                
-            }
-
-        }
-
 
     }
 
